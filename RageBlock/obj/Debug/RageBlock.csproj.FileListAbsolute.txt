@@ -1,0 +1,13 @@
+C:\Users\step\Documents\test\RageBlock\bin\Release\RageBlock.exe.config
+C:\Users\step\Documents\test\RageBlock\bin\Release\RageBlock.exe
+C:\Users\step\Documents\test\RageBlock\bin\Release\RageBlock.pdb
+C:\Users\step\Documents\test\RageBlock\bin\Release\LeagueSharp.Common.dll
+C:\Users\step\Documents\test\RageBlock\bin\Release\LeagueSharp.dll
+C:\Users\step\Documents\test\RageBlock\bin\Release\SFXLibrary.dll
+C:\Users\step\Documents\test\RageBlock\bin\Release\SharpDX.dll
+C:\Users\step\Documents\test\RageBlock\bin\Release\SharpDX.Direct3D9.dll
+C:\Users\step\Documents\test\RageBlock\bin\Release\clipper_library.dll
+C:\Users\step\Documents\test\RageBlock\bin\Release\LeagueSharp.Sandbox.dll
+C:\Users\step\Documents\test\RageBlock\bin\Release\LeagueSharp.xml
+C:\Users\step\Documents\test\RageBlock\obj\Debug\RageBlock.exe
+C:\Users\step\Documents\test\RageBlock\obj\Debug\RageBlock.pdb

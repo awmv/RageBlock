@@ -38,7 +38,7 @@ namespace RageBlock
         public static String GetTimestamp(DateTime value)
         {
             return value.ToString("HH:mm");
-        }    
+        }
 
         private static void Game_OnChat(GameChatEventArgs args)
         {
@@ -87,14 +87,14 @@ namespace RageBlock
                 "piss", "pissed", "pisser", "pissers", "pisses", "pissflaps", "pissin", "pissing", "pissoff", "poop", 
                 "porn", "porno", "pornography", "pornos", "prick", "pricks", "pron", "pube", "pusse", "pussi", "pussies", 
                 "pussy", "pussys", "rectum", "rimjaw", "rimming", "s hit", "s.o.b.", "sadist", "schlong", "screwing", 
-                "scroat", "scrote", "scrotum", "semen", "sh!+", "sh!t", "sh1t", "shag", "shagger", "shaggin", 
+                "scroat", "scrote", "scrotum", "semen", "sh!+", "sh!t", "sh1t", "shag", "shagger", "shaggin", "arsch",
                 "shagging", "shemale", "shit", "shitdick", "shite", "shited", "shitey", "shitfuck", "shitfull", "shithead", 
                 "shiting", "shitings", "shits", "shitted", "shitter", "shitters", "shitting", "shittings", "shitty", 
                 "skank", "slut", "sluts", "smegma", "smut", "snatch", "spac", "spunk", "s_h_i_t", "t1tt1e5", "t1tties", 
                 "teets", "teez", "testical", "testicle", "tit", "titfuck", "tits", "titt", "ittie5", "ittiefucker", 
                 "titties", "tittyfuck", "tittywank", "titwank", "tosser", "turd", "w4t", "twat", "twathead", "twatty", 
                 "twunt", "twunter", "v14gra", "v1gra", "vagina", "viagra", "vulva", "w00se", "wang", "wank", "wanker", 
-                "wanky", "whoar", "whore", "willies", "willy", "xrated", "xxx", "noob", "nap", "suck", "fuck", "reported"
+                "wanky", "whoar", "whore", "willies", "willy", "xrated", "xxx", "noob", "nap", "suck", "fuck", "report"
             };
             #endregion
             #region dontflame
@@ -105,38 +105,42 @@ namespace RageBlock
                                     "You want skins do you?"
                                  };
             #endregion
-            ArrayList muted = new ArrayList();
+            List<string> muted = new List<string>();
+            //ArrayList muted = new ArrayList();
             var wuu = dontFlame[new Random().Next(0, dontFlame.Length)];
             foreach (string item in args.Message.Split(' '))
             {
+
                 if (flame.Any(args.Message.Contains))
                 {
                     if (args.Sender.IsMe)
                     {
                         args.Process = false;
                         Notifications.AddNotification(new Notification(wuu, 3500).SetTextColor(Color.OrangeRed).SetBoxColor(Color.Black));
-                        break;
-
                     }
-                    if (!muted.Contains(args.Sender.Name))
+
+                    if (!muted.Any(str => str.Contains(args.Sender.Name)) && !args.Sender.IsMe)
                     {
-                        if (!args.Sender.IsMe) return;
                         Utility.DelayAction.Add(new Random().Next(127, 723), () => Game.Say("/mute " + args.Sender.Name));
                         Notifications.AddNotification(new Notification(args.Sender.Name + " has been muted.", 3500).SetTextColor(Color.OrangeRed).SetBoxColor(Color.Black));
                         muted.Add(args.Sender.Name);
                         Console.WriteLine("[" + timeStamp + "]: " + args.Sender.Name + " has been muted.");
-                        Console.WriteLine("[" + timeStamp + "]: Mute list:" + muted);
-                        break;
+                        Console.WriteLine("[" + timeStamp + "]: Mute list:");
+                        foreach (string banned in muted)
+                        {
+                            Console.WriteLine(banned);
+                        }
                     }
                 }
+                /*
                 if (("sorry, sry").Any(args.Message.Contains) && muted.Contains(args.Sender.Name))
                 {
                     Utility.DelayAction.Add(new Random().Next(127, 723), () => Game.Say("/mute " + args.Sender.Name));
                     muted.Remove(args.Sender.Name);
                     Console.WriteLine("[" + timeStamp + "]: " + args.Sender.Name + " has been unmuted.");
                     Console.WriteLine("[" + timeStamp + "]: Mute list:" + muted);
-                    break;
                 }
+                */
             }
         }
 

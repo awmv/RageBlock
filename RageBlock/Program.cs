@@ -163,9 +163,9 @@ namespace RageBlock
 
         #region Activator
         public static Items.Item
-            Mikaels = new Items.Item(3222, 600f), Quicksilver = new Items.Item(3140, 0), Mercurial = new Items.Item(3139, 0),
-            Dervish = new Items.Item(3137, 0), Potion = new Items.Item(2003, 0), ManaPotion = new Items.Item(2004, 0),
-            Flask = new Items.Item(2041, 0), Biscuit = new Items.Item(2010, 0);
+        Mikaels = new Items.Item(3222, 600f), Quicksilver = new Items.Item(3140, 0), Mercurial = new Items.Item(3139, 0),
+        Dervish = new Items.Item(3137, 0), Potion = new Items.Item(2003, 0), ManaPotion = new Items.Item(2004, 0),
+        Flask = new Items.Item(2041, 0), Biscuit = new Items.Item(2010, 0);
 
         private static void Cleanse()
         {
@@ -180,12 +180,9 @@ namespace RageBlock
             var rnd = new Random();
             int from = (int)(ObjectManager.Player.HealthPercent * 0.15);
             int till = from + 37;
-            if (Entry != Mikaels)
-            {
+            if (Entry != Mikaels) {
                 Utility.DelayAction.Add(rnd.Next(from, till), () => Entry.Cast());
-            }
-            else
-            {
+            } else {
                 Utility.DelayAction.Add(rnd.Next(from, till), () => Entry.Cast(ObjectManager.Player));
             }
         }

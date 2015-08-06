@@ -41,11 +41,18 @@
     <Reference Include="LeagueSharp.Common">
       <HintPath>E:\LeagueSharp\System\LeagueSharp.Common.dll</HintPath>
     </Reference>
+    <Reference Include="LeagueSharp.SDK">
+      <HintPath>E:\LeagueSharp\System\LeagueSharp.SDK.dll</HintPath>
+    </Reference>
     <Reference Include="SFXLibrary">
       <HintPath>E:\LeagueSharp\System\SFXLibrary.dll</HintPath>
     </Reference>
     <Reference Include="SharpDX">
       <HintPath>E:\LeagueSharp\System\SharpDX.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.Direct3D9, Version=2.6.3.0, Culture=neutral, PublicKeyToken=345b829e6e492981, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\LeagueSharp\System\SharpDX.Direct3D9.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

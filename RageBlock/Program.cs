@@ -6,8 +6,13 @@ using LeagueSharp;
 using LeagueSharp.Common;
 using System.IO;
 using SharpDX;
+using SharpDX.Direct3D9;
 using Color = System.Drawing.Color;
 using System.Collections;
+using SFXLibrary;
+using SFXLibrary.Extensions.NET;
+using SFXLibrary.Extensions.SharpDX;
+using SFXLibrary.Logger;
 
 namespace RageBlock
 {
@@ -15,37 +20,21 @@ namespace RageBlock
     {
         public static Menu M;
 
+        static List<string> muted = new List<string>();
+        static List<string> todoList = new List<string>();
+        static String timeStamp = GetTimestamp(DateTime.Now);
+        private static string[] flame;
+        private static string[] neverflame;
+        public static Orbwalking.Orbwalker Orbwalker;
+
+        public static Items.Item Mikaels = new Items.Item(3222, 600f), Quicksilver = new Items.Item(3140, 0),
+            Mercurial = new Items.Item(3139, 0), Dervish = new Items.Item(3137, 0), Potion = new Items.Item(2003, 0),
+            ManaPotion = new Items.Item(2004, 0), Flask = new Items.Item(2041, 0), Biscuit = new Items.Item(2010, 0);
+
         static void Main(string[] args)
         {
-            CustomEvents.Game.OnGameLoad += Game_OnGameLoad;
-        }
-
-        private static void Game_OnGameLoad(EventArgs args)
-        {
-            #region menu
-            var r = "RageBlock";
-            M = new Menu(r, r, true);
-            M.AddItem(new MenuItem("Status", "Enable").SetValue(true));
-
-            M.AddToMainMenu();
-            #endregion
-
-            Game.OnUpdate += Game_OnUpdate;
-            Game.OnChat += Game_OnChat;
-            Console.WriteLine("[" + r + "]" + " has been loaded.");
-        }
-
-        public static String GetTimestamp(DateTime value)
-        {
-            return value.ToString("HH:mm");
-        }
-
-        private static void Game_OnChat(GameChatEventArgs args)
-        {
-            if (!M.Item("Status").GetValue<bool>()) return;
-            String timeStamp = GetTimestamp(DateTime.Now);
             #region flame
-            string[] flame = {
+            flame = new string[] {
 	            "bronze", "silver", "gold", "platinum", "plat", "diamond", "master", "challenger", "feed", "retard", "ks", 
                 "killsteal", "on purpose", "fu", "fail", "failed", "bad", "gank", "camped", "stupid", "anal", "anus", "arrse", 
                 "arse", "ass-fucker", "assfucker", "assfukka", "asshole", "assholes", "asswhole", "mutter", "mother", 
@@ -67,7 +56,7 @@ namespace RageBlock
                 "fingerfuck", "fingerfucked", "fingerfucker", "fingerfuckers", "fingerfucking", "fingerfucks", "fistfuck", 
                 "fistfucked", "fistfucker", "fistfuckers", "fistfucking", "fistfuckings", "fistfucks", "flange", "fook", 
                 "fooker", "fuck", "fucka", "fucked", "fucker", "fuckers", "fuckhead", "fuckheads", "fuckin", "fucking", 
-                "fuckings", "fuckingshitmotherfucker", "fuckme", "fucks", "fuckwhit", "fuckwit", "fudge packer", 
+                "fuckings", "fuckingshitmotherfucker", "fuckme", "fucks", "fuckwhit", "fuckwit", "fudge packer", "ass",
                 "fudgepacker", "fuk", "fuker", "fukker", "fukkin", "fuks", "fukwhit", "fukwit", "fux", "fux0r", "f_u_c_k", 
                 "gangbang", "gangbanged", "gangbangs", "gaylord", "gaysex", "goatse", "God", "god-dam", "god-damned", 
                 "goddamn", "goddamned", "hardcoresex", "hell", "heshe", "hoar", "hoare", "hoer", "homo", "hore", "fick",
@@ -78,10 +67,10 @@ namespace RageBlock
                 "masterb8", "masterbat*", "masterbat3", "masterbate", "masterbation", "masterbations", "masturbate", 
                 "mo-fo", "mof0", "mofo", "mothafuck", "mothafucka", "mothafuckas", "mothafuckaz", "mothafucked", 
                 "mothafucker", "mothafuckers", "mothafuckin", "mothafucking", "mothafuckings", "mothafucks", "mother fucker", 
-                "motherfuck", "motherfucked", "motherfucker", "motherfuckers", "motherfuckin", "motherfucking", 
+                "motherfuck", "motherfucked", "motherfucker", "motherfuckers", "motherfuckin", "motherfucking", "stupid",
                 "motherfuckings", "motherfuckka", "motherfucks", "muff", "mutha", "muthafecker", "muthafuckker", "muther", 
                 "mutherfucker", "n1gga", "n1gger", "nazi", "nigg3r", "nigg4h", "nigga", "niggah", "niggas", "niggaz", 
-                "nigger", "niggers", "nob", "nob jokey", "nobhead", "nobjocky", "nobjokey", "numbnuts", "nutsack", 
+                "nigger", "niggers", "nob", "nob jokey", "nobhead", "nobjocky", "nobjokey", "numbnuts", "nutsack", "***",
                 "orgasim", "orgasims", "orgasm", "orgasms", "p0rn", "pawn", "pecker", "penis", "penisfucker", "phonesex", 
                 "phuck", "phuk", "phuked", "phuking", "phukked", "phukking", "phuks", "phuq", "pigfucker", "pimpis", 
                 "piss", "pissed", "pisser", "pissers", "pisses", "pissflaps", "pissin", "pissing", "pissoff", "poop", 
@@ -97,56 +86,142 @@ namespace RageBlock
                 "wanky", "whoar", "whore", "willies", "willy", "xrated", "xxx", "noob", "nap", "suck", "fuck", "report"
             };
             #endregion
-            #region dontflame
-            string[] dontFlame = {
+            #region neverflame
+            neverflame = new string[] {
                                     "You should not flame sweety",
                                     "Gotcha, next time maybe.",
                                     "Hey! You know why, do you?",
                                     "You want skins do you?"
                                  };
             #endregion
-            List<string> muted = new List<string>();
-            //ArrayList muted = new ArrayList();
-            var wuu = dontFlame[new Random().Next(0, dontFlame.Length)];
-            foreach (string item in args.Message.Split(' '))
-            {
+            CustomEvents.Game.OnGameLoad += Game_OnGameLoad;
+        }
 
-                if (flame.Any(args.Message.Contains))
+        private static void Game_OnGameLoad(EventArgs args)
+        {
+            #region menu
+            var r = "RageBlock";
+            M = new Menu(r, r, true);
+            M.AddItem(new MenuItem("Status", "Enable").SetValue(true));
+            M.AddItem(new MenuItem("Activator", "Cleanse").SetValue(true));
+
+            M.AddToMainMenu();
+            #endregion
+            Game.OnUpdate += Game_OnUpdate;
+            Game.OnChat += Game_OnChat;
+            ConsoleLog("has been loaded.");
+        }
+
+        public static String GetTimestamp(DateTime value)
+        {
+            return value.ToString("HH:mm");
+        }
+
+        private static void ConsoleLog(string Value)
+        {
+            Console.WriteLine("[" + timeStamp + "] RageBlock " + Value);
+        }
+
+        private static void Cleanse()
+        {
+            if (Quicksilver.IsReady()) DelayCleanse(Quicksilver);
+            else if (Mikaels.IsReady()) DelayCleanse(Mikaels);
+            else if (Mercurial.IsReady()) DelayCleanse(Mercurial);
+            else if (Dervish.IsReady()) DelayCleanse(Dervish);
+        }
+
+        private static void DelayCleanse(Items.Item Entry)
+        {
+            var rnd = new Random();
+            int from = (int)ObjectManager.Player.HealthPercent;
+            int till = from + 37;
+            if (Entry != Mikaels) {
+                Utility.DelayAction.Add(rnd.Next(from, till), () => Entry.Cast());
+            } else            {
+                Utility.DelayAction.Add(rnd.Next(from, till), () => Entry.Cast(ObjectManager.Player));
+            }
+        }
+         
+        private static void Cleansers()
+        {
+            /*
+             * Based on OneKeyToWin/LeagueRepo/OneKeyToWin_AIO_Sebby/OneKeyToWin_AIO_Sebby/Core/Activator.cs
+             */
+            if (!M.Item("Activator").GetValue<bool>()) return;
+            if (!Quicksilver.IsReady() && !Mikaels.IsReady() && !Mercurial.IsReady() && !Dervish.IsReady())
+                return;
+
+            if (ObjectManager.Player.HasBuff("ZedUltTargetmark") ||
+                ObjectManager.Player.HasBuff("FizzMarinerDoom") ||
+                ObjectManager.Player.HasBuff("MordekaiserChildrenOfTheGrave") ||
+                ObjectManager.Player.HasBuff("PoppyDiplomaticImmunity") ||
+                ObjectManager.Player.HasBuff("VladimirHemoplague") ||
+                ObjectManager.Player.HasBuffOfType(BuffType.Charm) ||
+                ObjectManager.Player.HasBuffOfType(BuffType.Fear) ||
+                ObjectManager.Player.HasBuffOfType(BuffType.Polymorph) ||
+                ObjectManager.Player.HasBuffOfType(BuffType.Snare) ||
+                ObjectManager.Player.HasBuffOfType(BuffType.Stun) ||
+                ObjectManager.Player.HasBuffOfType(BuffType.Suppression) ||
+                ObjectManager.Player.HasBuffOfType(BuffType.Taunt))
+                Cleanse();
+        }
+
+        private static void Game_OnChat(GameChatEventArgs args)
+        {
+            if (!M.Item("Status").GetValue<bool>()) return;
+            var someAdvice = neverflame[new Random().Next(0, neverflame.Length)];
+            if (args.Sender.IsMe)
+            {
+                foreach (string item in args.Message.Split(' '))
                 {
-                    if (args.Sender.IsMe)
+                    if (flame.Any(item.Contains))
                     {
                         args.Process = false;
-                        Notifications.AddNotification(new Notification(wuu, 3500).SetTextColor(Color.OrangeRed).SetBoxColor(Color.Black));
-                    }
-
-                    if (!muted.Any(str => str.Contains(args.Sender.Name)) && !args.Sender.IsMe)
-                    {
-                        Utility.DelayAction.Add(new Random().Next(127, 723), () => Game.Say("/mute " + args.Sender.Name));
-                        Notifications.AddNotification(new Notification(args.Sender.Name + " has been muted.", 3500).SetTextColor(Color.OrangeRed).SetBoxColor(Color.Black));
-                        muted.Add(args.Sender.Name);
-                        Console.WriteLine("[" + timeStamp + "]: " + args.Sender.Name + " has been muted.");
-                        Console.WriteLine("[" + timeStamp + "]: Mute list:");
-                        foreach (string banned in muted)
-                        {
-                            Console.WriteLine(banned);
-                        }
+                        ConsoleLog(someAdvice);
+                        Notifications
+                            .AddNotification(new Notification(someAdvice, 3500)
+                            .SetTextColor(Color.OrangeRed)
+                            .SetBoxColor(Color.Black));
+                        break;
                     }
                 }
-                /*
-                if (("sorry, sry").Any(args.Message.Contains) && muted.Contains(args.Sender.Name))
+                //var firstMatch = args.Message.Split(' ').FirstOrDefault(w => flame.Contains(w));
+                //if (firstMatch != null)
+                //{
+                //    args.Process = false;
+                //    ConsoleLog(someAdvice);
+                //    Notifications
+                //        .AddNotification(new Notification(someAdvice, 3500)
+                //        .SetTextColor(Color.OrangeRed)
+                //        .SetBoxColor(Color.Black));
+                //}
+            }
+            if (!args.Sender.IsMe)
+            {
+                foreach (string item in args.Message.Split(' '))
                 {
-                    Utility.DelayAction.Add(new Random().Next(127, 723), () => Game.Say("/mute " + args.Sender.Name));
-                    muted.Remove(args.Sender.Name);
-                    Console.WriteLine("[" + timeStamp + "]: " + args.Sender.Name + " has been unmuted.");
-                    Console.WriteLine("[" + timeStamp + "]: Mute list:" + muted);
+                    if (!muted.Any(str => str.Contains(args.Sender.Name)) && flame.Any(item.Contains))
+                    {
+                        muted.Add(args.Sender.Name);
+                        Utility.DelayAction.Add(new Random().Next(127, 723), () => Game.Say("/mute " + args.Sender.Name));                        
+                        ConsoleLog("has been muted");
+                        Notifications
+                            .AddNotification(new Notification(args.Sender.Name + " has been muted.", 3500)
+                            .SetTextColor(Color.OrangeRed)
+                            .SetBoxColor(Color.Black));
+                        break;
+                    }
                 }
-                */
             }
         }
 
         private static void Game_OnUpdate(EventArgs args)
         {
-        
+            Cleansers();
+            //if (!todoList.Any(str => str.Contains(args.Sender.Name)) && Orbwalker.ActiveMode != Orbwalking.OrbwalkingMode.None)
+            //{
+            //    todoList.Add(args.Sender.Name);
+            //}
         }
     }
 }

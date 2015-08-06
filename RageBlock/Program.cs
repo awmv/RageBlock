@@ -23,11 +23,6 @@ namespace RageBlock
         private static string[] neverflame;
         public static Orbwalking.Orbwalker Orbwalker;
 
-        public static Items.Item 
-            Mikaels = new Items.Item(3222, 600f), Quicksilver = new Items.Item(3140, 0), Mercurial = new Items.Item(3139, 0), 
-            Dervish = new Items.Item(3137, 0), Potion = new Items.Item(2003, 0), ManaPotion = new Items.Item(2004, 0), 
-            Flask = new Items.Item(2041, 0), Biscuit = new Items.Item(2010, 0);
-
         static void Main(string[] args)
         {
             #region Flame
@@ -167,6 +162,11 @@ namespace RageBlock
         }
 
         #region Activator
+        public static Items.Item
+            Mikaels = new Items.Item(3222, 600f), Quicksilver = new Items.Item(3140, 0), Mercurial = new Items.Item(3139, 0),
+            Dervish = new Items.Item(3137, 0), Potion = new Items.Item(2003, 0), ManaPotion = new Items.Item(2004, 0),
+            Flask = new Items.Item(2041, 0), Biscuit = new Items.Item(2010, 0);
+
         private static void Cleanse()
         {
             if (Quicksilver.IsReady()) DelayCleanse(Quicksilver);

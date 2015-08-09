@@ -76,7 +76,7 @@ namespace RageBlock
             };
             #endregion
             #region Jokes
-            neverflame = new string[] {
+            neverFlame = new string[] {
                 //"You should not flame sweety.", "Gotcha, next time maybe.", "Stop it.", "You want skins do you?", 
                 "Trundle never ceases to be amazed about how everyone on the internet knows he's a troll.",
                 "Mordekaiser really hates airport security.", 

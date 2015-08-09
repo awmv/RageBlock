@@ -9,6 +9,7 @@ using SharpDX;
 using SharpDX.Direct3D9;
 using Color = System.Drawing.Color;
 using System.Collections;
+using System.Text.RegularExpressions;
 
 namespace RageBlock
 {
@@ -35,7 +36,7 @@ namespace RageBlock
                 "blowjobs", "boiolas", "bollock", "bollok", "boner", "buceta", "bugger", "bum", "bunny fucker", "hure", 
                 "lappen", "dumm", "dämlich", "missgeburt", "butthole", "buttmuch", "buttplug", "c0ck", "c0cksucker", 
                 "carpet muncher", "cawk", "chink", "cipa", "cl1t", "clit", "clitoris", "clits", "cnut", "cock", "cock-sucker", 
-                "cockface", "cockhead", "cockmunch", "cockmuncher", "cocks", "cocksuck", "cocksucked", "cocksucker", 
+                "cockface", "cockhead", "cockmunch", "cockmuncher", "cocks", "cocksuck", "cocksucked", "cocksucker", "smurf",
                 "cocksucking", "cocksucks", "cocksuka", "cocksukka", "cok", "cokmuncher", "coksucka", "coon", "cox", "crap", 
                 "cum", "cummer", "cumming", "cums", "cumshot", "cunilingus", "cunillingus", "cunnilingus", "cunt", "cuntlick", 
                 "cuntlicker", "cuntlicking", "cunts", "cyalis", "cyberfuc", "cyberfuck", "cyberfucked", "cyberfucker", 
@@ -61,7 +62,7 @@ namespace RageBlock
                 "motherfucking", "stupid", "motherfuckings", "motherfuckka", "motherfucks", "muff", "mutha", "muthafecker", 
                 "muthafuckker", "muther", "mutherfucker", "n1gga", "n1gger", "nazi", "nigg3r", "nigg4h", "nigga", "niggah",
                 "niggas", "niggaz", "nigger", "niggers", "nob", "nob jokey", "nobhead", "nobjocky", "nobjokey", "numbnuts", 
-                "nutsack", "***", "orgasim", "orgasims", "orgasm", "orgasms", "p0rn", "pawn", "pecker", "penis", "penisfucker", 
+                "nutsack", "orgasim", "orgasims", "orgasm", "orgasms", "p0rn", "pawn", "pecker", "penis", "penisfucker", 
                 "phonesex", "phuck", "phuk", "phuked", "phuking", "phukked", "phukking", "phuks", "phuq", "pigfucker", "pimpis", 
                 "piss", "pissed", "pisser", "pissers", "pisses", "pissflaps", "pissin", "pissing", "pissoff", "poop", 
                 "porn", "porno", "pornography", "pornos", "prick", "pricks", "pron", "pube", "pusse", "pussi", "pussies", 
@@ -122,27 +123,33 @@ namespace RageBlock
             Game.PrintChat("[" + timeStamp + "] <font color='#eb7577'>RageBlock</font>: " + Value);
         }
 
-        private static void Game_OnChat(GameChatEventArgs args)
-        {
-            if (!M.Item("Status").GetValue<bool>()) return;
-            var someAdvice = neverflame[new Random().Next(0, neverflame.Length)];
+       //static List<string> getRegex() {
+       //     foreach (string value in flame)
+       //     {
+       //         regex.Add("\\|" + value);
+       //     }
+       //     return regex;
+       // }
 
+        private static void Game_OnChat(GameChatEventArgs args)
+        {            
+            if (!M.Item("Status").GetValue<bool>()) return;
             if (!args.Sender.IsMe)
             {
-                foreach (string item in args.Message.Split(' '))
+                var join = string.Join("|\\b", flame);
+                Regex regex = new Regex(join, RegexOptions.IgnoreCase);
+                Match match = regex.Match(args.Message);
+                if (match.Success)
                 {
-                    if (!muted.Any(str => str.Contains(args.Sender.Name)) && flame.Any(item.Contains))
-                    {
-                        muted.Add(args.Sender.Name);
-                        Utility.DelayAction.Add(new Random().Next(127, 723), () => Game.Say("/mute " + args.Sender.Name));                        
-                        //Log(args.Sender.ChampionName + " has been muted");
-                        Notifications
-                            .AddNotification(new Notification(args.Sender.ChampionName + " has been muted.", 3500)
-                            .SetTextColor(Color.OrangeRed)
-                            .SetBoxColor(Color.Black));
-                        break;
-                    }
+                    muted.Add(args.Sender.Name);
+                    Utility.DelayAction.Add(new Random().Next(127, 723), () => Game.Say("/mute " + args.Sender.Name));                        
+                    //Log(args.Sender.ChampionName + " has been muted");
+                    Notifications
+                        .AddNotification(new Notification(args.Sender.ChampionName + " has been muted.", 3500)
+                        .SetTextColor(Color.OrangeRed)
+                        .SetBoxColor(Color.Black));
                 }
+
             }
         }
 
@@ -150,26 +157,14 @@ namespace RageBlock
         {
             if (!M.Item("Status").GetValue<bool>()) return;
             var someAdvice = neverflame[new Random().Next(0, neverflame.Length)];
-
-                foreach (string item in args.Input.Split(' '))
-                {
-                    if (flame.Any(item.Contains))
-                    {
-                        args.Process = false;
-                        Log(someAdvice);
-                        break;
-                    }
-                }
-                //var firstMatch = args.Message.Split(' ').FirstOrDefault(w => flame.Contains(w));
-                //if (firstMatch != null)
-                //{
-                //    args.Process = false;
-                //    ConsoleLog(someAdvice);
-                //    Notifications
-                //        .AddNotification(new Notification(someAdvice, 3500)
-                //        .SetTextColor(Color.OrangeRed)
-                //        .SetBoxColor(Color.Black));
-                //}
+            var join = string.Join("|\\b", flame);
+            Regex regex = new Regex(join, RegexOptions.IgnoreCase);
+            Match match = regex.Match(args.Input);
+            if (match.Success)
+            {
+                args.Process = false;
+                Log(someAdvice);
+            }
         }
 
         private static void Game_OnUpdate(EventArgs args)

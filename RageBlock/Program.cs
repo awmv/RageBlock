@@ -32,7 +32,7 @@ namespace RageBlock
                 "ballsack", "bastard", "beastial", "beastiality", "scrub", "bellend", "bestial", "bestiality", "bi+ch", 
                 "biatch", "bitch", "bitcher", "bitchers", "bitches", "bitchin", "bitching", "bloody", "blow job", "blowjob",
                 "blowjobs", "boiolas", "bollock", "bollok", "boner", "buceta", "bugger", "bum", "bunny fucker", "hure", 
-                "lappen", "dumm", "dämlich", "missgeburt", "butthole", "buttmuch", "buttplug", "c0ck", "c0cksucker", 
+                "lappen", "dumm", "dämlich", "missgeburt", "butthole", "buttmuch", "buttplug", "c0ck", "c0cksucker", "stfu",
                 "carpet muncher", "cawk", "chink", "cipa", "cl1t", "clit", "clitoris", "clits", "cnut", "cock", "cock-sucker", 
                 "cockface", "cockhead", "cockmunch", "cockmuncher", "cocks", "cocksuck", "cocksucked", "cocksucker", "smurf",
                 "cocksucking", "cocksucks", "cocksuka", "cocksukka", "cok", "cokmuncher", "coksucka", "coon", "cox", "crap", 

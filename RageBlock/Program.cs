@@ -18,11 +18,9 @@ namespace RageBlock
         public static Menu M;
 
         static List<string> muted = new List<string>();
-        static List<string> todoList = new List<string>();
         static String timeStamp = GetTimestamp(DateTime.Now);
         private static string[] flame;
-        private static string[] neverflame;
-        public static Orbwalking.Orbwalker Orbwalker;
+        private static string[] neverFlame;
 
         static void Main(string[] args)
         {
@@ -107,7 +105,6 @@ namespace RageBlock
             var r = "RageBlock";
             M = new Menu(r, r, true);
             M.AddItem(new MenuItem("Status", "Enable").SetValue(true));
-            M.AddItem(new MenuItem("Activator", "Cleanse").SetValue(true));
 
             M.AddToMainMenu();
             #endregion
@@ -128,8 +125,7 @@ namespace RageBlock
             if (!M.Item("Status").GetValue<bool>()) return;
             if (!args.Sender.IsMe)
             {
-                var join = string.Join("|\\b", flame);
-                Regex regex = new Regex(join, RegexOptions.IgnoreCase);
+                Regex regex = new Regex(string.Join("|\\b", flame), RegexOptions.IgnoreCase);
                 Match match = regex.Match(args.Message);
                 if (match.Success)
                 {
@@ -147,71 +143,15 @@ namespace RageBlock
         private static void Game_OnInput(GameInputEventArgs args)
         {
             if (!M.Item("Status").GetValue<bool>()) return;
-            var someAdvice = neverflame[new Random().Next(0, neverflame.Length)];
-            var join = string.Join("|\\b", flame);
-            Regex regex = new Regex(join, RegexOptions.IgnoreCase);
+            Regex regex = new Regex(string.Join("|\\b", flame), RegexOptions.IgnoreCase);
             Match match = regex.Match(args.Input);
             if (match.Success)
             {
                 args.Process = false;
-                Log(someAdvice);
+                Log(neverFlame[new Random().Next(0, neverFlame.Length)]);
             }
         }
 
-        private static void Game_OnUpdate(EventArgs args)
-        {
-            Cleansers();
-        }
-
-        #region Activator
-        public static Items.Item
-        Mikaels = new Items.Item(3222, 600f), Quicksilver = new Items.Item(3140, 0), Mercurial = new Items.Item(3139, 0),
-        Dervish = new Items.Item(3137, 0), Potion = new Items.Item(2003, 0), ManaPotion = new Items.Item(2004, 0),
-        Flask = new Items.Item(2041, 0), Biscuit = new Items.Item(2010, 0);
-
-        private static void Cleanse()
-        {
-            if (Quicksilver.IsReady()) DelayCleanse(Quicksilver);
-            if (Mikaels.IsReady()) DelayCleanse(Mikaels);
-            if (Mercurial.IsReady()) DelayCleanse(Mercurial);
-            if (Dervish.IsReady()) DelayCleanse(Dervish);
-        }
-
-        private static void DelayCleanse(Items.Item Entry)
-        {
-            var rnd = new Random();
-            int from = (int)(ObjectManager.Player.HealthPercent * 0.15);
-            int till = from + 37;
-            if (Entry != Mikaels) {
-                Utility.DelayAction.Add(rnd.Next(from, till), () => Entry.Cast());
-            } else {
-                Utility.DelayAction.Add(rnd.Next(from, till), () => Entry.Cast(ObjectManager.Player));
-            }
-        }
-
-        private static void Cleansers()
-        {
-            /*
-             * Based on OneKeyToWin/LeagueRepo/OneKeyToWin_AIO_Sebby/OneKeyToWin_AIO_Sebby/Core/Activator.cs
-             */
-            if (!M.Item("Activator").GetValue<bool>()) return;
-            if (!Quicksilver.IsReady() && !Mikaels.IsReady() && !Mercurial.IsReady() && !Dervish.IsReady())
-                return;
-
-            if (ObjectManager.Player.HasBuff("ZedUltTargetmark") ||
-                ObjectManager.Player.HasBuff("FizzMarinerDoom") ||
-                ObjectManager.Player.HasBuff("MordekaiserChildrenOfTheGrave") ||
-                ObjectManager.Player.HasBuff("PoppyDiplomaticImmunity") ||
-                ObjectManager.Player.HasBuff("VladimirHemoplague") ||
-                ObjectManager.Player.HasBuffOfType(BuffType.Charm) ||
-                ObjectManager.Player.HasBuffOfType(BuffType.Fear) ||
-                ObjectManager.Player.HasBuffOfType(BuffType.Polymorph) ||
-                ObjectManager.Player.HasBuffOfType(BuffType.Snare) ||
-                ObjectManager.Player.HasBuffOfType(BuffType.Stun) ||
-                ObjectManager.Player.HasBuffOfType(BuffType.Suppression) ||
-                ObjectManager.Player.HasBuffOfType(BuffType.Taunt))
-                Cleanse();
-        }
-        #endregion
+        private static void Game_OnUpdate(EventArgs args) {}
     }
 }

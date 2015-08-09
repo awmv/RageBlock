@@ -119,17 +119,9 @@ namespace RageBlock
         public static String GetTimestamp(DateTime value) { return value.ToString("HH:mm"); }
 
         private static void Log(string Value) { 
-            Console.WriteLine("[" + timeStamp + "] RageBlock " + Value);
+            //Console.WriteLine("[" + timeStamp + "] RageBlock " + Value);
             Game.PrintChat("[" + timeStamp + "] <font color='#eb7577'>RageBlock</font>: " + Value);
         }
-
-       //static List<string> getRegex() {
-       //     foreach (string value in flame)
-       //     {
-       //         regex.Add("\\|" + value);
-       //     }
-       //     return regex;
-       // }
 
         private static void Game_OnChat(GameChatEventArgs args)
         {            
@@ -143,7 +135,6 @@ namespace RageBlock
                 {
                     muted.Add(args.Sender.Name);
                     Utility.DelayAction.Add(new Random().Next(127, 723), () => Game.Say("/mute " + args.Sender.Name));                        
-                    //Log(args.Sender.ChampionName + " has been muted");
                     Notifications
                         .AddNotification(new Notification(args.Sender.ChampionName + " has been muted.", 3500)
                         .SetTextColor(Color.OrangeRed)
@@ -170,10 +161,6 @@ namespace RageBlock
         private static void Game_OnUpdate(EventArgs args)
         {
             Cleansers();
-            //if (!todoList.Any(str => str.Contains(args.Sender.Name)) && Orbwalker.ActiveMode != Orbwalking.OrbwalkingMode.None)
-            //{
-            //    todoList.Add(args.Sender.Name);
-            //}
         }
 
         #region Activator

@@ -9,6 +9,5 @@ C:\Users\step\Documents\Repositories\stepsharp\RageBlock\bin\Release\SharpDX.dll
 C:\Users\step\Documents\Repositories\stepsharp\RageBlock\bin\Release\clipper_library.dll
 C:\Users\step\Documents\Repositories\stepsharp\RageBlock\bin\Release\LeagueSharp.Sandbox.dll
 C:\Users\step\Documents\Repositories\stepsharp\RageBlock\bin\Release\LeagueSharp.xml
-C:\Users\step\Documents\Repositories\stepsharp\RageBlock\obj\Debug\RageBlock.csprojResolveAssemblyReference.cache
 C:\Users\step\Documents\Repositories\stepsharp\RageBlock\obj\Debug\RageBlock.exe
 C:\Users\step\Documents\Repositories\stepsharp\RageBlock\obj\Debug\RageBlock.pdb

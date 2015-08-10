@@ -14,13 +14,12 @@ using System.Text.RegularExpressions;
 namespace RageBlock
 {
     class Program
-    {
-        public static Menu M;
-
+    {        
+        static Menu M;
         static List<string> muted = new List<string>();
         static String timeStamp = GetTimestamp(DateTime.Now);
-        private static string[] flame;
-        private static string[] neverFlame;
+        static string[] flame;
+        static string[] neverFlame;
 
         static void Main(string[] args)
         {
@@ -112,10 +111,9 @@ namespace RageBlock
             Game.OnInput += Game_OnInput;
         }
 
-        public static String GetTimestamp(DateTime value) { return value.ToString("HH:mm"); }
+        private static String GetTimestamp(DateTime value) { return value.ToString("HH:mm"); }
 
         private static void Log(string Value) { 
-            //Console.WriteLine("[" + timeStamp + "] RageBlock " + Value);
             Game.PrintChat("[" + timeStamp + "] <font color='#eb7577'>RageBlock</font>: " + Value);
         }
 
@@ -135,7 +133,6 @@ namespace RageBlock
                         .SetTextColor(Color.OrangeRed)
                         .SetBoxColor(Color.Black));
                 }
-
             }
         }
 

@@ -104,7 +104,6 @@ namespace RageBlock
             var r = "RageBlock";
             M = new Menu(r, r, true);
             M.AddItem(new MenuItem("Status", "Enable").SetValue(true));
-
             M.AddToMainMenu();
             #endregion
             Game.OnChat += Game_OnChat;

@@ -2,5 +2,6 @@
 **/obj
 **/Debug
 **/.vs
+**/.git
+**/*.v12.sou
 .git
-

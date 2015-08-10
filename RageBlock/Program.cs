@@ -108,7 +108,6 @@ namespace RageBlock
 
             M.AddToMainMenu();
             #endregion
-            Game.OnUpdate += Game_OnUpdate;
             Game.OnChat += Game_OnChat;
             Game.OnInput += Game_OnInput;
         }
@@ -151,7 +150,5 @@ namespace RageBlock
                 Log(neverFlame[new Random().Next(0, neverFlame.Length)]);
             }
         }
-
-        private static void Game_OnUpdate(EventArgs args) {}
     }
 }

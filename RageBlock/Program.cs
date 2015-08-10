@@ -1,14 +1,8 @@
 using System;
 using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
 using LeagueSharp;
 using LeagueSharp.Common;
-using System.IO;
-using SharpDX;
-using SharpDX.Direct3D9;
 using Color = System.Drawing.Color;
-using System.Collections;
 using System.Text.RegularExpressions;
 
 namespace RageBlock

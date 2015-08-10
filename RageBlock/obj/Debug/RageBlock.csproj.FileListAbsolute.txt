@@ -11,4 +11,3 @@ C:\Users\step\Documents\Repositories\stepsharp\RageBlock\bin\Release\LeagueSharp
 C:\Users\step\Documents\Repositories\stepsharp\RageBlock\bin\Release\LeagueSharp.xml
 C:\Users\step\Documents\Repositories\stepsharp\RageBlock\obj\Debug\RageBlock.exe
 C:\Users\step\Documents\Repositories\stepsharp\RageBlock\obj\Debug\RageBlock.pdb
-C:\Users\step\Documents\Repositories\stepsharp\RageBlock\obj\Debug\RageBlock.csprojResolveAssemblyReference.cache

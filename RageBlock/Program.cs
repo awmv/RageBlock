@@ -38,20 +38,17 @@ namespace RageBlock
 
         private static void Game_OnChat(GameChatEventArgs args)
         {
-            if (!M.Item("Status").GetValue<bool>()) return;
-            if (!args.Sender.IsMe)
+            if (!M.Item("Status").GetValue<bool>() && !args.Sender.IsMe) return;
+            Regex regex = new Regex(string.Join("|\\b", RageBlock.Rage.flame), RegexOptions.IgnoreCase);
+            Match match = regex.Match(args.Message);
+            if (match.Success)
             {
-                Regex regex = new Regex(string.Join("|\\b", RageBlock.Rage.flame), RegexOptions.IgnoreCase);
-                Match match = regex.Match(args.Message);
-                if (match.Success)
-                {
-                    muted.Add(args.Sender.Name);
-                    Utility.DelayAction.Add(new Random().Next(127, 723), () => Game.Say("/mute " + args.Sender.Name));                        
-                    Notifications
-                        .AddNotification(new Notification(args.Sender.ChampionName + " has been muted.", 3500)
-                        .SetTextColor(Color.OrangeRed)
-                        .SetBoxColor(Color.Black));
-                }
+                muted.Add(args.Sender.Name);
+                Utility.DelayAction.Add(new Random().Next(127, 723), () => Game.Say("/mute " + args.Sender.Name));
+                Notifications
+                    .AddNotification(new Notification(args.Sender.ChampionName + " has been muted.", 3500)
+                    .SetTextColor(Color.OrangeRed)
+                    .SetBoxColor(Color.Black));
             }
         }
 

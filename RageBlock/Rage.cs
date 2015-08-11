@@ -78,8 +78,8 @@
 "píčus", "píchat", "pizda", "prcat", "prdel", "prdelka", "sračka", "srát", "šoustat", "šulin", "zkurvit", "zkurvysyn", 
 "zmrd", "žrát", 
 //Danish
-"bøsserøv", "fisse", "fissehår", "hestepik", "kussekryller", "lort", "luder", "pik",
-"pikhår", "pikslugeri", "piksutteri", "pis", "røv", "røvhul", "røvskæg", "røvspræke", "negerpik", "svin", "lille luder", "din mor", "din far", "pik slikker",
+"bøsserøv", "fisse", "fissehår", "hestepik", "lort", "luder", "pik",
+"pikhår", "pis", "røv", "røvhul", "røvhår", "negerpik", "svin", "lille luder", "din mor", "din far", "pik slikker", "fede",
 //Vietnamese
 "con cac", "du ma", "du ma may", "con cho", "thang map", "may la con cac",
 //Dutch

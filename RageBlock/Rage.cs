@@ -49,7 +49,9 @@
 "titties", "tittyfuck", "tittywank", "titwank", "tosser", "turd", "w4t", "twat", "twathead", "twatty", "twunt", 
 "twunter", "v14gra", "v1gra", "vagina", "viagra", "vulva", "w00se", "wang", "wank", "wanker", "wanky", "whoar",
 "whore", "willies", "willy", "xrated", "xxx", "noob", "nap", "suck", "report", 
-//Chinese 
+/// <summary>
+/// Chinese
+/// </summary>
 "13.", "13点", "三级片", "下三烂", "下贱", "个老子的", "九游", "乳", "乳交", "乳头", "乳房", "乳波臀浪", "交配", "仆街", 
 "他奶奶", "他奶奶的", "他奶娘的", "他妈", "他妈ㄉ王八蛋", "他妈地", "他妈的", "他娘", "他马的", "你个傻比", "你他马的", 
 "你全家", "你奶奶的", "你她马的", "你妈", "你妈的", "你娘", "你娘卡好", "你娘咧", "你它妈的", "你它马的", "你是鸡", 
@@ -72,17 +74,25 @@
 "赛妳阿母", "赣您娘", "轮奸", "迷药", "逼", "逼样", "野鸡", "阳具", "阳萎", "阴唇", "阴户", "阴核", "阴毛", "阴茎", "阴道", 
 "阴部", "雞巴", "靠北", "靠母", "靠爸", "靠背", "靠腰", "驶你公", "驶你娘", "驶你母", "驶你爸", "驶你老师", "驶你老母", 
 "骚比", "骚货", "骚逼", "鬼公", "鸡8", "鸡八", "鸡叭", "鸡吧", "鸡奸", "鸡巴", "鸡芭", "鸡鸡", "龟儿子", "龟头", 
-//Czech
+/// <summary>
+/// Czech
+/// </summary>
 "bordel", "buzna", "čumět", "čurák", "debil", "do piče", "do prdele", "dršťka", "držka", "flundra", "hajzl", "hovno", 
 "chcanky", "chuj", "jebat", "kokot", "kokotina", "kunda", "kurva", "mamrd", "mrdat", "mrdka", "mrdník", "piča", 
 "píčus", "píchat", "pizda", "prcat", "prdel", "prdelka", "sračka", "srát", "šoustat", "šulin", "zkurvit", "zkurvysyn", 
 "zmrd", "žrát", 
-//Danish
+/// <summary>
+/// Danish
+/// </summary>
 "bøsserøv", "fisse", "fissehår", "hestepik", "lort", "luder", "pik",
 "pikhår", "pis", "røv", "røvhul", "røvhår", "negerpik", "svin", "lille luder", "din mor", "din far", "pik slikker", "fede",
-//Vietnamese
+/// <summary>
+/// Vietnamese
+/// </summary>
 "con cac", "du ma", "du ma may", "con cho", "thang map", "may la con cac",
-//Dutch
+/// <summary>
+/// Dutch
+/// </summary>
 "aardappels afgieteng", "achter het raam zitten", "afberen", "aflebberen", "afrossen", "afrukken", "aftrekken", 
 "afwerkplaats", "afzeiken", "afzuigen", "anderhalve man en een paardekop", "anita", "asbak", "aso", "bagger schijten", 
 "balen", "bedonderen", "befborstelg", "beffen", "bekken", "belazeren", "besodemieterd zijn", "besodemieteren", 
@@ -105,7 +115,9 @@
 "teringlijer", "toeter", "tongzoeng", "triootjeg", "trottoir prostituée", "trottoirteef", "utrecht", "vergallen", 
 "verkloten", "verneuken", "viespeuk", "vingeren", "vleesroos", "voor jan lul", "voor jan-met-de-korte-achternaam", "watje", 
 "welzijnsmafia", "wijf", "wippen", "wuftje", "zaadje", "zakkenwasser", "zeiken", "zeiker", "zuigen", "zuiplap", 
-//English
+/// <summary>
+/// English
+/// </summary>
 "2g1c", "2 girls 1 cup", "acrotomophilia", "alabama hot pocket", "alaskan pipeline", "anilingus", "arsehole", "assmunch", 
 "auto erotic", "autoerotic", "babeland", "baby batter", "baby juice", "ball gag", "ball gravy", "ball kicking",
 "ball licking", "ball sack", "ball sucking", "bangbros", "bareback", "barely legal", "barenaked", "bastardo", 
@@ -140,12 +152,16 @@
 "tushy", "twink", "twinkie", "two girls one cup", "undressing", "upskirt", "urethra play", "urophilia", "venus mound", 
 "vibrator", "violet blue", "violet wand", "vorarephilia", "voyeur", "wetback", "wet dream", "white power", 
 "women rapping", "wrapping men", "wrinkled starfish", "yaoi", "yellow showers", "yiffy", "zoophilia", 
-//Esperanto
+/// <summary>
+/// Esperanto
+/// </summary>
 "bugren", "bugri", "bugru", "ĉiesulino", "ĉiesulo", "diofek", "diofeka", "fek", "feken", "fekfikanto", "feklekulo", 
 "fekulo", "fik", "fikado", "fikema", "fikfek", "fiki", "fikiĝi", "fikiĝu", "fikilo", "fikklaŭno", "fikota", "fiku", 
 "forfiki", "forfikiĝu", "forfiku", "forfurzu", "forpisi", "forpisu", "furzulo", "kacen", "kaco", "kacsuĉulo", 
 "kojono", "piĉen", "piĉo", "zamenfek", 
-//Finnish
+/// <summary>
+/// Finnish
+/// </summary>
 "alfred nussi", "bylsiä", "haahka", "haista paska", "haista vittu",
 "hatullinen", "helvetisti", "hevonkuusi", "hevonpaska", "hevonperse", "hevonvittu", "hevonvitunperse", "hitosti", 
 "hitto", "huorata", "hässiä", "juosten kustu", "jutku", "jutsku", "jätkä", "kananpaska", "koiranpaska", 
@@ -160,7 +176,9 @@
 "runkata", "runkkari", "runkkaus", "runkku", "ryssä", "rättipää", "saatanasti", "suklaaosasto", "tavara", "toosa", 
 "tuhkaluukku", "tumputtaa", "turpasauna", "tussu", "tussukka", "tussut", "vakipano", "vetää käteen", "viiksi", "vittu", 
 "vittuilla", "vittuilu", "vittumainen", "vittuuntua", "vittuuntunut", "vitun", "vitusti", "vituttaa", "vitutus", "äpärä", 
-//French
+/// <summary>
+/// French
+/// </summary>
 "allumé", "allumée", "baiser", "bander", "bigornette", "bite", "bitte", "bloblos", "bosser", "bourré", "bourrée", 
 "branlage", "branler", "branlette", "branleur", "branleuse", "brouter le cresson", "caca", "cailler", "chatte", "chiasse", 
 "chier", "chiottes", "cirer", "clito", "con", "connard", "connasse", "conne", "couilles", "cramouille", "cul", "déconne", 
@@ -171,14 +189,18 @@
 "pipe", "pipi", "poilu", "pouffiasse", "pousse-crotte", "putain", "pute", "queue", "ramoner", "salaud", "salope", "serin",
 "service trois pièces", "suce", "tante", "tapette", "teuf", "tirer", "trick", "tringle", "tringler", "trique", "trou du cul",
 "turlute", "veuve", "viande a pneus", 
-//German
+/// <summary>
+/// German
+/// </summary>
 "analritter", "arschficker", "arschlecker", "arschloch", "bimbo", "bratze", "bumsen", "bonze", "dödel", "ficken", "flittchen",
 "fratze", "hackfresse", "hurensohn", "ische", "kackbratze", "kacke", "kacken", "kackwurst", "kampflesbe", "kanake", "kimme", 
 "lümmel", "MILF", "möpse", "morgenlatte", "möse", "mufti", "muschi", "nackt", "neger", "nippel", "nutte", "onanieren", 
 "orgasmus", "pimmel", "pimpern", "pinkeln", "pissen", "popel", "poppen", "reudig", "rosette", "schabracke", "scheiße", 
 "schlampe", "schnackeln", "schwanzlutscher", "schwuchtel", "tittchen", "titten", "vögeln", "vollpfosten", "wichse", "wichsen", 
 "wichser", 
-//Hungarian
+/// <summary>
+/// Hungarian
+/// </summary>
 "balfasz", "balfaszok", "balfaszokat", "balfaszt", "barmok", "barmokat", "barmot", "barom", "baszik", "bazmeg", "buksza", 
 "bukszák", "bukszákat", "bukszát", "búr", "búrok", "csöcs", "csöcsök", "csöcsöket", "csöcsöt", "fasz", "faszfej", "faszfejek", 
 "faszfejeket", "faszfejet", "faszok", "faszokat", "faszt", "fing", "fingok", "fingokat", "fingot", "franc", "francok", 
@@ -187,8 +209,10 @@
 "marhák", "marhákat", "marhát", "megdöglik", "pele", "pelék", "picsa", "picsákat", "picsát", "pina", "pinák", "pinákat", 
 "pinát", "pofa", "pofákat", "pofát", "pöcs", "pöcsök", "pöcsöket", "pöcsöt", "punci", "puncik", "segg", "seggek", "seggeket", 
 "segget", "seggfej", "seggfejek", "seggfejeket", "seggfejet", "szajha", "szajhák", "szajhákat", "szajhát", "szar", "szarabb", 
-"szarik", "szarok", "szarokat", "szart", 
-//Italian
+"szarik", "szarok", "szarokat", "szart",
+/// <summary>
+/// Italian
+/// </summary>
 "allupato", "ammucchiata", "anale", "arrapato", "arrusa", "arruso", "assatanato", "bagascia", "bagassa", "bagnarsi", 
 "baldracca", "balle", "battere", "battona", "belino", "biga", "bocchinara", "bocchino", "bofilo", "boiata", "bordello",
 "brinca", "bucaiolo", "budiùlo", "buona donna", "busone", "cacca", "caccati in mano e prenditi a schiaffi", "caciocappella", 
@@ -207,7 +231,9 @@
 "spompinare", "sticchio", "stronza", "stronzata", "stronzo", "succhiami", "sveltina", "sverginare", "tarzanello", "terrone", 
 "testa di cazzo", "tette", "tirare", "topa", "troia", "trombare", "uccello", "vacca", "vaffanculo", "vangare", "venire", "zinne",
 "zio cantante", "zoccola", 
-//Japanese
+/// <summary>
+/// Japanese
+/// </summary>
 "g スポット", "s ＆ m", "sm", "sm女王", "xx", "アジアのかわいい女の子", "アスホール", "アナリングス", "アナル", "いたずら", "イラマチオ",
 "ウェブカメラ", "エクスタシー", "エスコート", "エッチ", "エロティズム", "エロティック", "オーガズム", "オカマ", "おしっこ", "おしり", 
 "オシリ", "おしりのあな", "おっぱい", "オッパイ", "オナニー", "オマンコ", "おもらし", "お尻", "カーマスートラ", "カント", "クリトリス", 
@@ -225,25 +251,35 @@
 "直腸", "剃毛", "貞操帯", "奴隷", "二穴", "乳首", "尿道プレイ", "覗き", "売春婦", "縛り", "噴出", "糞", "糞尿愛好症", "糞便", "平手打ち",
 "変態", "勃起する", "夢精", "毛深い", "誘惑", "幼児", "幼児性愛者", "裸", "裸の女性", "乱交", "両性", "両性具有", "両刀", "輪姦", "卍", 
 "宦官", "肛門", "膣", "//Klingon", "ghuy'cha'", "QI'yaH", "Qu'vatlh", 
-//Korean
+/// <summary>
+/// Korean
+/// </summary>
 "강간", "개새끼", "개자식", "개좆", "개차반", "거유", "계집년", "고자", "근친", "노모", "니기미", "뒤질래", "딸딸이", "때씹", "또라이",
 "뙤놈", "로리타", "망가", "몰카", "미친", "미친새끼", "바바리맨", "변태", "병신", "보지", "불알", "빠구리", "사까시", "섹스", "스와핑",
 "쌍놈", "씨발", "씨발놈", "씨팔", "씹", "씹물", "씹빨", "씹새끼", "씹알", "씹창", "씹팔", "암캐", "애자", "야동", "야사", "야애니", 
 "엄창", "에로", "염병", "옘병", "유모", "육갑", "은꼴", "자위", "자지", "잡년", "종간나", "좆", "좆만", "죽일년", "쥐좆", "직촬", "짱깨",
 "쪽바리", "창녀", "포르노", "하드코어", "호로", "화냥년", "후레아들", "후장", "희쭈그리", 
-//Norwegian
+/// <summary>
+/// Norwegian
+/// </summary>
 "drittsekk", "faen i helvete", "fitte", "jævla", "kuk", "kukene", "kuker", "pikk", "sotrør", "ståpikk", "ståpikkene", "ståpikker", 
-//Persian
+/// <summary>
+/// Persian
+/// </summary>
 "آب کیر", "پورن", "پورنو", "تخمی", "جق", "جقی", "جلق", "جنده", "چوچول", "حشر", "حشری", "دودول", "ساک زدن", "سکس", 
 "سکس کردن", "سکسی", "شق کردن", "شهوت", "شهوتی", "شونبول", "فیلم سوپر", "کس", "کس دادن", "کس کردن", "کسکش", "کون",
 "کون دادن", "کون کردن", "کونکش", "کونی", "کیر", "کیری", "لاپا", "لاپایی", "لاشی", "لش", "منی", "هرزه", 
-//Polish
+/// <summary>
+/// Polish
+/// </summary>
 "burdel", "burdelmama", "chujnia", "ciota", "cyc", "dmuchać", "do kurwy nędzy", "dupa", "dupek", "duperele", "dziwka", 
 "fiut", "gówno", "gówno prawda", "huj", "jajco", "jajeczko", "jajko", "jajo", "ja pierdolę", "jebać", "jebany", "kurwa",
 "kurwy", "kutafon", "kutas", "lizać pałę", "obciągać chuja", "obciągać fiuta", "obciągać loda", "pieprzyć", "pierdolec",
 "pierdolić", "pierdolnięty", "pierdoła", "pierdzieć", "pojeb", "popierdolony", "robic loda", "robić loda", "ruchać",
 "rzygać", "skurwysyn", "sraczka", "srać", "suka", "syf", "wkurwiać", "zajebisty", 
-//Portuguese
+/// <summary>
+/// Portuguese
+/// </summary>
 "aborto", "amador", "ânus", "aranha", "ariano", "balalao", "bicha", "biscate", "bissexual", "boceta", "bosta", 
 "braulio de borracha", "bumbum", "burro", "cabrao", "cacete", "cagar", "camisinha", "caralho", "cerveja", "chochota",
 "chupar", "cocaína", "colhoes", "comer", "cona", "consolo", "corno", "cu", "dar o rabo", "dum raio", "esporra", 
@@ -251,7 +287,9 @@
 "homoerótico", "homosexual", "inferno", "lésbica", "mama", "paneleiro", "passar um cheque", "pau", "peidar", 
 "pênis", "pinto", "porra", "puta", "puta que pariu", "puta que te pariu", "queca", "sacanagem", "saco", "torneira", 
 "transar", "vai-te foder", "vai tomar no cu", "veado", "vibrador", "xana", "xochota", 
-//Russian
+/// <summary>
+/// Russian
+/// </summary>
 "bychara", "byk", "chernozhopyi", "dolboy'eb", "ebalnik", "ebalo", "ebalom sch'elkat", "gol", "mudack", "opizdenet", 
 "osto'eblo", "ostokhuitel'no", "ot'ebis", "otmudohat", "otpizdit", "otsosi", "padlo", "pedik", "perdet", "petuh", 
 "pidar gnoinyj", "pizdato", "pizdatyi", "piz'det", "pizdetc", "pizdoi nakryt'sja", "pizd'uk", "piz`dyulina", "podi ku'evo",
@@ -269,7 +307,9 @@
 "половое сношение", "секс", "сиски", "спиздить", "срать", "ссать", "траxать", "ты мне ваньку не валяй", "фига", "хапать", 
 "хер с ней", "хер с ним", "хохол", "хрен", "хуёво", "хуёвый", "хуем груши околачивать", "хуеплет", "хуило", 
 "хуиней страдать", "хуиня", "хуй", "хуйнуть", "хуй пинать", 
-//Spanish
+/// <summary>
+/// Spanish
+/// </summary>
 "Asesinato", "asno", "Bollera", "Cabron", "Cabrón", "Caca", "Chupada", "Chupapollas", "Chupetón", "concha", 
 "Concha de tu madre", "Coño", "Coprofagía", "Culo", "Drogas", "Esperma", "Fiesta de salchichas", "Follador", 
 "Follar", "Gilipichis", "Gilipollas", "Hacer una paja", "Haciendo el amor", "Heroína", "Hija de puta", "Hijaputa", 
@@ -277,14 +317,20 @@
 "Macizorra", "maldito", "Mamada", "Marica", "Maricón", "Mariconazo", "martillo", "Mierda", "Nazi", "Orina", "Pedo", 
 "Pervertido", "Pezón", "Pinche", "Pis", "Prostituta", "Puta", "Racista", "Ramera", "Sádico", "Semen", "Sexo", "Sexo oral", 
 "Soplagaitas", "Soplapollas", "Tetas grandes", "Tía buena", "Travesti", "Trio", "Verga", "vete a la mierda", "Vulva", 
-//Swedish
+/// <summary>
+/// Swedish
+/// </summary>
 "arsle", "brutta", "dra åt helvete", "fan", "fitta", "fittig", "för helvete", "hård", "jävlar", "knulla", "moona", 
 "moonade", "moonar", "moonat", "mutta", "olla", "pippa", "pitt", "prutt", "pök", "runka", "röv", "rövhål", "rövknulla", 
 "satan", "skita", "skit ner dig", "skäggbiff", "snedfitta", "snefitta", "stake", "subba", "sås", "sätta på", "tusan", 
-//Thai
+/// <summary>
+/// Thai
+/// </summary>
 "กระดอ", "กระเด้า", "กระหรี่", "กะปิ", "กู", "ขี้", "ควย", "จิ๋ม", "จู๋", "เจ๊ก", "เจี๊ยว", "ดอกทอง", "ตอแหล", "ตูด", "น้ําแตก", "มึง", "แม่ง", 
 "เย็ด", "รูตูด", "ล้างตู้เย็น", "ส้นตีน", "สัด", "เสือก", "หญิงชาติชั่ว", "หลั่ง", "ห่า", "หํา", "หี", "เหี้ย", "อมนกเขา", "ไอ้ควาย", 
-//Turkish
+/// <summary>
+/// Turkish
+/// </summary>
 "amcığa", "amcığı", "amcığın", "amcık", "amcıklar", "amcıklara", "amcıklarda", "amcıklardan", "amcıkları", "amcıkların", 
 "amcıkta", "amcıktan", "amı", "amlar", "çingene", "Çingenede", "Çingeneden", "Çingeneler", "Çingenelerde", "Çingenelerden",
 "Çingenelere", "Çingeneleri", "Çingenelerin", "Çingenenin", "Çingeneye", "Çingeneyi", "göt", "göte", "götler", "götlerde", 
@@ -305,20 +351,20 @@
         #endregion
         #region Jokes
         public static string[] jokes = new string[] { 
-//"You should not flame sweety.", "Gotcha, next time maybe.", "Stop it.", "You want skins do you?",
-"Shacos darkest secret is that he's afraid of children.", "Yorick walked into a bar. There was no counter.",
-"Once Kog'maw had a cold, but no one could tell.", "For some reason Alistar suffers from headaches.",
-"Taric's employer thinks he's a real gem.", "Sheep are suspicious of the newcomer: Urf the manatee",
-"Trundle never ceases to be amazed about how everyone on the internet knows he's a troll.",
-"Mordekaiser really hates airport security.", "Ryze's big secret is a real shocker!",
-"Why Mundo can't be jailed for sexual assault? Mundo pleases who ever he pleases!",
-"Why didn't Sivir win the spelling bee? Because she could only spell shield",
-"Why did Fizz fall off of his trident? Because he's incredibly unbalanced.",
-"Also, Evelynn is constantly being bothered by an old man named Gargamel.",
-"Cassiopeia always knows how much she weighs thanks to all her scales.",
-"You know Zilean is having a bad day when he asks you for the time.",
-"Sometimes Karthus picks up a sword and pretends that he's Arthas.",
-"Tristana is disappointed that it's never a rocket in your pocket."
+        //"You should not flame sweety.", "Gotcha, next time maybe.", "Stop it.", "You want skins do you?",
+        "Shacos darkest secret is that he's afraid of children.", "Yorick walked into a bar. There was no counter.",
+        "Once Kog'maw had a cold, but no one could tell.", "For some reason Alistar suffers from headaches.",
+        "Taric's employer thinks he's a real gem.", "Sheep are suspicious of the newcomer: Urf the manatee",
+        "Trundle never ceases to be amazed about how everyone on the internet knows he's a troll.",
+        "Mordekaiser really hates airport security.", "Ryze's big secret is a real shocker!",
+        "Why Mundo can't be jailed for sexual assault? Mundo pleases who ever he pleases!",
+        "Why didn't Sivir win the spelling bee? Because she could only spell shield",
+        "Why did Fizz fall off of his trident? Because he's incredibly unbalanced.",
+        "Also, Evelynn is constantly being bothered by an old man named Gargamel.",
+        "Cassiopeia always knows how much she weighs thanks to all her scales.",
+        "You know Zilean is having a bad day when he asks you for the time.",
+        "Sometimes Karthus picks up a sword and pretends that he's Arthas.",
+        "Tristana is disappointed that it's never a rocket in your pocket."
        };
        #endregion
     }

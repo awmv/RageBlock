@@ -39,7 +39,7 @@ namespace RageBlock
         private static void Game_OnChat(GameChatEventArgs args)
         {
             if (!M.Item("Status").GetValue<bool>()) return;
-            if (!args.Sender.IsMe)
+            if (!args.Sender.IsMe && !muted.Contains(args.Sender.Name))
             {
                 Regex regex = new Regex(@"\b" + string.Join(@"\b|\b", RageBlock.Rage.flame) + @"\b", RegexOptions.IgnoreCase);
                 Match match = regex.Match(args.Message);

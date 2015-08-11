@@ -25,7 +25,7 @@
 "fistfucks", "flange", "fook", "fooker", "fuck", "fucka", "fucked", "fucker", "fuckers", "fuckhead", "fuckheads", 
 "fuckin", "fucking", "fuckings", "script", "fuckingshitmotherfucker", "fuckme", "fucks", "fuckwhit", "fuckwit", 
 "fudge packer", "ass", "fudgepacker", "fuk", "fuker", "fukker", "fukkin", "fuks", "fukwhit", "fukwit", "fux", 
-"fux0r", "f_u_c_k", "gangbang", "scripts", "gangbanged", "gangbangs", "gaylord", "gaysex", "goatse", "God", 
+"fux0r", "f_u_c_k", "gangbang", "scripts", "gangbanged", "gangbangs", "gaylord", "gaysex", "goatse", 
 "god-dam", "god-damned", "goddamn", "goddamned", "hardcoresex", "hell", "heshe", "hoar", "hoare", "hoer", "homo", 
 "hore", "fick", "horniest", "horny", "hotsex", "jack-off", "jackoff", "jerk-off", "jism", "jiz", "jizm", "jizz", 
 "kawk", "knob", "knobead", "knobed", "knobend", "knobhead", "knobjocky", "knobjokey", "kock", "kondum", "kondums", 

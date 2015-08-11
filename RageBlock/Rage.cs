@@ -9,7 +9,7 @@
 "assholes", "asswhole", "mutter", "mother", "b!tch", "b17ch", "b1tch", "ballbag", "ballsack", "bastard", "beastial", 
 "beastiality", "scrub", "bellend", "bestial", "bestiality", "bi+ch", "shit fuck", "biatch", "bitch", "bitcher", 
 "bitchers", "bitches", "bitchin", "bitching", "bloody", "blow job", "blowjob", "crap", "blowjobs", "boiolas", "bollock", 
-"bollok", "boner", "buceta", "bugger", "bum", "bunny fucker", "hure", "fuck you", "lappen", "dumm", "dämlich", 
+"bollok", "boner", "buceta", "bugger", "bunny fucker", "hure", "fuck you", "lappen", "dumm", "dämlich", 
 "missgeburt", "butthole", "buttmuch", "buttplug", "c0ck", "c0cksucker", "stfu", "carpet muncher", "cawk", "chink", 
 "cipa", "cl1t", "clit", "clitoris", "clits", "cnut", "cock", "cock-sucker", "cockface", "cockhead", "cockmunch", 
 "cockmuncher", "cocks", "cocksuck", "cocksucked", "cocksucker", "smurf", "cocksucking", "cocksucks", "cocksuka", 
@@ -285,7 +285,7 @@
 "กระดอ", "กระเด้า", "กระหรี่", "กะปิ", "กู", "ขี้", "ควย", "จิ๋ม", "จู๋", "เจ๊ก", "เจี๊ยว", "ดอกทอง", "ตอแหล", "ตูด", "น้ําแตก", "มึง", "แม่ง", 
 "เย็ด", "รูตูด", "ล้างตู้เย็น", "ส้นตีน", "สัด", "เสือก", "หญิงชาติชั่ว", "หลั่ง", "ห่า", "หํา", "หี", "เหี้ย", "อมนกเขา", "ไอ้ควาย", 
 //Turkish
-"am", "amcığa", "amcığı", "amcığın", "amcık", "amcıklar", "amcıklara", "amcıklarda", "amcıklardan", "amcıkları", "amcıkların", 
+"amcığa", "amcığı", "amcığın", "amcık", "amcıklar", "amcıklara", "amcıklarda", "amcıklardan", "amcıkları", "amcıkların", 
 "amcıkta", "amcıktan", "amı", "amlar", "çingene", "Çingenede", "Çingeneden", "Çingeneler", "Çingenelerde", "Çingenelerden",
 "Çingenelere", "Çingeneleri", "Çingenelerin", "Çingenenin", "Çingeneye", "Çingeneyi", "göt", "göte", "götler", "götlerde", 
 "götlerden", "götlere", "götleri", "götlerin", "götte", "götten", "götü", "götün", "götveren", "götverende", "götverenden",

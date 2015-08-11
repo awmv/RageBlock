@@ -41,7 +41,7 @@ namespace RageBlock
             if (!M.Item("Status").GetValue<bool>()) return;
             if (!args.Sender.IsMe)
             {
-                Regex regex = new Regex(string.Join("|\\b", RageBlock.Rage.flame), RegexOptions.IgnoreCase);
+                Regex regex = new Regex(@"\b" + string.Join(@"\b|\b", RageBlock.Rage.flame) + @"\b", RegexOptions.IgnoreCase);
                 Match match = regex.Match(args.Message);
                 if (match.Success)
                 {
@@ -58,7 +58,7 @@ namespace RageBlock
         private static void Game_OnInput(GameInputEventArgs args)
         {
             if (!M.Item("Status").GetValue<bool>()) return;
-            Regex regex = new Regex(string.Join("|\\b", RageBlock.Rage.flame), RegexOptions.IgnoreCase);
+            Regex regex = new Regex(@"^(?!\/(?:whisper|w|reply|r)\b).*\b(" + string.Join(@"\b|\b", RageBlock.Rage.flame) + @"\b)", RegexOptions.IgnoreCase);
             Match match = regex.Match(args.Input);
             if (match.Success)
             {

@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using LeagueSharp;
 using LeagueSharp.Common;
-using Color = System.Drawing.Color;
+using System.Drawing;
 using System.Text.RegularExpressions;
+
+using System.Reflection;
+using System.IO;
 
 namespace RageBlock
 {
@@ -30,14 +33,14 @@ namespace RageBlock
             Game.OnInput += Game_OnInput;
         }
 
-        private static String GetTimestamp(DateTime value) { return value.ToString("HH:mm"); }
+        private static String GetTimestamp(DateTime Value) { return Value.ToString("HH:mm"); }
 
-        private static void Log(string Value) { 
-            Game.PrintChat("[" + timeStamp + "] <font color='#eb7577'>" + r + "</font>: " + Value);
+        private static void Log(string value) { 
+            Game.PrintChat("[" + timeStamp + "] <font color='#eb7577'>" + r + "</font>: " + value);
         }
 
         private static void Game_OnChat(GameChatEventArgs args)
-        {            
+        {
             if (!M.Item("Status").GetValue<bool>()) return;
             if (!args.Sender.IsMe)
             {

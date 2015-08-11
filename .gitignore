@@ -3,5 +3,5 @@
 **/Debug
 **/.vs
 **/.git
-**/*.v12.sou
+**/**.v12.sou
 .git

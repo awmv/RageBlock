@@ -79,7 +79,9 @@
 "zmrd", "žrát", 
 //Danish
 "bøsserøv", "fisse", "fissehår", "hestepik", "kussekryller", "lort", "luder", "pik",
-"pikhår", "pikslugeri", "piksutteri", "pis", "røv", "røvhul", "røvskæg", "røvspræke", 
+"pikhår", "pikslugeri", "piksutteri", "pis", "røv", "røvhul", "røvskæg", "røvspræke", "negerpik", "svin", "lille luder", "din mor", "din far", "pik slikker",
+//Vietnamese
+"con cac", "du ma", "du ma may", "con cho", "thang map", "may la con cac",
 //Dutch
 "aardappels afgieteng", "achter het raam zitten", "afberen", "aflebberen", "afrossen", "afrukken", "aftrekken", 
 "afwerkplaats", "afzeiken", "afzuigen", "anderhalve man en een paardekop", "anita", "asbak", "aso", "bagger schijten", 

@@ -6,9 +6,6 @@ using LeagueSharp.Common;
 using System.Drawing;
 using System.Text.RegularExpressions;
 
-using System.Reflection;
-using System.IO;
-
 namespace RageBlock
 {
     class Program

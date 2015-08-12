@@ -380,7 +380,7 @@
 "taşakları", "taşakların", "taşakta", "taşaktan", "yarağa", "yarağı", "yarağın", "yarak", "yaraklar", "yaraklara", 
 "yaraklarda", "yaraklardan", "yarakları", "yarakların", "yarakta", "yaraktan" , "orospu", "oç", "oçları", "kürt",
 "sikeyim", "sikim", "orospu çocuğu", "orospu çocukları", "şerefsiz", "anneni sikeyim", "ananı sikeyim", 
-"allahını sikeyim", "annesiz", "o.ç", "o.çları", "götünü", "götüne", "fahişe", "kaltak", "kahpe"
+"allahını sikeyim", "annesiz", "o.ç", "o.çları", "götünü", "götüne", "fahişe", "kaltak", "kahpe", "amk"
         };
         #endregion
         #region Jokes

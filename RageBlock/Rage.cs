@@ -473,7 +473,7 @@
 "yaraklara", "yaraklarda", "yaraklardan", "yarakları", "yarakların", "yarakta", "yaraktan", 
 "oç", "oçları", "kürt", "sikeyim", "sikim", "orospu çocuğu", "orospu çocukları", "şerefsiz", 
 "anneni sikeyim", "ananı sikeyim", "allahını sikeyim", "annesiz", "o.ç", "o.çları", 
-"götünü", "götüne", "fahişe", "kahpe", 
+"götünü", "götüne", "fahişe", "kahpe", "amk",
 /// <summary>
 /// Taiwanese
 /// </summary>

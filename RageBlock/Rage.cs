@@ -273,8 +273,8 @@
 "강간", "개새끼", "개자식", "개좆", "개차반", "거유", "계집년", "고자", "근친", "노모", "니기미", "뒤질래", "딸딸이", 
 "때씹", "또라이", "뙤놈", "로리타", "망가", "몰카", "미친", "미친새끼", "바바리맨", "변태", "병신", "보지", "불알", 
 "빠구리", "사까시", "섹스", "스와핑", "쌍놈", "씨발", "씨발놈", "씨팔", "씹", "씹물", "씹빨", "씹새끼", "씹알", 
-"씹창", "씹팔", "암캐", "애자", "야동", "야사", "야애니", "엄창", "에로", "염병", "옘병", "유모", "육갑", "은꼴", 
-"자위", "자지", "잡년", "종간나", "좆", "좆만", "죽일년", "쥐좆", "직촬", "짱깨", "쪽바리", "창녀", "포르노", 
+"씹창", "씹팔", "암캐", "애자", "야동", "야사", "엄창", "에로", "염병", "옘병", "유모", "육갑", "은꼴", 
+"자위", "자지", "잡년", "종간나", "좆", "좆만", "죽일년", "쥐좆", "짱깨", "쪽바리", "창녀", "포르노", 
 "하드코어", "호로", "화냥년", "후레아들", "후장", 
 "희쭈그리", 
 /// <summary>
@@ -378,7 +378,9 @@
 "siklerde", "siklerden", "siklere", "sikleri", "siklerin", "sikmek", "sikmemek", "sikte", "sikten", "siktir", 
 "siktirir siktirmez", "taşağa", "taşağı", "taşağın", "taşak", "taşaklar", "taşaklara", "taşaklarda", "taşaklardan", 
 "taşakları", "taşakların", "taşakta", "taşaktan", "yarağa", "yarağı", "yarağın", "yarak", "yaraklar", "yaraklara", 
-"yaraklarda", "yaraklardan", "yarakları", "yarakların", "yarakta", "yaraktan"
+"yaraklarda", "yaraklardan", "yarakları", "yarakların", "yarakta", "yaraktan" , "orospu", "oç", "oçları", "kürt",
+"sikeyim", "sikim", "orospu çocuğu", "orospu çocukları", "şerefsiz", "anneni sikeyim", "ananı sikeyim", 
+"allahını sikeyim", "annesiz"
         };
         #endregion
         #region Jokes

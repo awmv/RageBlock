@@ -280,13 +280,22 @@
 /// <summary>
 /// Portuguese
 /// </summary>
-"aborto", "amador", "ânus", "aranha", "ariano", "balalao", "bicha", "biscate", "bissexual", "boceta", "bosta", 
-"braulio de borracha", "bumbum", "burro", "cabrao", "cacete", "cagar", "camisinha", "caralho", "cerveja", "chochota",
-"chupar", "cocaína", "colhoes", "comer", "cona", "consolo", "corno", "cu", "dar o rabo", "dum raio", "esporra", 
-"filho da puta", "foda", "foda-se", "foder", "frango assado", "gozar", "grelho", "heroína", "heterosexual", "homem gay",
-"homoerótico", "homosexual", "inferno", "lésbica", "mama", "paneleiro", "passar um cheque", "pau", "peidar", 
-"pênis", "pinto", "porra", "puta", "puta que pariu", "puta que te pariu", "queca", "sacanagem", "saco", "torneira", 
-"transar", "vai-te foder", "vai tomar no cu", "veado", "vibrador", "xana", "xochota", 
+"aborto", "amador", "ânus", "aranha", "ariano", "balalao", "bastardo", "bicha", "biscate", "bissexual", "boceta", 
+"buceta", "bdsm", "boob", "bosta", "bunda", "boquete", "boqueteiro", "boqueteira", "braulio de borracha", "bumbum",
+"burro", "burra", "cabrao", "cacete", "cagar", "camisinha", "caralho", "cerveja", "chochota", "cuzao", "cusao", 
+"cuzona", "chupar", "clitoris", "cocaína", "colhoes", "comer", "cona", "consolo", "corno", "diabetes", "diabetico", 
+"desprovido", "dar o rabo", "dum raio", "esporra", "encoxada", "fecal", "filho da puta", "foda", "foda-se", "fdps", 
+"foder", "fudido", "fodedor", "fuder", "gay", "gordo", "gozado", "gozada", "goza", "gozo", "gosa", "goso", "gozar", 
+"grelho", "heroína", "heterosexual", "heterossexual", "homem gay", "homoerótico", "homosexual", "homossexual", 
+"incesto", "inutil", "inútil", "inferno", "idiota", "jesus", "karalho", "lixo", "lesado", "lerdo", "lésbica", 
+"lolita", "mãe", "mama", "merda", "maldito", "maldita", "mental", "ninfeta", "ninfetinha", "nuas", "orgasmo",
+"paneleiro", "passar um cheque", "peidar", "pênis", "pinto", "peitura", "pica", "pirocudo", "piroca", "porra", 
+"puto", "putinho", "putinha", "prostituta", "puta", "putaria", "porno", "punheta", "puta que pariu", "puta que te pariu", 
+"ppk", "queca", "quenga", "retardado", "ratardada", "rabuda", "rabo", "rola", "roludo", "siririca", "sacanagem", 
+"saco", "sado", "sadomado", "sexo", "sex", "sem noção", "sexy", "safado", "safada", "transexual", "transa", "teemo", 
+"torneira", "tarado", "tarada", "transar", "transudo", "trepada", "trepadeira", "trepar", "travesti", "vai-te foder", 
+"vai tomar no cu", "veado", "viado", "viadinho", "viadão", "vaginal", "vibrador", "xana", "xochota", "xota", 
+"xoxota", "zoofilia", "zoofilo",
 /// <summary>
 /// Russian
 /// </summary>

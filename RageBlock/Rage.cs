@@ -315,7 +315,9 @@
 "sacanagem", "saco", "sado", "sadomado", "sexo", "sex", "sem noção", "sexy", "safado", "safada", "transexual", 
 "transa", "teemo", "torneira", "tarado", "tarada", "transar", "transudo", "trepada", "trepadeira", "trepar", 
 "travesti", "vai-te foder", "vai tomar no cu", "veado", "viado", "viadinho", "viadão", "vaginal", "vibrador", 
-"xana", "xochota", "xota", "xoxota", "zoofilia", "zoofilo",
+"xana", "xochota", "xota", "xoxota", "zoofilia", "zoofilo", "vtnc", "lixo", "arrombado", "seu merda",
+"vai toma no cu", "cala a boca", "cala a boka", "seu bosta", "vai se fuder", "kita entao", "kita então",
+"kitou", "vou kitar", "vou quitar", "vai te foder", "foda-se", "foda", "chupar", "desgraçado", "caralhooooo",
 /// <summary>
 /// Russian
 /// </summary>

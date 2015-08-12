@@ -39,26 +39,26 @@ namespace RageBlock
         private static void Game_OnChat(GameChatEventArgs args)
         {
             if (!M.Item("Status").GetValue<bool>()) return;
-            if (!args.Sender.IsMe && !muted.Contains(args.Sender.Name))
+            Regex regex = new Regex(@"\b" + string.Join(@"\b|\b", RageBlock.Rage.flame) + @"\b", RegexOptions.IgnoreCase);
+            Match match = regex.Match(args.Message);
+            if (!args.Sender.IsMe && !muted.Contains(args.Sender.Name) && match.Success)
             {
-                Regex regex = new Regex(@"\b" + string.Join(@"\b|\b", RageBlock.Rage.flame) + @"\b", RegexOptions.IgnoreCase);
-                Match match = regex.Match(args.Message);
-                if (match.Success)
-                {
-                    muted.Add(args.Sender.Name);
-                    Utility.DelayAction.Add(new Random().Next(127, 723), () => Game.Say("/mute " + args.Sender.Name));
-                    Notifications
-                        .AddNotification(new Notification(args.Sender.ChampionName + " has been muted.", 3500)
-                        .SetTextColor(Color.OrangeRed)
-                        .SetBoxColor(Color.Black));
-                }
+                muted.Add(args.Sender.Name);
+                Utility.DelayAction.Add(new Random().Next(127, 723), () => Game.Say("/mute " + args.Sender.Name));
+                Notifications
+                    .AddNotification(new Notification(args.Sender.ChampionName + " has been muted.", 3500)
+                    .SetTextColor(Color.OrangeRed)
+                    .SetBoxColor(Color.Black));
+
             }
         }
 
         private static void Game_OnInput(GameInputEventArgs args)
         {
             if (!M.Item("Status").GetValue<bool>()) return;
-            Regex regex = new Regex(@"^(?!\/(?:whisper|w|reply|r)\b).*\b(" + string.Join(@"\b|\b", RageBlock.Rage.flame) + @"\b)", RegexOptions.IgnoreCase);
+            Regex regex = 
+                new Regex(@"^(?!\/(?:whisper|w|reply|r)\b).*\b(" + string.Join(@"\b|\b", 
+                    RageBlock.Rage.flame) + @"\b)", RegexOptions.IgnoreCase);
             Match match = regex.Match(args.Input);
             if (match.Success)
             {

@@ -39,8 +39,8 @@
 /// <summary>
 /// Danish
 /// </summary>
-"bøsserøv", "fisse", "fissehår", "hestepik", "lort", "luder", "pik",
-"pikhår", "pis", "røv", "røvhul", "røvhår", "negerpik", "svin", "lille luder", "din mor", "din far", "pik slikker", "fede",
+"bøsserøv", "fisse", "fissehår", "hestepik", "lort", "luder", "pik", "pikhår", "pis", "røv", "røvhul", "røvhår", 
+"negerpik", "svin", "lille luder", "din mor", "din far", "pik slikker", "fede",
 /// <summary>
 /// Vietnamese
 /// </summary>
@@ -49,7 +49,7 @@
 /// Dutch
 /// </summary>
 "aardappels afgieteng", "achter het raam zitten", "afberen", "aflebberen", "afrossen", "afrukken", "aftrekken", 
-"afwerkplaats", "afzeiken", "afzuigen", "anderhalve man en een paardekop", "anita", "asbak", "aso", "bagger schijten", 
+"afwerkplaats", "afzeiken", "afzuigen", "anderhalve man en een paardekop", "anita", "asbak", "bagger schijten", 
 "balen", "bedonderen", "befborstelg", "beffen", "bekken", "belazeren", "besodemieterd zijn", "besodemieteren", 
 "beurt", "boemelen", "boerelul", "boerenpummelg", "bokkelul", "botergeil", "broekhoesten", "brugpieperg", "buffelen", 
 "buiten de pot piesen", "da's kloten van de bok", "de ballen", "de hoer spelen", "de hond uitlaten", "de koffer induiken",
@@ -63,13 +63,13 @@
 "mof", "mutsg", "naaien", "naakt", "neuken", "neukstier", "nicht", "oetlul", "opgeilen", "opkankeren", "oprotten", 
 "opsodemieteren", "op z'n hondjes", "op z'n sodemieter geven", "opzouten", "ouwehoer", "ouwehoeren", "ouwe rukker", 
 "paal", "paardelul", "palen", "penozeg", "piesen", "pijpbekkieg", "pijpen", "pleurislaaier", "poep", "poepen", 
-"poot", "portiekslet", "pot", "potverdorie", "publiciteitsgeil", "raaskallen", "reet", "reetridder", 
+"poot", "portiekslet", "potverdorie", "publiciteitsgeil", "raaskallen", "reet", "reetridder", 
 "reet trappen, voor zijn", "remsporeng", "reutelen", "rothoer", "rotzak", "rukhond", "rukken", "schatje", 
 "schijt", "schijten", "schoft", "schuinsmarcheerder", "slempen", "sletg", "sletterig", "slik mijn zaad", "snolg", 
 "spuiten", "standje", "standje-69g", "stoephoer", "stootje", "strontg", "sufferdg", "tapijtnek", "teefg", "temeier", 
 "teringlijer", "toeter", "tongzoeng", "triootjeg", "trottoir prostituée", "trottoirteef", "utrecht", "vergallen", 
-"verkloten", "verneuken", "viespeuk", "vingeren", "vleesroos", "voor jan lul", "voor jan-met-de-korte-achternaam", "watje", 
-"welzijnsmafia", "wijf", "wippen", "wuftje", "zaadje", "zakkenwasser", "zeiken", "zeiker", "zuigen", "zuiplap", 
+"verkloten", "verneuken", "viespeuk", "vingeren", "vleesroos", "voor jan lul", "voor jan-met-de-korte-achternaam", 
+"watje", "welzijnsmafia", "wijf", "wippen", "wuftje", "zaadje", "zakkenwasser", "zeiken", "zeiker", "zuigen", "zuiplap", 
 /// <summary>
 /// English
 /// </summary>
@@ -82,22 +82,22 @@
 "bulldyke", "bullet vibe", "bullshit", "bung hole", "bunghole", "busty", "butt", "buttcheeks", "camel toe", "camgirl", 
 "camslut", "camwhore", "carpetmuncher", "chocolate rosebuds", "circlejerk", "cleveland steamer", "clover clamps", 
 "clusterfuck", "coprolagnia", "coprophilia", "cornhole", "creampie", "darkie", "date rape", "daterape", "deep throat",
-"deepthroat", "dendrophilia", "dirty pillows", "dirty sanchez", "doggie style", "doggiestyle", "doggy style", "doggystyle",
-"dog style", "dolcett", "domination", "dominatrix", "dommes", "donkey punch", "double dong", "double penetration", 
-"dp action", "dry hump", "dvda", "eat my ass", "ecchi", "erotic", "erotism", "escort", "ethical slut", "eunuch", "fecal",
-"felch", "feltch", "female squirting", "femdom", "figging", "fingerbang", "fingering", "fisting", "foot fetish", 
-"footjob", "frotting", "fuck buttons", "futanari", "gang bang", "gay sex", "genitals", "giant cock", "girl on",
-"girl on top", "girls gone wild", "goatcx", "god damn", "gokkun", "golden shower", "goodpoop", "goo girl", "goregasm", 
-"grope", "group sex", "g-spot", "guro", "hand job", "handjob", "hard core", "hardcore", "hentai", "homoerotic", "honkey",
-"hooker", "hot carl", "hot chick", "how to kill", "how to murder", "huge fat", "humping", "incest", "intercourse", 
-"jack off", "jail bait", "jailbait", "jelly donut", "jerk off", "jigaboo", "jiggaboo", "jiggerboo", "juggs", "kike", 
-"kinbaku", "kinkster", "kinky", "knobbing", "leather restraint", "leather straight jacket", "lemon party", "lolita", 
-"lovemaking", "make me come", "male squirting", "menage a trois", "milf", "missionary position", "mound of venus", 
-"mr hands", "muff diver", "muffdiving", "nambla", "nawashi", "negro", "neonazi", "nig nog", "nimphomania", "nipple", 
-"nipples", "nsfw images", "nude", "nudity", "nympho", "nymphomania", "octopussy", "omorashi", "one cup two girls", 
-"one guy one jar", "orgy", "paedophile", "panties", "panty", "pedobear", "pedophile", "pegging", "phone sex", 
-"piece of shit", "piss pig", "pisspig", "playboy", "pleasure chest", "pole smoker", "ponyplay", "poof", "poon", 
-"poontang", "punany", "poop chute", "poopchute", "prince albert piercing", "pthc", "pubes", "queaf", "raghead", 
+"deepthroat", "dendrophilia", "dirty pillows", "dirty sanchez", "doggie style", "doggiestyle", "doggy style", 
+"doggystyle", "dog style", "dolcett", "domination", "dominatrix", "dommes", "donkey punch", "double dong", 
+"double penetration", "dp action", "dry hump", "dvda", "eat my ass", "ecchi", "erotic", "erotism", "escort", 
+"ethical slut", "eunuch", "fecal", "felch", "feltch", "female squirting", "femdom", "figging", "fingerbang", "fingering", 
+"fisting", "foot fetish", "footjob", "frotting", "fuck buttons", "futanari", "gang bang", "gay sex", "genitals", 
+"giant cock", "girl on", "girl on top", "girls gone wild", "goatcx", "god damn", "gokkun", "golden shower", "goodpoop", 
+"goo girl", "goregasm", "grope", "group sex", "g-spot", "guro", "hand job", "handjob", "hard core", "hardcore", "hentai",
+"homoerotic", "honkey", "hooker", "hot carl", "hot chick", "how to kill", "how to murder", "huge fat", "humping", 
+"incest", "intercourse", "jack off", "jail bait", "jailbait", "jelly donut", "jerk off", "jigaboo", "jiggaboo", 
+"jiggerboo", "juggs", "kike", "kinbaku", "kinkster", "kinky", "knobbing", "leather restraint", "leather straight jacket",
+"lemon party", "lolita", "lovemaking", "make me come", "male squirting", "menage a trois", "milf", "missionary position", 
+"mound of venus", "mr hands", "muff diver", "muffdiving", "nambla", "nawashi", "negro", "neonazi", "nig nog", 
+"nimphomania", "nipple", "nipples", "nsfw images", "nude", "nudity", "nympho", "nymphomania", "octopussy", "omorashi", 
+"one cup two girls", "one guy one jar", "orgy", "paedophile", "panties", "panty", "pedobear", "pedophile", "pegging", 
+"phone sex", "piece of shit", "piss pig", "pisspig", "playboy", "pleasure chest", "pole smoker", "ponyplay", "poof", 
+"poon", "poontang", "punany", "poop chute", "poopchute", "prince albert piercing", "pthc", "pubes", "queaf", "raghead", 
 "raging boner", "rape", "raping", "rapist", "reverse cowgirl", "rimjob", "rosy palm", "rosy palm and her 5 sisters", 
 "rusty trombone", "sadism", "santorum", "scat", "scissoring", "sex", "sexo", "sexy", "shaved beaver", "shaved pussy", 
 "shibari", "shota", "shrimping", "skeet", "slanteye", "s&m", "snowballing", "sodomize", "sodomy", "spic", "splooge", 
@@ -130,7 +130,7 @@
 "f_u_c_k", "gangbang", "scripts", "gangbanged", "gangbangs", "gaylord", "gaysex", "goatse", "god-dam", "god-damned", 
 "goddamn", "goddamned", "hardcoresex", "heshe", "hoar", "hoare", "hoer", "homo", "hore", "horniest", "horny", "hotsex", 
 "jack-off", "jackoff", "jerk-off", "jism", "jiz", "jizm", "jizz", "kawk", "knob", "knobead", "knobed", "knobend", 
-"knobhead", "knobjocky", "knobjokey", "kock", "kondum", "kondums", "kum", "kummer", "kumming", "kums", "kunilingus", 
+"knobhead", "knobjocky", "knobjokey", "kock", "kondum", "kondums", "kummer", "kumming", "kums", "kunilingus", 
 "l3i+ch", "l3itch", "labia", "lmfao", "lusting", "m0f0", "m0fo","m45terbate", "ma5terb8", "ma5terbate", "masochist", 
 "master-bate", "useless", "masterb8", "masterbat*", "masterbat3","masterbate", "masterbation", "masterbations", 
 "masturbate", "mo-fo", "mof0", "mofo", "mothafuck", "mothafucka", "mothafuckas", "mothafuckaz", "mothafucked", 
@@ -146,29 +146,29 @@
 "scrotum", "semen", "sh!+", "sh!t", "sh1t", "shag", "shagger", "shaggin", "shagging", "shemale", "shit", "shitdick", 
 "shite", "shited", "shitey", "shitfuck", "shitfull", "shithead", "shiting", "shitings", "shits", "shitted", "shitter", 
 "shitters", "shitting", "shittings", "shitty", "skank", "slut", "sluts", "smegma", "smut", "snatch", "spac", "spunk", 
-"s_h_i_t", "t1tt1e5", "t1tties", "teets", "teez", "testical", "testicle", "tit", "titfuck", "tits", "titt", "ittie5", 
+"s_h_i_t", "t1tt1e5", "t1tties", "teets", "teez", "testical", "testicle", "titfuck", "tits", "titt", "ittie5", 
 "ittiefucker", "titties", "tittyfuck", "tittywank", "titwank", "tosser", "turd", "w4t", "twat", "twathead", "twatty", 
 "twunt", "twunter", "v14gra", "v1gra", "vagina", "viagra", "vulva", "w00se", "wang", "wank", "wanker", "wanky", "whoar",
 "whore", "willies", "willy", "xrated", "xxx", "noob", "suck", "report", 
 /// <summary>
 /// Esperanto
 /// </summary>
-"bugren", "bugri", "bugru", "ĉiesulino", "ĉiesulo", "diofek", "diofeka", "fek", "feken", "fekfikanto", "feklekulo", 
-"fekulo", "fik", "fikado", "fikema", "fikfek", "fiki", "fikiĝi", "fikiĝu", "fikilo", "fikklaŭno", "fikota", "fiku", 
+"bugren", "bugri", "bugru", "ĉiesulino", "ĉiesulo", "diofek", "diofeka", "feken", "fekfikanto", "feklekulo", 
+"fekulo", "fikado", "fikema", "fikfek", "fiki", "fikiĝi", "fikiĝu", "fikilo", "fikklaŭno", "fikota", "fiku", 
 "forfiki", "forfikiĝu", "forfiku", "forfurzu", "forpisi", "forpisu", "furzulo", "kacen", "kaco", "kacsuĉulo", 
 "kojono", "piĉen", "piĉo", "zamenfek", 
 /// <summary>
 /// Finnish
 /// </summary>
-"alfred nussi", "bylsiä", "haahka", "haista paska", "haista vittu", "hatullinen", "helvetisti", "hevonkuusi", "hevonpaska",
-"hevonperse", "hevonvittu", "hevonvitunperse", "hitosti", "hitto", "huorata", "hässiä", "juosten kustu", "jutku", "jutsku", 
-"jätkä", "kananpaska", "koiranpaska", "kuin esterin perseestä", "kulli", "kullinluikaus", "kuppainen", "kusaista", 
-"kuseksia", "kusettaa", "kusi", "kusipää", "kusta", "kyrpiintynyt", "kyrpiintyä", "kyrpiä", "kyrpä", "kyrpänaama", 
-"kyrvitys", "lahtari", "lutka", "molo", "molopää", "mulkero", "mulkku", "mulkvisti", "muna", "munapää", "munaton", 
-"mutakuono", "mutiainen", "naida", "nainti", "narttu", "neekeri", "nekru", "nuolla persettä", "nussia", "nussija", 
-"nussinta", "paljaalla", "palli", "pallit", "paneskella", "panettaa", "panna", "pano", "pantava", "paska", "paskainen", 
-"paskamainen", "paskanmarjat", "paskantaa", "paskapuhe", "paskapää", "paskattaa", "paskiainen", "paskoa", "pehko", 
-"pentele", "perkele", "perkeleesti", "persaukinen", "perse", "perseennuolija", "perseet olalla", "persereikä", 
+"alfred nussi", "bylsiä", "haahka", "haista paska", "haista vittu", "hatullinen", "helvetisti", "hevonkuusi", 
+"hevonpaska", "hevonperse", "hevonvittu", "hevonvitunperse", "hitosti", "hitto", "huorata", "hässiä", "juosten kustu", 
+"jutku", "jutsku", "jätkä", "kananpaska", "koiranpaska", "kuin esterin perseestä", "kulli", "kullinluikaus", "kuppainen", 
+"kusaista", "kuseksia", "kusettaa", "kusi", "kusipää", "kusta", "kyrpiintynyt", "kyrpiintyä", "kyrpiä", "kyrpä", 
+"kyrpänaama", "kyrvitys", "lahtari", "lutka", "molo", "molopää", "mulkero", "mulkku", "mulkvisti", "muna", "munapää", 
+"munaton", "mutakuono", "mutiainen", "naida", "nainti", "narttu", "neekeri", "nekru", "nuolla persettä", "nussia", 
+"nussija", "nussinta", "paljaalla", "palli", "pallit", "paneskella", "panettaa", "panna", "pano", "pantava", "paska", 
+"paskainen", "paskamainen", "paskanmarjat", "paskantaa", "paskapuhe", "paskapää", "paskattaa", "paskiainen", "paskoa", 
+"pehko", "pentele", "perkele", "perkeleesti", "persaukinen", "perse", "perseennuolija", "perseet olalla", "persereikä", 
 "perseääliö", "persläpi", "perspano", "persvako", "pilkunnussija", "pillu", "pillut", "pipari", "piru", "pistää", 
 "pyllyvako", "reikä", "reva", "ripsipiirakka", "runkata", "runkkari", "runkkaus", "runkku", "ryssä", "rättipää", 
 "saatanasti", "suklaaosasto", "tavara", "toosa", "tuhkaluukku", "tumputtaa", "turpasauna", "tussu", "tussukka", 
@@ -179,7 +179,7 @@
 /// </summary>
 "allumé", "allumée", "baiser", "bander", "bigornette", "bite", "bitte", "bloblos", "bosser", "bourré", "bourrée", 
 "branlage", "branler", "branlette", "branleur", "branleuse", "brouter le cresson", "caca", "cailler", "chatte", "chiasse", 
-"chier", "chiottes", "cirer", "clito", "con", "connard", "connasse", "conne", "couilles", "cramouille", "cul", "déconne", 
+"chier", "chiottes", "cirer", "clito", "connard", "connasse", "conne", "couilles", "cramouille", "déconne", 
 "déconner", "doudounes", "drague", "emmerdant", "emmerder", "emmerdeur", "emmerdeuse", "enculé", "enculée", "enfoiré", 
 "enfoirée", "étron", "fille de pute", "fils de pute", "flic", "folle", "foutre", "gerber", "gouine", "grande folle", 
 "grogniasse", "gueule", "jouir", "la putain de ta mère", "MALPT", "maquereau", "melon", "ménage a trois", "merde", 
@@ -233,7 +233,7 @@
 /// <summary>
 /// Japanese
 /// </summary>
-"g スポット", "s ＆ m", "sm", "sm女王", "xx", "アジアのかわいい女の子", "アスホール", "アナリングス", "アナル", "いたずら", 
+"g スポット", "s ＆ m", "sm女王", "アジアのかわいい女の子", "アスホール", "アナリングス", "アナル", "いたずら", 
 "イラマチオ", "ウェブカメラ", "エクスタシー", "エスコート", "エッチ", "エロティズム", "エロティック", "オーガズム", "オカマ",
 "おしっこ", "おしり", "オシリ", "おしりのあな", "おっぱい", "オッパイ", "オナニー", "オマンコ", "おもらし", "お尻", 
 "カーマスートラ", "カント", "クリトリス", "グループ・セックス", "グロ", "クンニリングス", "ゲイ・セックス", "ゲイの男性", 
@@ -244,8 +244,8 @@
 "ファック", "ファンタジー", "フィスト", "フェティッシュ", "フェラチオ", "ふたなり", "ぶっかけ", "フック", 
 "プリンス アルバート ピアス", "プレイボーイ", "ベアバック", "ペニス", "ペニスバンド", "ボーイズラブ", "ボールギャグ", 
 "ボールを蹴る", "ぽっちゃり", "ホモ", "ポルノ", "ポルノグラフィー", "ボンテージ", "マザー・ファッカー", "マスターベーション", 
-"まんこ", "やおい", "やりまん", "ユダヤ人", "ラティーナ", "ラバー", "ランジェリー", "レイプ", "レズビアン", "ローター", "ロリータ",
-"陰毛", "革抑制", "騎上位", "巨根", "強姦犯", "玉なめ", "玉舐め", "緊縛", "近親相姦", "嫌い", "後背位", "合意の性交", "拷問", 
+"まんこ", "やおい", "やりまん", "ユダヤ人", "ラティーナ", "ラバー", "ランジェリー", "レイプ", "レズビアン", "ローター", 
+"ロリータ", "陰毛", "革抑制", "騎上位", "巨根", "強姦犯", "玉なめ", "玉舐め", "緊縛", "近親相姦", "嫌い", "後背位", "合意の性交", "拷問", 
 "黒人", "殺し方", "殺人事件", "殺人方法", "支配", "児童性虐待", "自己愛性", "手コキ", "獣姦", "女の子", "女王様", "女子高生", 
 "女装", "新しいポルノ", "人妻", "人種", "正常位", "生殖器", "精液", "挿入", "足フェチ", "足を広げる", "大陰唇", "脱衣",
 "茶色のシャワー", "中出し", "潮吹き女", "潮吹き男性", "直腸", "剃毛", "貞操帯", "奴隷", "二穴", "乳首", "尿道プレイ", "覗き", 
@@ -261,8 +261,9 @@
 "강간", "개새끼", "개자식", "개좆", "개차반", "거유", "계집년", "고자", "근친", "노모", "니기미", "뒤질래", "딸딸이", "때씹", 
 "또라이", "뙤놈", "로리타", "망가", "몰카", "미친", "미친새끼", "바바리맨", "변태", "병신", "보지", "불알", "빠구리", "사까시", 
 "섹스", "스와핑", "쌍놈", "씨발", "씨발놈", "씨팔", "씹", "씹물", "씹빨", "씹새끼", "씹알", "씹창", "씹팔", "암캐", "애자", 
-"야동", "야사", "야애니", "엄창", "에로", "염병", "옘병", "유모", "육갑", "은꼴", "자위", "자지", "잡년", "종간나", "좆", "좆만", 
-"죽일년", "쥐좆", "직촬", "짱깨", "쪽바리", "창녀", "포르노", "하드코어", "호로", "화냥년", "후레아들", "후장", "희쭈그리", 
+"야동", "야사", "야애니", "엄창", "에로", "염병", "옘병", "유모", "육갑", "은꼴", "자위", "자지", "잡년", "종간나", "좆", 
+"좆만", "죽일년", "쥐좆", "직촬", "짱깨", "쪽바리", "창녀", "포르노", "하드코어", "호로", "화냥년", "후레아들", "후장", 
+"희쭈그리", 
 /// <summary>
 /// Norwegian
 /// </summary>
@@ -278,7 +279,7 @@
 /// Polish
 /// </summary>
 "burdel", "burdelmama", "chujnia", "ciota", "cyc", "dmuchać", "do kurwy nędzy", "dupa", "dupek", "duperele", "dziwka", 
-"fiut", "gówno", "gówno prawda", "huj", "jajco", "jajeczko", "jajko", "jajo", "ja pierdolę", "jebać", "jebany", "kurwa",
+"fiut", "gówno", "gówno prawda", "jajco", "jajeczko", "jajko", "jajo", "ja pierdolę", "jebać", "jebany", "kurwa",
 "kurwy", "kutafon", "kutas", "lizać pałę", "obciągać chuja", "obciągać fiuta", "obciągać loda", "pieprzyć", "pierdolec",
 "pierdolić", "pierdolnięty", "pierdoła", "pierdzieć", "pojeb", "popierdolony", "robic loda", "robić loda", "ruchać",
 "rzygać", "skurwysyn", "sraczka", "srać", "suka", "syf", "wkurwiać", "zajebisty", 
@@ -296,7 +297,7 @@
 "lolita", "mãe", "mama", "merda", "maldito", "maldita", "mental", "ninfeta", "ninfetinha", "nuas", "orgasmo",
 "paneleiro", "passar um cheque", "peidar", "pênis", "pinto", "peitura", "pica", "pirocudo", "piroca", "porra", 
 "puto", "putinho", "putinha", "prostituta", "puta", "putaria", "porno", "punheta", "puta que pariu", "puta que te pariu", 
-"ppk", "queca", "quenga", "retardado", "ratardada", "rabuda", "rabo", "rola", "roludo", "siririca", "sacanagem", 
+"queca", "quenga", "retardado", "ratardada", "rabuda", "rabo", "rola", "roludo", "siririca", "sacanagem", 
 "saco", "sado", "sadomado", "sexo", "sex", "sem noção", "sexy", "safado", "safada", "transexual", "transa", "teemo", 
 "torneira", "tarado", "tarada", "transar", "transudo", "trepada", "trepadeira", "trepar", "travesti", "vai-te foder", 
 "vai tomar no cu", "veado", "viado", "viadinho", "viadão", "vaginal", "vibrador", "xana", "xochota", "xota", 
@@ -304,12 +305,12 @@
 /// <summary>
 /// Russian
 /// </summary>
-"bychara", "byk", "chernozhopyi", "dolboy'eb", "ebalnik", "ebalo", "ebalom sch'elkat", "mudack", "opizdenet", 
+"bychara", "chernozhopyi", "dolboy'eb", "ebalnik", "ebalo", "ebalom sch'elkat", "mudack", "opizdenet", 
 "osto'eblo", "ostokhuitel'no", "ot'ebis", "otmudohat", "otpizdit", "otsosi", "padlo", "pedik", "perdet", "petuh", 
-"pidar gnoinyj", "pizdato", "pizdatyi", "piz'det", "pizdetc", "pizdoi nakryt'sja", "pizd'uk", "piz`dyulina", "podi ku'evo",
-"poeben", "po'imat' na konchik", "po'iti posrat", "po khuy", "poluchit pizdy", "pososi moyu konfetku", "prissat", 
-"proebat", "promudobl'adsksya pizdopro'ebina", "propezdoloch", "prosrat", "raspeezdeyi", "raspizdatyi", "raz'yebuy", 
-"raz'yoba", "s'ebat'sya", "shalava", "styervo", "sukin syn", "svodit posrat", "svoloch", "trakhat'sya", 
+"pidar gnoinyj", "pizdato", "pizdatyi", "piz'det", "pizdetc", "pizdoi nakryt'sja", "pizd'uk", "piz`dyulina", 
+"podi ku'evo", "poeben", "po'imat' na konchik", "po'iti posrat", "po khuy", "poluchit pizdy", "pososi moyu konfetku", 
+"prissat", "proebat", "promudobl'adsksya pizdopro'ebina", "propezdoloch", "prosrat", "raspeezdeyi", "raspizdatyi", 
+"raz'yebuy", "raz'yoba", "s'ebat'sya", "shalava", "styervo", "sukin syn", "svodit posrat", "svoloch", "trakhat'sya", 
 "trimandoblydskiy pizdoproyob", "ubl'yudok", "uboy", "u'ebitsche", "vafl'a", "vafli lovit", "v pizdu", "vyperdysh", 
 "vzdrochennyi", "yeb vas", "za'ebat", "zaebis", "zalupa", "zalupat", "zasranetc", "zassat", "zlo'ebuchy", "бардак", 
 "бздёнок", "блядки", "блядовать", "блядство", "блядь", "бугор", "во пизду", "встать раком", "выёбываться", "гандон", 
@@ -330,7 +331,7 @@
 "Follar", "Gilipichis", "Gilipollas", "Hacer una paja", "Haciendo el amor", "Heroína", "Hija de puta", "Hijaputa", 
 "Hijo de puta", "Hijoputa", "Idiota", "Imbécil", "infierno", "Jilipollas", "Kapullo", "Lameculos", "Maciza", 
 "Macizorra", "maldito", "Mamada", "Marica", "Maricón", "Mariconazo", "martillo", "Mierda", "Nazi", "Orina", "Pedo", 
-"Pervertido", "Pezón", "Pinche", "Pis", "Prostituta", "Puta", "Racista", "Ramera", "Sádico", "Semen", "Sexo", "Sexo oral", 
+"Pervertido", "Pezón", "Pinche", "Prostituta", "Puta", "Racista", "Ramera", "Sádico", "Semen", "Sexo", "Sexo oral", 
 "Soplagaitas", "Soplapollas", "Tetas grandes", "Tía buena", "Travesti", "Trio", "Verga", "vete a la mierda", "Vulva", 
 /// <summary>
 /// Swedish
@@ -347,21 +348,21 @@
 /// Turkish
 /// </summary>
 "amcığa", "amcığı", "amcığın", "amcık", "amcıklar", "amcıklara", "amcıklarda", "amcıklardan", "amcıkları", "amcıkların", 
-"amcıkta", "amcıktan", "amı", "amlar", "çingene", "Çingenede", "Çingeneden", "Çingeneler", "Çingenelerde", "Çingenelerden",
-"Çingenelere", "Çingeneleri", "Çingenelerin", "Çingenenin", "Çingeneye", "Çingeneyi", "göt", "göte", "götler", "götlerde", 
-"götlerden", "götlere", "götleri", "götlerin", "götte", "götten", "götü", "götün", "götveren", "götverende", "götverenden",
-"götverene", "götvereni", "götverenin", "götverenler", "götverenlerde", "götverenlerden", "götverenlere", "götverenleri", 
-"götverenlerin", "kaltağa", "kaltağı", "kaltağın", "kaltak", "kaltaklar", "kaltaklara", "kaltaklarda", "kaltaklardan", 
-"kaltakları", "kaltakların", "kaltakta", "kaltaktan", "orospu", "orospuda", "orospudan", "orospular", "orospulara", 
-"orospularda", "orospulardan", "orospuları", "orospuların", "orospunun", "orospuya", "orospuyu", "otuz birci", 
-"otuz bircide", "otuz birciden", "otuz birciler", "otuz bircilerde", "otuz bircilerden", "otuz bircilere", 
-"otuz bircileri", "otuz bircilerin", "otuz bircinin", "otuz birciye", "otuz birciyi", "saksocu", "saksocuda", "saksocudan", 
-"saksocular", "saksoculara", "saksocularda", "saksoculardan", "saksocuları", "saksocuların", "saksocunun", "saksocuya", 
-"saksocuyu", "sıçmak", "sik", "sike", "siker sikmez", "siki", "sikilir sikilmez", "sikin", "sikler", "siklerde", 
-"siklerden", "siklere", "sikleri", "siklerin", "sikmek", "sikmemek", "sikte", "sikten", "siktir", "siktirir siktirmez", 
-"taşağa", "taşağı", "taşağın", "taşak", "taşaklar", "taşaklara", "taşaklarda", "taşaklardan", "taşakları", "taşakların", 
-"taşakta", "taşaktan", "yarağa", "yarağı", "yarağın", "yarak", "yaraklar", "yaraklara", "yaraklarda", "yaraklardan", 
-"yarakları", "yarakların", "yarakta", "yaraktan"
+"amcıkta", "amcıktan", "amı", "amlar", "çingene", "Çingenede", "Çingeneden", "Çingeneler", "Çingenelerde", 
+"Çingenelerden", "Çingenelere", "Çingeneleri", "Çingenelerin", "Çingenenin", "Çingeneye", "Çingeneyi", "göt", "göte", 
+"götler", "götlerde", "götlerden", "götlere", "götleri", "götlerin", "götte", "götten", "götü", "götün", "götveren", 
+"götverende", "götverenden", "götverene", "götvereni", "götverenin", "götverenler", "götverenlerde", "götverenlerden", 
+"götverenlere", "götverenleri", "götverenlerin", "kaltağa", "kaltağı", "kaltağın", "kaltak", "kaltaklar", "kaltaklara", 
+"kaltaklarda", "kaltaklardan", "kaltakları", "kaltakların", "kaltakta", "kaltaktan", "orospu", "orospuda", "orospudan", 
+"orospular", "orospulara", "orospularda", "orospulardan", "orospuları", "orospuların", "orospunun", "orospuya", 
+"orospuyu", "otuz birci", "otuz bircide", "otuz birciden", "otuz birciler", "otuz bircilerde", "otuz bircilerden", 
+"otuz bircilere", "otuz bircileri", "otuz bircilerin", "otuz bircinin", "otuz birciye", "otuz birciyi", "saksocu", 
+"saksocuda", "saksocudan", "saksocular", "saksoculara", "saksocularda", "saksoculardan", "saksocuları", "saksocuların", 
+"saksocunun", "saksocuya", "saksocuyu", "sıçmak", "sike", "siker sikmez", "siki", "sikilir sikilmez", "sikin", "sikler", 
+"siklerde", "siklerden", "siklere", "sikleri", "siklerin", "sikmek", "sikmemek", "sikte", "sikten", "siktir", 
+"siktirir siktirmez", "taşağa", "taşağı", "taşağın", "taşak", "taşaklar", "taşaklara", "taşaklarda", "taşaklardan", 
+"taşakları", "taşakların", "taşakta", "taşaktan", "yarağa", "yarağı", "yarağın", "yarak", "yaraklar", "yaraklara", 
+"yaraklarda", "yaraklardan", "yarakları", "yarakların", "yarakta", "yaraktan"
         };
         #endregion
         #region Jokes

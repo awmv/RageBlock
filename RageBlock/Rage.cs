@@ -160,19 +160,20 @@
 /// <summary>
 /// Finnish
 /// </summary>
-"alfred nussi", "bylsiä", "haahka", "haista paska", "haista vittu", "hatullinen", "helvetisti", "hevonkuusi", "hevonpaska", "hevonperse", "hevonvittu", "hevonvitunperse", "hitosti", 
-"hitto", "huorata", "hässiä", "juosten kustu", "jutku", "jutsku", "jätkä", "kananpaska", "koiranpaska", 
-"kuin esterin perseestä", "kulli", "kullinluikaus", "kuppainen", "kusaista", "kuseksia", "kusettaa", "kusi", "kusipää", 
-"kusta", "kyrpiintynyt", "kyrpiintyä", "kyrpiä", "kyrpä", "kyrpänaama", "kyrvitys", "lahtari", "lutka", "molo", 
-"molopää", "mulkero", "mulkku", "mulkvisti", "muna", "munapää", "munaton", "mutakuono", "mutiainen", "naida", "nainti", 
-"narttu", "neekeri", "nekru", "nuolla persettä", "nussia", "nussija", "nussinta", "paljaalla", "palli", "pallit", 
-"paneskella", "panettaa", "panna", "pano", "pantava", "paska", "paskainen", "paskamainen", "paskanmarjat", "paskantaa",
-"paskapuhe", "paskapää", "paskattaa", "paskiainen", "paskoa", "pehko", "pentele", "perkele", "perkeleesti", "persaukinen",
-"perse", "perseennuolija", "perseet olalla", "persereikä", "perseääliö", "persläpi", "perspano", "persvako", 
-"pilkunnussija", "pillu", "pillut", "pipari", "piru", "pistää", "pyllyvako", "reikä", "reva", "ripsipiirakka", 
-"runkata", "runkkari", "runkkaus", "runkku", "ryssä", "rättipää", "saatanasti", "suklaaosasto", "tavara", "toosa", 
-"tuhkaluukku", "tumputtaa", "turpasauna", "tussu", "tussukka", "tussut", "vakipano", "vetää käteen", "viiksi", "vittu", 
-"vittuilla", "vittuilu", "vittumainen", "vittuuntua", "vittuuntunut", "vitun", "vitusti", "vituttaa", "vitutus", "äpärä", 
+"alfred nussi", "bylsiä", "haahka", "haista paska", "haista vittu", "hatullinen", "helvetisti", "hevonkuusi", "hevonpaska",
+"hevonperse", "hevonvittu", "hevonvitunperse", "hitosti", "hitto", "huorata", "hässiä", "juosten kustu", "jutku", "jutsku", 
+"jätkä", "kananpaska", "koiranpaska", "kuin esterin perseestä", "kulli", "kullinluikaus", "kuppainen", "kusaista", 
+"kuseksia", "kusettaa", "kusi", "kusipää", "kusta", "kyrpiintynyt", "kyrpiintyä", "kyrpiä", "kyrpä", "kyrpänaama", 
+"kyrvitys", "lahtari", "lutka", "molo", "molopää", "mulkero", "mulkku", "mulkvisti", "muna", "munapää", "munaton", 
+"mutakuono", "mutiainen", "naida", "nainti", "narttu", "neekeri", "nekru", "nuolla persettä", "nussia", "nussija", 
+"nussinta", "paljaalla", "palli", "pallit", "paneskella", "panettaa", "panna", "pano", "pantava", "paska", "paskainen", 
+"paskamainen", "paskanmarjat", "paskantaa", "paskapuhe", "paskapää", "paskattaa", "paskiainen", "paskoa", "pehko", 
+"pentele", "perkele", "perkeleesti", "persaukinen", "perse", "perseennuolija", "perseet olalla", "persereikä", 
+"perseääliö", "persläpi", "perspano", "persvako", "pilkunnussija", "pillu", "pillut", "pipari", "piru", "pistää", 
+"pyllyvako", "reikä", "reva", "ripsipiirakka", "runkata", "runkkari", "runkkaus", "runkku", "ryssä", "rättipää", 
+"saatanasti", "suklaaosasto", "tavara", "toosa", "tuhkaluukku", "tumputtaa", "turpasauna", "tussu", "tussukka", 
+"tussut", "vakipano", "vetää käteen", "viiksi", "vittu", "vittuilla", "vittuilu", "vittumainen", "vittuuntua", 
+"vittuuntunut", "vitun", "vitusti", "vituttaa", "vitutus", "äpärä", 
 /// <summary>
 /// French
 /// </summary>
@@ -202,11 +203,11 @@
 "bukszák", "bukszákat", "bukszát", "búr", "búrok", "csöcs", "csöcsök", "csöcsöket", "csöcsöt", "fasz", "faszfej", 
 "faszfejek", "faszfejeket", "faszfejet", "faszok", "faszokat", "faszt", "fing", "fingok", "fingokat", "fingot", "franc", 
 "francok", "francokat", "francot", "geci", "gecibb", "gecik", "geciket", "gecit", "kibaszott", "kibaszottabb", "kúr", 
-"kurafi", "kurafik", "kurafikat", "kurafit", "kurvák", "kurvákat", "kurvát", "leggecibb", "legkibaszottabb", "legszarabb", "marha", 
-"marhák", "marhákat", "marhát", "megdöglik", "pele", "pelék", "picsa", "picsákat", "picsát", "pina", "pinák", "pinákat", 
-"pinát", "pofa", "pofákat", "pofát", "pöcs", "pöcsök", "pöcsöket", "pöcsöt", "punci", "puncik", "segg", "seggek", 
-"seggeket", "segget", "seggfej", "seggfejek", "seggfejeket", "seggfejet", "szajha", "szajhák", "szajhákat", "szajhát",
-"szar", "szarabb", "szarik", "szarok", "szarokat", "szart",
+"kurafi", "kurafik", "kurafikat", "kurafit", "kurvák", "kurvákat", "kurvát", "leggecibb", "legkibaszottabb", "legszarabb",
+"marha", "marhák", "marhákat", "marhát", "megdöglik", "pele", "pelék", "picsa", "picsákat", "picsát", "pina", "pinák", 
+"pinákat", "pinát", "pofa", "pofákat", "pofát", "pöcs", "pöcsök", "pöcsöket", "pöcsöt", "punci", "puncik", "segg", 
+"seggek", "seggeket", "segget", "seggfej", "seggfejek", "seggfejeket", "seggfejet", "szajha", "szajhák", "szajhákat", 
+"szajhát", "szar", "szarabb", "szarik", "szarok", "szarokat", "szart",
 /// <summary>
 /// Italian
 /// </summary>
@@ -216,18 +217,19 @@
 "caciocappella", "cadavere", "cagare", "cagata", "cagna", "cammello", "cappella", "carciofo", "carità", "casci", 
 "cazzata", "cazzimma", "cazzo", "checca", "chiappa", "chiavare", "chiavata", "ciospo", "ciucciami il cazzo", "coglione", 
 "coglioni", "cornuto", "cozza", "culattina", "culattone", "culo", "di merda", "ditalino", "duro", "fare unaŠ", "fava", 
-"femminuccia", "fica", "figa", "figlio di buona donna", "figlio di puttana", "figone", "finocchio", "fottere", "fottersi", "fracicone", "fregna", "frocio",
-"froscio", "fuori come un balcone", "goldone", "grilletto", "guanto", "guardone", "incazzarsi", "incoglionirsi", "ingoio", 
-"l'arte bolognese", "leccaculo", "lecchino", "lofare", "loffa", "loffare", "lumaca", "manico", "mannaggia", "merda", 
-"merdata", "merdoso", "mignotta", "minchia", "minchione", "mona", "monta", "montare", "mussa", "nave scuola", "nerchia", 
-"nudo", "padulo", "palle", "palloso", "patacca", "patonza", "pecorina", "pesce", "picio", "pincare", "pipa", "pipì", 
-"pippone", "pirla", "pisciare", "piscio", "pisello", "pistola", "pistolotto", "pomiciare", "pompa", "pompino", "porca", 
-"porca madonna", "porca miseria", "porca puttana", "porco due", "porco zio", "potta", "puppami", "puttana", "quaglia",
-"recchione", "regina", "rincoglionire", "rizzarsi", "rompiballe", "ruffiano", "sbattere", "sbattersi", "sborra", 
-"sborrata", "sborrone", "sbrodolata", "scopare", "scopata", "scorreggiare", "sega", "slinguare", "slinguata", 
-"smandrappata", "soccia", "socmel", "sorca", "spagnola", "spompinare", "sticchio", "stronza", "stronzata", "stronzo", 
-"succhiami", "sveltina", "sverginare", "tarzanello", "terrone", "testa di cazzo", "tette", "tirare", "topa", "troia", 
-"trombare", "uccello", "vacca", "vaffanculo", "vangare", "venire", "zinne", "zio cantante", "zoccola", 
+"femminuccia", "fica", "figa", "figlio di buona donna", "figlio di puttana", "figone", "finocchio", "fottere", "fottersi", 
+"fracicone", "fregna", "frocio", "froscio", "fuori come un balcone", "goldone", "grilletto", "guanto", "guardone", 
+"incazzarsi", "incoglionirsi", "ingoio", "l'arte bolognese", "leccaculo", "lecchino", "lofare", "loffa", "loffare", 
+"lumaca", "manico", "mannaggia", "merda", "merdata", "merdoso", "mignotta", "minchia", "minchione", "mona", "monta", 
+"montare", "mussa", "nave scuola", "nerchia", "nudo", "padulo", "palle", "palloso", "patacca", "patonza", "pecorina", 
+"pesce", "picio", "pincare", "pipa", "pipì", "pippone", "pirla", "pisciare", "piscio", "pisello", "pistola", "pistolotto",
+"pomiciare", "pompa", "pompino", "porca", "porca madonna", "porca miseria", "porca puttana", "porco due", "porco zio", 
+"potta", "puppami", "puttana", "quaglia", "recchione", "regina", "rincoglionire", "rizzarsi", "rompiballe", "ruffiano", 
+"sbattere", "sbattersi", "sborra", "sborrata", "sborrone", "sbrodolata", "scopare", "scopata", "scorreggiare", "sega", 
+"slinguare", "slinguata", "smandrappata", "soccia", "socmel", "sorca", "spagnola", "spompinare", "sticchio", "stronza", 
+"stronzata", "stronzo", "succhiami", "sveltina", "sverginare", "tarzanello", "terrone", "testa di cazzo", "tette", 
+"tirare", "topa", "troia", "trombare", "uccello", "vacca", "vaffanculo", "vangare", "venire", "zinne", "zio cantante", 
+"zoccola", 
 /// <summary>
 /// Japanese
 /// </summary>
@@ -259,8 +261,8 @@
 "강간", "개새끼", "개자식", "개좆", "개차반", "거유", "계집년", "고자", "근친", "노모", "니기미", "뒤질래", "딸딸이", "때씹", 
 "또라이", "뙤놈", "로리타", "망가", "몰카", "미친", "미친새끼", "바바리맨", "변태", "병신", "보지", "불알", "빠구리", "사까시", 
 "섹스", "스와핑", "쌍놈", "씨발", "씨발놈", "씨팔", "씹", "씹물", "씹빨", "씹새끼", "씹알", "씹창", "씹팔", "암캐", "애자", 
-"야동", "야사", "야애니", "엄창", "에로", "염병", "옘병", "유모", "육갑", "은꼴", "자위", "자지", "잡년", "종간나", "좆", "좆만", "죽일년", "쥐좆", "직촬", "짱깨",
-"쪽바리", "창녀", "포르노", "하드코어", "호로", "화냥년", "후레아들", "후장", "희쭈그리", 
+"야동", "야사", "야애니", "엄창", "에로", "염병", "옘병", "유모", "육갑", "은꼴", "자위", "자지", "잡년", "종간나", "좆", "좆만", 
+"죽일년", "쥐좆", "직촬", "짱깨", "쪽바리", "창녀", "포르노", "하드코어", "호로", "화냥년", "후레아들", "후장", "희쭈그리", 
 /// <summary>
 /// Norwegian
 /// </summary>
@@ -353,13 +355,13 @@
 "kaltakları", "kaltakların", "kaltakta", "kaltaktan", "orospu", "orospuda", "orospudan", "orospular", "orospulara", 
 "orospularda", "orospulardan", "orospuları", "orospuların", "orospunun", "orospuya", "orospuyu", "otuz birci", 
 "otuz bircide", "otuz birciden", "otuz birciler", "otuz bircilerde", "otuz bircilerden", "otuz bircilere", 
-"otuz bircileri", "otuz bircilerin", "otuz bircinin", "otuz birciye", "otuz birciyi", "saksocu", "saksocuda", "saksocudan", "saksocular", 
-"saksoculara", "saksocularda", "saksoculardan", "saksocuları", "saksocuların", "saksocunun", "saksocuya", "saksocuyu", 
-"sıçmak", "sik", "sike", "siker sikmez", "siki", "sikilir sikilmez", "sikin", "sikler", "siklerde", "siklerden", "siklere",
-"sikleri", "siklerin", "sikmek", "sikmemek", "sikte", "sikten", "siktir", "siktirir siktirmez", "taşağa", "taşağı", 
-"taşağın", "taşak", "taşaklar", "taşaklara", "taşaklarda", "taşaklardan", "taşakları", "taşakların", "taşakta", "taşaktan", "yarağa",
-"yarağı", "yarağın", "yarak", "yaraklar", "yaraklara", "yaraklarda", "yaraklardan", "yarakları", "yarakların", "yarakta",
-"yaraktan"
+"otuz bircileri", "otuz bircilerin", "otuz bircinin", "otuz birciye", "otuz birciyi", "saksocu", "saksocuda", "saksocudan", 
+"saksocular", "saksoculara", "saksocularda", "saksoculardan", "saksocuları", "saksocuların", "saksocunun", "saksocuya", 
+"saksocuyu", "sıçmak", "sik", "sike", "siker sikmez", "siki", "sikilir sikilmez", "sikin", "sikler", "siklerde", 
+"siklerden", "siklere", "sikleri", "siklerin", "sikmek", "sikmemek", "sikte", "sikten", "siktir", "siktirir siktirmez", 
+"taşağa", "taşağı", "taşağın", "taşak", "taşaklar", "taşaklara", "taşaklarda", "taşaklardan", "taşakları", "taşakların", 
+"taşakta", "taşaktan", "yarağa", "yarağı", "yarağın", "yarak", "yaraklar", "yaraklara", "yaraklarda", "yaraklardan", 
+"yarakları", "yarakların", "yarakta", "yaraktan"
         };
         #endregion
         #region Jokes

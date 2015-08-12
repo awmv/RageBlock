@@ -24,6 +24,7 @@ namespace RageBlock
         {
             M = new Menu(r, r, true);
             M.AddItem(new MenuItem("Status", "Enable").SetValue(true));
+            //M.AddItem(new MenuItem("Block", "Block modus:").SetValue(new StringList(new[] { "Mute people", "Only censor people", "Let them joke" })));
             M.AddToMainMenu();
 
             Game.OnChat += Game_OnChat;
@@ -43,7 +44,6 @@ namespace RageBlock
             Match match = regex.Match(args.Message);
             if (!args.Sender.IsMe && !muted.Contains(args.Sender.Name) && match.Success)
             {
-                muted.Add(args.Sender.Name);
                 args.Process = false;                
                 Utility.DelayAction.Add(new Random().Next(127, 723), () => Game.Say("/mute " + args.Sender.Name));
                 Notifications
@@ -57,8 +57,8 @@ namespace RageBlock
         private static void Game_OnInput(GameInputEventArgs args)
         {
             if (!M.Item("Status").GetValue<bool>()) return;
-            Regex regex = 
-                new Regex(@"^(?!\/(?:whisper|w|reply|r)\b).*\b(" + string.Join(@"\b|\b", 
+            Regex regex =
+                new Regex(@"^(?!\/(?:whisper|w|reply|r)\b).*\b(" + string.Join(@"\b|\b",
                     RageBlock.Rage.flame) + @"\b)", RegexOptions.IgnoreCase);
             Match match = regex.Match(args.Input);
             if (match.Success)

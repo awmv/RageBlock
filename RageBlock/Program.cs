@@ -43,6 +43,7 @@ namespace RageBlock
             Match match = regex.Match(args.Message);
             if (!args.Sender.IsMe && !muted.Contains(args.Sender.Name) && match.Success)
             {
+                args.Process = false;
                 muted.Add(args.Sender.Name);
                 Utility.DelayAction.Add(new Random().Next(127, 723), () => Game.Say("/mute " + args.Sender.Name));
                 Notifications

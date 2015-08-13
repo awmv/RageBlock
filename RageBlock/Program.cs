@@ -24,7 +24,9 @@ namespace RageBlock
         {
             M = new Menu(r, r, true);
             M.AddItem(new MenuItem("Status", "Enable").SetValue(true));
-            M.AddItem(new MenuItem("Block", "Block modus:").SetValue(new StringList(new[] { "Mute people", "Only censor people" })));
+            M.AddItem(new MenuItem("Block", "Block modus:").SetValue(new StringList(new[] { 
+                "Mute people", "Only censor people" 
+            })));
             M.AddToMainMenu();
 
             Game.OnChat += Game_OnChat;
@@ -39,31 +41,41 @@ namespace RageBlock
 
         private static void Game_OnChat(GameChatEventArgs args)
         {
-            if (!M.Item("Status").GetValue<bool>()) return;
-            Regex regex = new Regex(@"\b" + string.Join(@"\b|\b", RageBlock.Rage.flame) + @"\b", RegexOptions.IgnoreCase);
-            Match match = regex.Match(args.Message);
-            if (!args.Sender.IsMe && !muted.Contains(args.Sender.Name) && match.Success)
+            if (!M.Item("Status").GetValue<bool>())
             {
-                if (M.Item("Block").GetValue<StringList>().SelectedValue == "Mute people")
+                Regex regex = new Regex(@"\b" + string.Join(@"\b|\b", RageBlock.Rage.flame) + @"\b", RegexOptions.IgnoreCase);
+                Match match = regex.Match(args.Message);
+                if (!args.Sender.IsMe && !muted.Contains(args.Sender.Name) && match.Success)
                 {
-                    muted.Add(args.Sender.Name);
+                    if (M.Item("Block").GetValue<StringList>().SelectedIndex == 0) 
+                    {
+                        muted.Add(args.Sender.Name);
+                    }
+                    args.Process = false;
+                    Utility.DelayAction.Add(new Random().Next(127, 723), () => 
+                        Game.Say("/mute " + args.Sender.Name)
+                    );
+                    Notifications
+                        .AddNotification(new Notification(args.Sender.ChampionName + " has been muted.", 3500)
+                        .SetTextColor(Color.OrangeRed)
+                        .SetBoxColor(Color.Black));
                 }
-                args.Process = false;                
-                Utility.DelayAction.Add(new Random().Next(127, 723), () => Game.Say("/mute " + args.Sender.Name));
-                Notifications
-                    .AddNotification(new Notification(args.Sender.ChampionName + " has been muted.", 3500)
-                    .SetTextColor(Color.OrangeRed)
-                    .SetBoxColor(Color.Black));
-
             }
+            //if (M.Item("Status").GetValue<bool>() || M.Item("Block").GetValue<StringList>().SelectedIndex != 0 && muted != null)
+            //{
+            //    for (int i = 0; i < muted.Count; i++) {
+            //        Utility.DelayAction.Add(new Random().Next(127, 723), () => 
+            //            Game.Say("/mute " + muted[i])
+            //        );
+            //    }
+            //}
         }
 
         private static void Game_OnInput(GameInputEventArgs args)
         {
             if (!M.Item("Status").GetValue<bool>()) return;
             Regex regex =
-                new Regex(@"^(?!\/(?:whisper|w|reply|r)\b).*\b(" + string.Join(@"\b|\b",
-                    RageBlock.Rage.flame) + @"\b)", RegexOptions.IgnoreCase);
+                new Regex(@"^(?!\/(?:whisper|w|reply|r)\b).*\b(" + string.Join(@"\b|\b", RageBlock.Rage.flame) + @"\b)", RegexOptions.IgnoreCase);
             Match match = regex.Match(args.Input);
             if (match.Success)
             {

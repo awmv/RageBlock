@@ -252,7 +252,8 @@
 "nique ta mère", "noune", "palucher", "pédale", "pédé", "péter", "pipe", "pipi", "poilu", 
 "pouffiasse", "pousse-crotte", "putain", "pute", "queue", "ramoner", "salaud", "serin", 
 "service trois pièces", "suce", "tante", "tapette", "teuf", "tirer", "trick", "tringle", 
-"tringler", "trique", "trou du cul", "turlute", "veuve", "viande a pneus", 
+"tringler", "trique", "trou du cul", "turlute", "veuve", "viande a pneus", "nique ta mère",
+"fils de tute", "pédé", "ta geule",
 /// <summary>
 /// German
 /// </summary>

@@ -47,7 +47,7 @@ namespace RageBlock
                 Match match = regex.Match(args.Message);
                 if (!args.Sender.IsMe && !muted.Contains(args.Sender.Name) && match.Success)
                 {
-                    if (M.Item("Block").GetValue<StringList>().SelectedIndex == 0) 
+                    if (M.Item("Block").GetValue<StringList>().SelectedValue == "Mute people")) 
                     {
                         muted.Add(args.Sender.Name);
                     }

@@ -210,7 +210,8 @@
 "pedal", "pierdol", "pierdolona", "pierdolić", "pierdolic", "przejebane", "przyjeb", "rozpierdalać", 
 "rozpierdolony", "rozpierdolone", "ruchać", "ruhać", "ruchanie", "ruhanie", "Skurwiel", "skórwiel", 
 "skorwiel", "sranie", "wyjebć", "wyjebac", "wyjebany", "wypierdol", "zajebać", "zajebane", 
-"zajebany", 
+"zajebany", "cancro", "muori", "deforme", "senza mani", "tumore", "nascano morti", "cazzo",
+"figa", "scopare", "sesso", "scopo",
 /// <summary>
 /// Esperanto
 /// </summary>

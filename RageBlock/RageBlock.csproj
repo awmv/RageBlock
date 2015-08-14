@@ -41,6 +41,9 @@
     <Reference Include="LeagueSharp.Common">
       <HintPath>E:\LeagueSharp\System\LeagueSharp.Common.dll</HintPath>
     </Reference>
+    <Reference Include="LeagueSharp.Sandbox">
+      <HintPath>E:\LeagueSharp\System\LeagueSharp.Sandbox.dll</HintPath>
+    </Reference>
     <Reference Include="SFXLibrary">
       <HintPath>E:\LeagueSharp\System\SFXLibrary.dll</HintPath>
     </Reference>

@@ -258,14 +258,15 @@
 /// <summary>
 /// German
 /// </summary>
-"analritter", "arschficker", "arschlecker", "arschloch", "bimbo", "bratze", "bumsen", "bonze", 
-"dödel", "ficken", "flittchen", "fratze", "hackfresse", "hurensohn", "ische", "kackbratze", 
-"kacke", "kacken", "kackwurst", "kampflesbe", "kanake", "kimme", "lümmel", "MILF", "möpse", 
-"morgenlatte", "möse", "mufti", "muschi", "nackt", "nippel", "nutte", "onanieren", "orgasmus", 
-"pimmel", "pimpern", "pinkeln", "pissen", "popel", "poppen", "reudig", "schabracke", "scheiße", 
-"schnackeln", "schwanzlutscher", "tittchen", "titten", "vögeln", "vollpfosten", "wichse", 
-"wichsen", "wichser", "hure", "huren", "lappenköpfe", "lappen", "dumm", "dämlich", 
-"missgeburt", "missgeburten", "fick", "arsch", 
+"analritter", "arschficker", "arschlecker", "arschloch", "arschlöcher", "bimbo", "bratze", "bumsen",
+"bonze", "dödel", "dödels", "ficken", "flittchen", "fratze", "fratzen", "hackfresse", "hurensohn",
+"hurensöhne", "ische", "kackbratze", "kackbratzen", "kacke", "kacken", "kackwurst", "kampflesbe",
+"kampflesben", "kanake", "kanaken","lümmel", "MILF", "morgenlatte", "möse", "mufti", "muschi",
+"muschis", "nippel", "nutte", "nutten", "onanieren", "pimmel", "pimpern", "pinkeln", "pissen", "poppen",
+"schabracke", "schabracken", "scheiße", "scheißen", "schnackeln", "schwanzlutscher", "vollpfosten",
+"wichse", "wichsen", "wichser", "hure", "huren", "lappenköpfe", "lappen", "dumm", "dämlich", 
+"missgeburt", "missgeburten", "fick", "arsch", "ärsche", "jedem das seine", "affenarsch", "ffenärsche",
+"affenmensch", "affenmenschen", "ameisenficker", "analbaron", "recht oder unrecht", "vaterland",
 /// <summary>
 /// Hungarian
 /// </summary>

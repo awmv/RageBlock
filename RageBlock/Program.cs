@@ -31,7 +31,7 @@ namespace RageBlock
             M.AddToMainMenu();
 
             Game.OnChat += Game_OnChat;
-            //Game.OnInput += Game_OnInput;
+            Game.OnInput += Game_OnInput;
         }
 
         private static String GetTimestamp(DateTime Value) { return Value.ToString("HH:mm"); }
@@ -59,16 +59,16 @@ namespace RageBlock
             }
         }
 
-        //private static void Game_OnInput(GameInputEventArgs args)
-        //{
-        //    if (!M.Item("Status").GetValue<bool>()) return;
-        //    Regex regex = new Regex(@"^(?!\/(?:whisper|w|reply|r)\b).*\b(" + string.Join(@"\b|\b", RageBlock.Rage.flame) + @"\b)", RegexOptions.IgnoreCase);
-        //    Match match = regex.Match(args.Input);
-        //    if (match.Success)
-        //    {
-        //        args.Process = false;
-        //        Log(RageBlock.Rage.jokes[new Random().Next(0, RageBlock.Rage.jokes.Length)]);
-        //    }
-        //}
+        private static void Game_OnInput(GameInputEventArgs args)
+        {
+            if (!M.Item("Status").GetValue<bool>()) return;
+            Regex regex = new Regex(@"^(?!\/(?:whisper|w|reply|r)\b).*\b(" + string.Join(@"\b|\b", RageBlock.Rage.flame) + @"\b)", RegexOptions.IgnoreCase);
+            Match match = regex.Match(args.Input);
+            if (match.Success)
+            {
+                args.Process = false;
+                Log(RageBlock.Rage.jokes[new Random().Next(0, RageBlock.Rage.jokes.Length)]);
+            }
+        }
     }
 }

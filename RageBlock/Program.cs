@@ -31,7 +31,7 @@ namespace RageBlock
             M.AddToMainMenu();
 
             Game.OnChat += Game_OnChat;
-            Game.OnInput += Game_OnInput;
+            //Game.OnInput += Game_OnInput;
         }
 
         private static String GetTimestamp(DateTime Value) { return Value.ToString("HH:mm"); }
@@ -42,35 +42,33 @@ namespace RageBlock
         }
 
         private static void Game_OnChat(GameChatEventArgs args)
-        {            
+        {
+            if (!M.Item("Status").GetValue<bool>()) return;
             Regex regex = new Regex(@"\b" + string.Join(@"\b|\b", RageBlock.Rage.flame) + @"\b", RegexOptions.IgnoreCase);
-            Match match = regex.Match(args.Message);
-            if (!M.Item("Status").GetValue<bool>())
-            if (!args.Sender.IsMe && !muted.Contains(args.Sender.Name))
+            Match match = regex.Match(args.Message);            
+            if (!args.Sender.IsMe && !muted.Contains(args.Sender.Name) && match.Success)
             {
-                if (match.Success) {                    
-                    if (M.Item("Block").GetValue<StringList>().SelectedIndex == 0)
-                    {
-                        muted.Add(args.Sender.Name);
-                        Utility.DelayAction.Add(new Random().Next(127, 723), () =>
-                            Game.Say("/mute " + args.Sender.ChampionName)
-                        );
-                    }
-                    args.Process = false;
+                if (M.Item("Block").GetValue<StringList>().SelectedIndex == 0)
+                {
+                    muted.Add(args.Sender.Name);
+                    Utility.DelayAction.Add(new Random().Next(127, 723), () =>
+                        Game.Say("/mute " + args.Sender.ChampionName)
+                    );
                 }
+                args.Process = false;
             }
         }
 
-        private static void Game_OnInput(GameInputEventArgs args)
-        {
-            if (!M.Item("Status").GetValue<bool>()) return;
-            Regex regex = new Regex(@"^(?!\/(?:whisper|w|reply|r)\b).*\b(" + string.Join(@"\b|\b", RageBlock.Rage.flame) + @"\b)", RegexOptions.IgnoreCase);
-            Match match = regex.Match(args.Input);
-            if (match.Success)
-            {
-                args.Process = false;
-                Log(RageBlock.Rage.jokes[new Random().Next(0, RageBlock.Rage.jokes.Length)]);
-            }
-        }
+        //private static void Game_OnInput(GameInputEventArgs args)
+        //{
+        //    if (!M.Item("Status").GetValue<bool>()) return;
+        //    Regex regex = new Regex(@"^(?!\/(?:whisper|w|reply|r)\b).*\b(" + string.Join(@"\b|\b", RageBlock.Rage.flame) + @"\b)", RegexOptions.IgnoreCase);
+        //    Match match = regex.Match(args.Input);
+        //    if (match.Success)
+        //    {
+        //        args.Process = false;
+        //        Log(RageBlock.Rage.jokes[new Random().Next(0, RageBlock.Rage.jokes.Length)]);
+        //    }
+        //}
     }
 }

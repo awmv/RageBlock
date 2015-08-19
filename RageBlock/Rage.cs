@@ -477,7 +477,10 @@
 "yaraklara", "yaraklarda", "yaraklardan", "yarakları", "yarakların", "yarakta", "yaraktan", 
 "oç", "oçları", "kürt", "sikeyim", "sikim", "orospu çocuğu", "orospu çocukları", "şerefsiz", 
 "anneni sikeyim", "ananı sikeyim", "allahını sikeyim", "annesiz", "o.ç", "o.çları", 
-"götünü", "götüne", "fahişe", "kahpe", "amk",
+"götünü", "götüne", "fahişe", "kahpe", "amk", "orospu çocu", "ananı sikim", "ebenin",
+"orusbu", "orosbu", "orrosbu", "anan", "baban", "sülalen", "sikem", "belanı", "ibne",
+"pezevenk", "eşcinsel", "it oğlu it", "yarrak", "yarrak kafası", "ebenin", "ebeni sikem",
+"ebeni sikeyim", "ebenin amına koyayım", "ebenin kıllı amcığına çakayım",
 /// <summary>
 /// Taiwanese
 /// </summary>

@@ -52,7 +52,7 @@ namespace RageBlock
                 {
                     muted.Add(args.Sender.Name);
                     Utility.DelayAction.Add(new Random().Next(127, 723), () =>
-                        Game.Say("/mute " + args.Sender.ChampionName)
+                        Game.Say("/mute " + args.Sender.Name)
                     );
                 }
                 args.Process = false;

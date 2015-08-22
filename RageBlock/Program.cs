@@ -1,74 +1,97 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using LeagueSharp;
-using LeagueSharp.Common;
-using System.Drawing;
-using System.Text.RegularExpressions;
-
-namespace RageBlock
+﻿namespace RageBlock
 {
-    class Program
-    {
-        static Menu M;
-        const string r = "RageBlock";
-        static List<string> muted = new List<string>();
-        static String timeStamp = GetTimestamp(DateTime.Now);
+    using System;
+    using System.Collections.Generic;
+    using System.Text.RegularExpressions;
 
-        static void Main(string[] args)
+    using LeagueSharp;
+    using LeagueSharp.Common;
+
+    internal class Program
+    {
+        #region Constants
+
+        private const string R = "RageBlock";
+
+        #endregion
+
+        #region Static Fields
+
+        private static readonly List<string> Muted = new List<string>();
+
+        private static Menu m;
+
+        private static readonly string TimeStamp = GetTimestamp(DateTime.Now);
+
+        #endregion
+
+        #region Methods
+
+        private static void Game_OnChat(GameChatEventArgs args)
         {
-            CustomEvents.Game.OnGameLoad += Game_OnGameLoad;
-        }        
+            if (!m.Item("Status").GetValue<bool>())
+            {
+                return;
+            }
+            var regex = new Regex(@"\b" + string.Join(@"\b|\b", Rage.Flame) + @"\b", RegexOptions.IgnoreCase);
+            var match = regex.Match(args.Message);
+            if (args.Sender.IsMe || Muted.Contains(args.Sender.Name) || !match.Success)
+            {
+                return;
+            }
+            if (m.Item("Block").GetValue<StringList>().SelectedIndex == 0)
+            {
+                Muted.Add(args.Sender.Name);
+                Utility.DelayAction.Add(new Random().Next(127, 723), () => Game.Say("/mute " + args.Sender.Name));
+            }
+            args.Process = false;
+        }
 
         private static void Game_OnGameLoad(EventArgs args)
         {
-            M = new Menu(r, r, true);
-            M.AddItem(new MenuItem("Status", "Enable")
-                .SetValue(true));
-            M.AddItem(new MenuItem("Block", "Block modus:").SetValue(new StringList(new[] { 
-                "Mute people", "Only censor people" 
-            })));
-            M.AddToMainMenu();
+            m = new Menu(R, R, true);
+            m.AddSubMenu(new Menu("Orbwalking", "Orbwalking"));
+            m.AddItem(new MenuItem("Status", "Enable").SetValue(true));
+            m.AddItem(
+                new MenuItem("Block", "Block modus:").SetValue(
+                    new StringList(new[] { "Mute people", "Only censor people" })));
+            m.AddToMainMenu();
 
             Game.OnChat += Game_OnChat;
             Game.OnInput += Game_OnInput;
         }
 
-        private static String GetTimestamp(DateTime Value) { return Value.ToString("HH:mm"); }
-
-        private static void Log (string value)
-        {
-            Game.PrintChat("[" + timeStamp + "] <font color='#eb7577'>" + r + "</font>: " + value);
-        }
-
-        private static void Game_OnChat(GameChatEventArgs args)
-        {
-            if (!M.Item("Status").GetValue<bool>()) return;
-            Regex regex = new Regex(@"\b" + string.Join(@"\b|\b", RageBlock.Rage.flame) + @"\b", RegexOptions.IgnoreCase);
-            Match match = regex.Match(args.Message);            
-            if (!args.Sender.IsMe && !muted.Contains(args.Sender.Name) && match.Success)
-            {
-                if (M.Item("Block").GetValue<StringList>().SelectedIndex == 0)
-                {
-                    muted.Add(args.Sender.Name);
-                    Utility.DelayAction.Add(new Random().Next(127, 723), () =>
-                        Game.Say("/mute " + args.Sender.Name)
-                    );
-                }
-                args.Process = false;
-            }
-        }
-
         private static void Game_OnInput(GameInputEventArgs args)
         {
-            if (!M.Item("Status").GetValue<bool>()) return;
-            Regex regex = new Regex(@"^(?!\/(?:whisper|w|reply|r)\b).*\b(" + string.Join(@"\b|\b", RageBlock.Rage.flame) + @"\b)", RegexOptions.IgnoreCase);
-            Match match = regex.Match(args.Input);
+            if (!m.Item("Status").GetValue<bool>())
+            {
+                return;
+            }
+            var regex = new Regex(@"^(?!\/(?:whisper|w|reply|r)\b).*\b(" + string.Join(@"\b|\b", Rage.Flame) + @"\b)", RegexOptions.IgnoreCase);
+            var match = regex.Match(args.Input);
             if (match.Success)
             {
-                args.Process = false;
-                Log(RageBlock.Rage.jokes[new Random().Next(0, RageBlock.Rage.jokes.Length)]);
+                return;
             }
+            args.Process = false;
+            Log(Rage.Jokes[new Random().Next(0, Rage.Jokes.Length)]);
         }
+
+        private static string GetTimestamp(DateTime value)
+        {
+            return value.ToString("HH:mm");
+        }
+
+        private static void Log(string value)
+        {
+            Game.PrintChat("[" + TimeStamp + "] <font color='#eb7577'>" + R + "</font>: " + value);
+        }
+
+        private static void Main()
+        {
+            CustomEvents.Game.OnGameLoad += Game_OnGameLoad;
+        }
+
+        #endregion
     }
 }

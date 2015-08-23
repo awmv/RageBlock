@@ -50,10 +50,10 @@
         private static void Game_OnGameLoad(EventArgs args)
         {
             m = new Menu(R, R, true);
-            m.AddItem(new MenuItem("Status", "Enable").SetValue(true));
+            m.AddItem(new MenuItem("Status", "Enable").SetValue(true)).ValueChanged += ProgramValueChanged;
             m.AddItem(
                 new MenuItem("Block", "Block modus:").SetValue(
-                    new StringList(new[] { "Mute people", "Only censor people" })));
+                    new StringList(new[] { "Mute people", "Only censor people" }))).ValueChanged += ItemValueChanged;
             m.AddToMainMenu();
 
             Game.OnChat += Game_OnChat;
@@ -83,6 +83,22 @@
             return value.ToString("HH:mm");
         }
 
+        private static void ItemValueChanged(object sender, OnValueChangeEventArgs e)
+        {
+            if (e.GetNewValue<StringList>().SelectedIndex == 0)
+            {
+                return;
+            }
+            if (Muted != null)
+            {
+                return;
+            }
+            foreach (var t in Muted)
+            {
+                Utility.DelayAction.Add(new Random().Next(127, 723), () => Game.Say("/mute " + t));
+            }
+        }
+
         private static void Log(string value)
         {
             Game.PrintChat("[" + TimeStamp + "] <font color='#eb7577'>" + R + "</font>: " + value);
@@ -91,6 +107,22 @@
         private static void Main()
         {
             CustomEvents.Game.OnGameLoad += Game_OnGameLoad;
+        }
+
+        private static void ProgramValueChanged(object sender, OnValueChangeEventArgs e)
+        {
+            if (e.GetNewValue<bool>())
+            {
+                return;
+            }
+            if (Muted != null)
+            {
+                return;
+            }
+            foreach (var t in Muted)
+            {
+                Utility.DelayAction.Add(new Random().Next(127, 723), () => Game.Say("/mute " + t));
+            }
         }
 
         #endregion

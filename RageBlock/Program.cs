@@ -50,7 +50,6 @@
         private static void Game_OnGameLoad(EventArgs args)
         {
             m = new Menu(R, R, true);
-            m.AddSubMenu(new Menu("Orbwalking", "Orbwalking"));
             m.AddItem(new MenuItem("Status", "Enable").SetValue(true));
             m.AddItem(
                 new MenuItem("Block", "Block modus:").SetValue(
@@ -67,9 +66,11 @@
             {
                 return;
             }
-            var regex = new Regex(@"^(?!\/(?:whisper|w|reply|r)\b).*\b(" + string.Join(@"\b|\b", Rage.Flame) + @"\b)", RegexOptions.IgnoreCase);
+            var regex = new Regex(
+                @"^(?!\/(?:whisper|w|reply|r)\b).*\b(" + string.Join(@"\b|\b", Rage.Flame) + @"\b)",
+                RegexOptions.IgnoreCase);
             var match = regex.Match(args.Input);
-            if (match.Success)
+            if (!match.Success)
             {
                 return;
             }

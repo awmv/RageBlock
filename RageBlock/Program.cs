@@ -42,7 +42,9 @@
             if (m.Item("Block").GetValue<StringList>().SelectedIndex == 0)
             {
                 Muted.Add(args.Sender.Name);
-                Utility.DelayAction.Add(new Random().Next(127, 723), () => Game.Say("/mute " + args.Sender.Name));
+                Utility.DelayAction.Add(new Random().Next(127, 723), () => 
+                    Game.Say("/mute " + args.Sender.Name)
+                );
             }
             args.Process = false;
         }
@@ -89,13 +91,13 @@
             {
                 return;
             }
-            if (Muted != null)
+            if (Muted == null)
             {
                 return;
             }
             foreach (var t in Muted)
             {
-                Utility.DelayAction.Add(new Random().Next(127, 723), () => 
+                Utility.DelayAction.Add(new Random().Next(127, 723), () =>
                     Game.Say("/mute " + t)
                 );
             }
@@ -117,13 +119,13 @@
             {
                 return;
             }
-            if (Muted != null)
+            if (Muted == null)
             {
                 return;
             }
             foreach (var t in Muted)
             {
-                Utility.DelayAction.Add(new Random().Next(127, 723), () => 
+                Utility.DelayAction.Add(new Random().Next(127, 723), () =>
                     Game.Say("/mute " + t)
                 );
             }

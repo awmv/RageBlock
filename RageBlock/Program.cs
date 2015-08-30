@@ -95,7 +95,9 @@
             }
             foreach (var t in Muted)
             {
-                Utility.DelayAction.Add(new Random().Next(127, 723), () => Game.Say("/mute " + t));
+                Utility.DelayAction.Add(new Random().Next(127, 723), () => 
+                    Game.Say("/mute " + t)
+                );
             }
         }
 
@@ -121,7 +123,9 @@
             }
             foreach (var t in Muted)
             {
-                Utility.DelayAction.Add(new Random().Next(127, 723), () => Game.Say("/mute " + t));
+                Utility.DelayAction.Add(new Random().Next(127, 723), () => 
+                    Game.Say("/mute " + t)
+                );
             }
         }
 

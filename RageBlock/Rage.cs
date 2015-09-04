@@ -348,22 +348,22 @@
                                                "vitusti", "vituttaa", "vitutus", "äpärä", /*
                                                French
                                                */
-                                               "baiser", "bander", "bigornette", "bloblos", "bosser", "bourré", 
+                                               "baiser", "bander", "bigornette", "bloblos", "bosser", "bourré",
                                                "branlette", "branleur", "branleuse", "brouter le cresson",
-                                               "cailler", "chatte", "chiasse", "chier", "chiottes",
-                                               "cirer", "clito", "connard", "connasse", "conne", "couilles",
+                                               "cailler", "chatte", "chiasse", "chier", "chiottes", "cirer",
+                                               "clito", "connard", "connasse", "conne", "couilles",
                                                "cramouille", "emmerdant", "emmerder", "emmerdeur", "emmerdeuse",
-                                               "enculé", "enculée", "enfoiré", "enfoirée", "étron", "fille de pute",
-                                               "fils de pute", "foutre", "gouine",
+                                               "enculé", "enculée", "enfoiré", "enfoirée", "étron",
+                                               "fille de pute", "fils de pute", "foutre", "gouine",
                                                "grande folle", "grogniasse", "gueule", "jouir",
                                                "la putain de ta mère", "MALPT", "maquereau", "melon",
                                                "ménage a trois", "merde", "merdeuse", "merdeux", "merlan",
-                                               "morue", "moule", "nègre", "nique ta mère", "noune",
-                                               "palucher", "pédale", "pédé", "péter", "pipe", "pipi", "poilu",
-                                               "pouffiasse", "pousse-crotte", "putain", "pute", "queue",
-                                               "ramoner", "salaud", "serin", "suce", "tapette", "tringle",
-                                               "tringler", "trou du cul", "turlute", "viande a pneus", "nique ta mère",
-                                               "fils de tute", "pédé", "ta geule", /*
+                                               "morue", "moule", "nègre", "nique ta mère", "noune", "palucher",
+                                               "pédale", "pédé", "péter", "pipe", "pipi", "poilu", "pouffiasse",
+                                               "pousse-crotte", "putain", "pute", "queue", "ramoner", "salaud",
+                                               "serin", "suce", "tapette", "tringle", "tringler", "trou du cul",
+                                               "turlute", "viande a pneus", "nique ta mère", "fils de tute",
+                                               "pédé", "ta geule", /*
                                                German
                                                */
                                                "analritter", "arschficker", "arschlecker", "arschloch",

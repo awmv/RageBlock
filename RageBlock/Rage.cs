@@ -503,7 +503,12 @@
                                                "obciągać fiuta", "obciągać loda", "pieprzyć", "pierdolec",
                                                "pierdolnięty", "pierdoła", "pierdzieć", "pojeb", "popierdolony",
                                                "robic loda", "robić loda", "rzygać", "skurwysyn", "sraczka",
-                                               "srać", "suka", "wkurwiać", "zajebisty", /*
+                                               "srać", "suka", "wkurwiać", "zajebisty", "kurwo", "kurwich",
+                                               "cipa", "cipo", "pizdo", "pizda", "suko", "suka", "ciota",
+                                               "cioto", "pierdolony", "spierdolony", "wyjebac", "wypierdolic",
+                                               "wyjebany", "pojebany", "wkurwiasz", "wkurwie", "wkurwiam",
+                                               "spierdalaj", "wypierdalaj", "zapierdalaj", "spierdolina",
+                                               "jebany", "zajebac", "wyjebac", /*
                                                Portuguese
                                                */
                                                "aborto", "amador", "ânus", "aranha", "ariano", "balalao",

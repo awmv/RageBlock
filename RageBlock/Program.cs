@@ -2,7 +2,6 @@
 {
     using System;
     using System.Collections.Generic;
-    using System.Data.SqlTypes;
     using System.Text.RegularExpressions;
 
     using LeagueSharp;
@@ -98,7 +97,7 @@
             }
             foreach (var t in Muted)
             {
-                Utility.DelayAction.Add(new Random().Next(127, 723), () =>
+                Utility.DelayAction.Add(new Random().Next(127, 723), () => 
                     Game.Say("/mute " + t)
                 );
                 Muted.Remove(t);
@@ -127,7 +126,7 @@
             }
             foreach (var t in Muted)
             {
-                Utility.DelayAction.Add(new Random().Next(127, 723), () =>
+                Utility.DelayAction.Add(new Random().Next(127, 723), () => 
                     Game.Say("/mute " + t)
                 );
                 Muted.Remove(t);

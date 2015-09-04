@@ -348,26 +348,22 @@
                                                "vitusti", "vituttaa", "vitutus", "äpärä", /*
                                                French
                                                */
-                                               "allumé", "allumée", "baiser", "bander", "bigornette", "bloblos",
-                                               "bosser", "bourré", "bourrée", "branlage", "branler",
+                                               "baiser", "bander", "bigornette", "bloblos", "bosser", "bourré", 
                                                "branlette", "branleur", "branleuse", "brouter le cresson",
-                                               "caca", "cailler", "chatte", "chiasse", "chier", "chiottes",
+                                               "cailler", "chatte", "chiasse", "chier", "chiottes",
                                                "cirer", "clito", "connard", "connasse", "conne", "couilles",
-                                               "cramouille", "déconne", "déconner", "doudounes", "drague",
-                                               "emmerdant", "emmerder", "emmerdeur", "emmerdeuse", "enculé",
-                                               "enculée", "enfoiré", "enfoirée", "étron", "fille de pute",
-                                               "fils de pute", "flic", "folle", "foutre", "gerber", "gouine",
+                                               "cramouille", "emmerdant", "emmerder", "emmerdeur", "emmerdeuse",
+                                               "enculé", "enculée", "enfoiré", "enfoirée", "étron", "fille de pute",
+                                               "fils de pute", "foutre", "gouine",
                                                "grande folle", "grogniasse", "gueule", "jouir",
                                                "la putain de ta mère", "MALPT", "maquereau", "melon",
                                                "ménage a trois", "merde", "merdeuse", "merdeux", "merlan",
-                                               "meuf", "morue", "moule", "nègre", "nique ta mère", "noune",
+                                               "morue", "moule", "nègre", "nique ta mère", "noune",
                                                "palucher", "pédale", "pédé", "péter", "pipe", "pipi", "poilu",
                                                "pouffiasse", "pousse-crotte", "putain", "pute", "queue",
-                                               "ramoner", "salaud", "serin", "service trois pièces", "suce",
-                                               "tante", "tapette", "teuf", "tirer", "trick", "tringle",
-                                               "tringler", "trique", "trou du cul", "turlute", "veuve",
-                                               "viande a pneus", "nique ta mère", "fils de tute", "pédé",
-                                               "ta geule", /*
+                                               "ramoner", "salaud", "serin", "suce", "tapette", "tringle",
+                                               "tringler", "trou du cul", "turlute", "viande a pneus", "nique ta mère",
+                                               "fils de tute", "pédé", "ta geule", /*
                                                German
                                                */
                                                "analritter", "arschficker", "arschlecker", "arschloch",
@@ -403,7 +399,8 @@
                                                "pöcsöket", "pöcsöt", "punci", "puncik", "segg", "seggek",
                                                "seggeket", "segget", "seggfej", "seggfejek", "seggfejeket",
                                                "seggfejet", "szajha", "szajhák", "szajhákat", "szajhát", "szar",
-                                               "szarabb", "szarik", "szarok", "szarokat", "szart", /*
+                                               "szarabb", "szarik", "szarok", "szarokat", "szart", "fæn",
+                                               "dritt", "fitte", /*
                                                Italian
                                                */
                                                "allupato", "ammucchiata", "anale", "arrapato", "arrusa",

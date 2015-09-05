@@ -575,6 +575,14 @@
                                                "хер с ним", "хохол", "хрен", "хуёво", "хуёвый",
                                                "хуем груши околачивать", "хуеплет", "хуило", "хуиней страдать",
                                                "хуиня", "хуй", "хуйнуть", "хуй пинать", /*
+                                               Serbian
+                                               */
+                                               "kurac", "picka", "sisa", "u picku materinu", "idi u kurac",
+                                               "jebem ti svekrvu", "jebem ti mater", "picka ti materina",
+                                               "jebem ti dete", "jebem ti sestru", "jebem ti decu",
+                                               "pusi kurac", "jedi govna", "jedi pita", "jebem ti decu",
+                                               "jebo ti pas mater", "jebi se", "idi u picku materinu",
+                                               "na kurcu te nosam", /*
                                                Spanish
                                                */
                                                "Asesinato", "asno", "Bollera", "Cabron", "Cabrón", "Caca",

@@ -121,14 +121,9 @@
             }
         }
 
-        private static string GetTimestamp(DateTime value)
-        {
-            return value.ToString("HH:mm");
-        }
-
         private static void Log(object value)
         {
-            Game.PrintChat("[" + GetTimestamp(DateTime.Now) + "] <font color='#eb7577'>" + R + "</font>: " + value);
+            Game.PrintChat("[" + DateTime.Now.ToString("HH:mm") + "] <font color='#eb7577'>" + R + "</font>: " + value);
         }
 
         #endregion

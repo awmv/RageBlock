@@ -125,7 +125,7 @@
                                                "dolcett", "domination", "dominatrix", "dommes", "donkey punch",
                                                "double dong", "double penetration", "dp action", "dry hump",
                                                "dvda", "eat my ass", "ecchi", "erotic", "erotism", "escort",
-                                               "ethical slut", "eunuch", "fecal", "felch", "feltch",
+                                               "ethical slut", "eunuch", "fecal", "felch", "feltch", "fuckyou",
                                                "female squirting", "femdom", "figging", "fingerbang",
                                                "fingering", "fisting", "foot fetish", "footjob", "frotting",
                                                "fuck buttons", "futanari", "gang bang", "gay sex", "genitals",

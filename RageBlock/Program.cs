@@ -17,8 +17,6 @@
 
         private static List<string> Muted = new List<string>();
 
-        //private static readonly string TimeStamp = GetTimestamp(DateTime.Now);
-
         #endregion
 
         #region Methods
@@ -96,17 +94,7 @@
             {
                 return;
             }
-            if (Muted == null)
-            {
-                return;
-            }
-            foreach (var t in Muted)
-            {
-                Utility.DelayAction.Add(new Random().Next(127, 723), () => 
-                    Game.Say("/mute " + t)
-                );
-                Muted.Remove(t);
-            }
+            UnMute();
         }
 
         private static void ItemValueChanged(object sender, OnValueChangeEventArgs e)
@@ -115,13 +103,18 @@
             {
                 return;
             }
+            UnMute();
+        }
+
+        private static void UnMute()
+        {
             if (Muted == null)
             {
                 return;
             }
             foreach (var t in Muted)
             {
-                Utility.DelayAction.Add(new Random().Next(127, 723), () => 
+                Utility.DelayAction.Add(new Random().Next(127, 723), () =>
                     Game.Say("/mute " + t)
                 );
                 Muted.Remove(t);
@@ -133,7 +126,7 @@
             return value.ToString("HH:mm");
         }
 
-        private static void Log(string value)
+        private static void Log(object value)
         {
             Game.PrintChat("[" + GetTimestamp(DateTime.Now) + "] <font color='#eb7577'>" + R + "</font>: " + value);
         }

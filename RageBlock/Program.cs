@@ -62,18 +62,16 @@
             if (!match.Success) 
             {
                 return;
-            } 
-            var senderName = new List<string> { args.Sender.Name }; 
+            }  
             args.Process = false;
             if (m.Item("Block").GetValue<StringList>().SelectedIndex != 0)
             {
                 return;
-            } 
-            Muted.Add(senderName.ToString());
+            }
             Utility.DelayAction.Add(new Random().Next(127, 723), () =>
-                Game.Say("/mute " + senderName)
+                Game.Say("/mute " + args.Sender.Name)
             );
-            senderName.Remove(senderName.ToString());
+
         }
 
         private static void Game_OnInput(GameInputEventArgs args)

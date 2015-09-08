@@ -6,8 +6,8 @@
 
         public static string[] Flame = new string[]
                                            {
-                                               /* 
-                                               Chinese 
+                                               /*
+                                               Chinese
                                                */
                                                "13点", "三级片", "下三烂", "下贱", "个老子的", "九游", "乳", "乳交", "乳头", "乳房",
                                                "乳波臀浪", "交配", "仆街", "他奶奶", "他奶奶的", "他奶娘的", "他妈", "他妈ㄉ王八蛋", "他妈地",
@@ -832,6 +832,6 @@
                                                "Tristana is disappointed that it's never a rocket in your pocket."
                                            };
 
-        #endregion
+        #endregion Static Fields
     }
 }

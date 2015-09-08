@@ -1,11 +1,11 @@
 ﻿namespace RageBlock
 {
+    using LeagueSharp;
+    using LeagueSharp.Common;
     using System;
     using System.Collections.Generic;
     using System.Linq;
     using System.Text.RegularExpressions;
-    using LeagueSharp;
-    using LeagueSharp.Common;
 
     internal class Program
     {
@@ -17,7 +17,7 @@
 
         private static List<string> Muted = new List<string>();
 
-        #endregion
+        #endregion Constants & Static Fields
 
         #region Methods
 
@@ -47,27 +47,33 @@
             }
             var regex = new Regex(@"\b" + string.Join(@"\b|\b", Rage.Flame) + @"\b", RegexOptions.IgnoreCase);
             var match = regex.Match(args.Message);
-            if (args.Sender.IsMe)
+            if (args.Sender == null)
             {
                 return;
             }
+            if (args.Sender.IsMe) 
+            {
+                return;
+            } 
             if (Muted.Any(args.Sender.Name.Contains))
             {
                 return;
-            }
-            if (!match.Success)
+            } 
+            if (!match.Success) 
             {
                 return;
-            }
+            } 
+            var senderName = new List<string> { args.Sender.Name }; 
             args.Process = false;
             if (m.Item("Block").GetValue<StringList>().SelectedIndex != 0)
             {
                 return;
-            }
-            Muted.Add(args.Sender.Name);
+            } 
+            Muted.Add(senderName.ToString());
             Utility.DelayAction.Add(new Random().Next(127, 723), () =>
-                Game.Say("/mute " + args.Sender.Name)
+                Game.Say("/mute " + senderName)
             );
+            senderName.Remove(senderName.ToString());
         }
 
         private static void Game_OnInput(GameInputEventArgs args)
@@ -126,6 +132,6 @@
             Game.PrintChat("[" + DateTime.Now.ToString("HH:mm") + "] <font color='#eb7577'>" + R + "</font>: " + value);
         }
 
-        #endregion
+        #endregion Methods
     }
 }

@@ -165,7 +165,7 @@
                                                "tranny", "tribadism", "tub girl", "tubgirl", "tushy", "twink",
                                                "twinkie", "two girls one cup", "undressing", "upskirt",
                                                "urethra play", "urophilia", "venus mound", "vibrator",
-                                               "violet blue", "violet wand", "vorarephilia", "voyeur",
+                                               "violet wand", "vorarephilia", "voyeur",
                                                "wetback", "wet dream", "white power", "women rapping",
                                                "wrapping men", "wrinkled starfish", "yaoi", "yellow showers",
                                                "yiffy", "zoophilia", "bronze", "silver", "gold", "platinum",

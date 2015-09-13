@@ -51,18 +51,18 @@
             {
                 return;
             }
-            if (args.Sender.IsMe) 
+            if (args.Sender.IsMe)
             {
                 return;
-            } 
+            }
             if (Muted.Any(args.Sender.Name.Contains))
             {
                 return;
-            } 
-            if (!match.Success) 
+            }
+            if (!match.Success)
             {
                 return;
-            }  
+            }
             args.Process = false;
             if (m.Item("Block").GetValue<StringList>().SelectedIndex != 0)
             {

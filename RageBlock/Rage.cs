@@ -3371,8 +3371,6 @@
                                                       "黃色影視", "龜公", 
                                                       "代打"
                                                   };
-        // .Select(
-        // x => x.ToLowerInvariant()).ToArray()
 
         /// <summary>
         /// List of words that people use to call someone out.

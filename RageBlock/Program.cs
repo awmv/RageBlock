@@ -106,11 +106,6 @@
 
             muted.Add(args.Sender.Name);
             Utility.DelayAction.Add(new Random().Next(127, 723), () => Game.Say("/mute " + args.Sender.Name));
-
-            if (m.SubMenu("Muted") != null)
-            {
-                m.AddSubMenu(new Menu("Muted", "Muted people"));
-            }
         }
 
         /// <summary>

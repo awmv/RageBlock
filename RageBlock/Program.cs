@@ -35,6 +35,35 @@
         #region Methods
 
         /// <summary>
+        /// Subscribe to the Game.Load event.
+        /// </summary>
+        /// <param name="args">
+        /// The args.
+        /// </param>
+        private static void Game_OnGameLoad(EventArgs args)
+        {
+            m = new Menu(R, R, true);
+            m.AddItem(new MenuItem("Status", "Enable").SetValue(true)).ValueChanged += ProgramValueChanged;
+            m.AddItem(
+                new MenuItem("Block", "Block modus:").SetValue(new StringList(new[] { "Block and Mute", "Block" })))
+             .ValueChanged += ItemValueChanged;
+            m.AddItem(new MenuItem("CallOut", "Include words that get used to call out")).SetValue(true).ValueChanged +=
+                CallOutValueChanged;
+            m.AddToMainMenu();
+
+            if (m.Item("CallOut").GetValue<bool>())
+            {
+                foreach (var entry in Rage.IDont)
+                {
+                    Rage.Flame.Add(entry);
+                }
+            }
+
+            Game.OnChat += Game_OnChat;
+            Game.OnInput += Game_OnInput;
+        }
+
+        /// <summary>
         /// Subscribe to the Game.OnChat event.
         /// </summary>
         /// <param name="args">
@@ -75,36 +104,13 @@
                 return;
             }
 
+            muted.Add(args.Sender.Name);
             Utility.DelayAction.Add(new Random().Next(127, 723), () => Game.Say("/mute " + args.Sender.Name));
-        }
 
-        /// <summary>
-        /// Subscribe to the Game.Load event.
-        /// </summary>
-        /// <param name="args">
-        /// The args.
-        /// </param>
-        private static void Game_OnGameLoad(EventArgs args)
-        {
-            m = new Menu(R, R, true);
-            m.AddItem(new MenuItem("Status", "Enable").SetValue(true)).ValueChanged += ProgramValueChanged;
-            m.AddItem(
-                new MenuItem("Block", "Block modus:").SetValue(new StringList(new[] { "Block and Mute", "Block" })))
-             .ValueChanged += ItemValueChanged;
-            m.AddItem(new MenuItem("CallOut", "Include words that get used to call out")).SetValue(true).ValueChanged +=
-                CallOutValueChanged;
-            m.AddToMainMenu();
-
-            if (m.Item("CallOut").GetValue<bool>())
+            if (m.SubMenu("Muted") != null)
             {
-                foreach (var entry in Rage.IDont)
-                {
-                    Rage.Flame.Add(entry);
-                }
+                m.AddSubMenu(new Menu("Muted", "Muted people"));
             }
-
-            Game.OnChat += Game_OnChat;
-            Game.OnInput += Game_OnInput;
         }
 
         /// <summary>

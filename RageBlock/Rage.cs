@@ -639,25 +639,25 @@
         ///     This is my attempt you make you laugh to forget your anger.
         /// </summary>
         public static string[] Jokes =
-            {
-                "Shacos darkest secret is that he's afraid of children.", 
-                "Yorick walked into a bar. There was no counter.", 
-                "Once Kog'maw had a cold, but no one could tell.", 
-                "For some reason Alistar suffers from headaches.", 
-                "Taric's employer thinks he's a real gem.", 
-                "Sheep are suspicious of the newcomer: Urf the manatee", 
-                "Trundle never ceases to be amazed about how everyone on the internet knows he's a troll.", 
-                "Mordekaiser really hates airport security.", 
-                "Ryze's big secret is a real shocker!", 
-                "Why Mundo can't be jailed for sexual assault? Mundo pleases who ever he pleases!", 
-                "Why didn't Sivir win the spelling bee? Because she could only spell shield", 
-                "Why did Fizz fall off of his trident? Because he's incredibly unbalanced.", 
-                "Also, Evelynn is constantly being bothered by an old man named Gargamel.", 
-                "Cassiopeia always knows how much she weighs thanks to all her scales.", 
-                "You know Zilean is having a bad day when he asks you for the time.", 
-                "Sometimes Karthus picks up a sword and pretends that he's Arthas.", 
-                "Tristana is disappointed that it's never a rocket in your pocket."
-            };
+        {
+            "Shacos darkest secret is that he's afraid of children.", 
+            "Yorick walked into a bar. There was no counter.", 
+            "Once Kog'maw had a cold, but no one could tell.", 
+            "For some reason Alistar suffers from headaches.", 
+            "Taric's employer thinks he's a real gem.", 
+            "Sheep are suspicious of the newcomer: Urf the manatee", 
+            "Trundle never ceases to be amazed about how everyone on the internet knows he's a troll.", 
+            "Mordekaiser really hates airport security.", 
+            "Ryze's big secret is a real shocker!", 
+            "Why Mundo can't be jailed for sexual assault? Mundo pleases who ever he pleases!", 
+            "Why didn't Sivir win the spelling bee? Because she could only spell shield", 
+            "Why did Fizz fall off of his trident? Because he's incredibly unbalanced.", 
+            "Also, Evelynn is constantly being bothered by an old man named Gargamel.", 
+            "Cassiopeia always knows how much she weighs thanks to all her scales.", 
+            "You know Zilean is having a bad day when he asks you for the time.", 
+            "Sometimes Karthus picks up a sword and pretends that he's Arthas.", 
+            "Tristana is disappointed that it's never a rocket in your pocket."
+        };
 
         #endregion
     }

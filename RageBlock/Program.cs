@@ -9,14 +9,14 @@
     using LeagueSharp.Common;
 
     /// <summary>
-    ///     The program.
+    ///     The Program class.
     /// </summary>
     internal class Program
     {
         #region Constants
 
         /// <summary>
-        ///     The r.
+        ///     The RageBlock(R).
         /// </summary>
         public const string R = "RageBlock";
 
@@ -25,12 +25,12 @@
         #region Static Fields
 
         /// <summary>
-        ///     The m.
+        ///     The Menu (m).
         /// </summary>
         private static Menu m;
 
         /// <summary>
-        ///     The muted List of Players.
+        ///     List of Players.
         /// </summary>
         private static List<string> muted = new List<string>();
 
@@ -162,7 +162,7 @@
         }
 
         /// <summary>
-        ///     The log.
+        ///     Console (Log).
         /// </summary>
         /// <param name="value">
         ///     The value.
@@ -173,7 +173,7 @@
         }
 
         /// <summary>
-        ///     The un mute all.
+        ///     UnmuteAll (UnMuteAll).
         /// </summary>
         private static void UnMuteAll()
         {

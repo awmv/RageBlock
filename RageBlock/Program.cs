@@ -9,24 +9,28 @@
     using LeagueSharp.Common;
 
     /// <summary>
-    /// The Program class.
+    ///     The program.
     /// </summary>
     internal class Program
     {
-        #region Constants & Static Fields
+        #region Constants
 
         /// <summary>
-        /// The R.
+        ///     The r.
         /// </summary>
         public const string R = "RageBlock";
 
+        #endregion
+
+        #region Static Fields
+
         /// <summary>
-        /// The Menu m.
+        ///     The m.
         /// </summary>
         private static Menu m;
 
         /// <summary>
-        /// The muted List of Players.
+        ///     The muted List of Players.
         /// </summary>
         private static List<string> muted = new List<string>();
 
@@ -35,20 +39,65 @@
         #region Methods
 
         /// <summary>
-        /// Subscribe to the Game.Load event.
+        ///     Subscribe to the Game.OnGameLoad event.
+        /// </summary>
+        private static void Main()
+        {
+            CustomEvents.Game.OnGameLoad += Game_OnGameLoad;
+        }
+
+        /// <summary>
+        ///     Subscribe to the Game.OnGameLoad event.
         /// </summary>
         /// <param name="args">
-        /// The args.
+        ///     The args.
         /// </param>
         private static void Game_OnGameLoad(EventArgs args)
         {
             m = new Menu(R, R, true);
-            m.AddItem(new MenuItem("Status", "Enable").SetValue(true)).ValueChanged += ProgramValueChanged;
+            m.AddItem(new MenuItem("Status", "Enable").SetValue(true)).ValueChanged +=
+                delegate (object sender, OnValueChangeEventArgs eventArgs)
+                {
+                    if (eventArgs.GetNewValue<bool>())
+                    {
+                        return;
+                    }
+
+                    UnMuteAll();
+                };
             m.AddItem(
                 new MenuItem("Block", "Block modus:").SetValue(new StringList(new[] { "Block and Mute", "Block" })))
-             .ValueChanged += ItemValueChanged;
+             .ValueChanged += delegate (object sender, OnValueChangeEventArgs eventArgs)
+             {
+                 if (eventArgs.GetNewValue<StringList>().SelectedIndex == 0)
+                 {
+                     return;
+                 }
+
+                 UnMuteAll();
+             };
             m.AddItem(new MenuItem("CallOut", "Include words that get used to call out")).SetValue(true).ValueChanged +=
-                CallOutValueChanged;
+                delegate (object sender, OnValueChangeEventArgs eventArgs)
+                {
+                    if (eventArgs.GetNewValue<bool>())
+                    {
+                        foreach (var entry in Rage.IDont)
+                        {
+                            Rage.Flame.Add(entry);
+                        }
+                    }
+
+                    if (eventArgs.GetNewValue<bool>())
+                    {
+                        return;
+                    }
+
+                    foreach (var entry in Rage.IDont)
+                    {
+                        Rage.Flame.Remove(entry);
+                    }
+                };
+
             m.AddToMainMenu();
 
             if (m.Item("CallOut").GetValue<bool>())
@@ -64,41 +113,25 @@
         }
 
         /// <summary>
-        /// Subscribe to the Game.OnChat event.
+        ///     Subscribe to the Game.OnChat event.
         /// </summary>
         /// <param name="args">
-        /// The args.
+        ///     The args.
         /// </param>
         private static void Game_OnChat(GameChatEventArgs args)
         {
-            if (!m.Item("Status").GetValue<bool>())
-            {
-                return;
-            }
-
-            var regex = new Regex(@"\b" + string.Join(@"\b|\b", Rage.Flame) + @"\b", RegexOptions.IgnoreCase);
-            var match = regex.Match(args.Message);
-            if (args.Sender == null)
-            {
-                return;
-            }
-
-            if (args.Sender.IsMe)
-            {
-                return;
-            }
-
-            if (muted.Any(args.Sender.Name.Contains))
-            {
-                return;
-            }
-
-            if (!match.Success)
+            if (!m.Item("Status").GetValue<bool>() // If RageBlock → Enable → On
+                || args.Sender == null // Prevents Exceptions in the console for buying items.
+                || !args.Sender.IsMe // Prevents the event to run for myself.
+                || muted.Any(args.Sender.Name.Contains) // Checks if the SM name exists in muted.
+                || !new Regex(@"\b" + string.Join(@"\b|\b", Rage.Flame) + @"\b", RegexOptions.IgnoreCase).Match(
+                    args.Message).Success)
             {
                 return;
             }
 
             args.Process = false;
+
             if (m.Item("Block").GetValue<StringList>().SelectedIndex != 0)
             {
                 return;
@@ -109,23 +142,17 @@
         }
 
         /// <summary>
-        /// Subscribe to the Game.OnInput event.
+        ///     Subscribe to the Game.OnInput event.
         /// </summary>
         /// <param name="args">
-        /// The args.
+        ///     The args.
         /// </param>
         private static void Game_OnInput(GameInputEventArgs args)
         {
-            if (!m.Item("Status").GetValue<bool>())
-            {
-                return;
-            }
-
-            var regex = new Regex(
-            @"^(?!\/(?:whisper|w|reply|r)\b).*\b(" + string.Join(@"\b|\b", Rage.Flame) + @"\b)",
-            RegexOptions.IgnoreCase);
-            var match = regex.Match(args.Input);
-            if (!match.Success)
+            if (!m.Item("Status").GetValue<bool>()
+                || !new Regex(
+                        @"^(?!\/(?:whisper|w|reply|r)\b).*\b(" + string.Join(@"\b|\b", Rage.Flame) + @"\b)",
+                        RegexOptions.IgnoreCase).Match(args.Input).Success)
             {
                 return;
             }
@@ -134,83 +161,11 @@
             Log(Rage.Jokes[new Random().Next(0, Rage.Jokes.Length)]);
         }
 
-        #region ValueChanged
-
         /// <summary>
-        /// The program value changed.
-        /// </summary>
-        /// <param name="sender">
-        /// The sender.
-        /// </param>
-        /// <param name="e">
-        /// The e.
-        /// </param>
-        private static void ProgramValueChanged(object sender, OnValueChangeEventArgs e)
-        {
-            if (e.GetNewValue<bool>())
-            {
-                return;
-            }
-
-            UnMute();
-        }
-
-        /// <summary>
-        /// The item value changed.
-        /// </summary>
-        /// <param name="sender">
-        /// The sender.
-        /// </param>
-        /// <param name="e">
-        /// The e.
-        /// </param>
-        private static void ItemValueChanged(object sender, OnValueChangeEventArgs e)
-        {
-            if (e.GetNewValue<StringList>().SelectedIndex == 0)
-            {
-                return;
-            }
-
-            UnMute();
-        }
-
-        /// <summary>
-        /// The call out value changed.
-        /// </summary>
-        /// <param name="sender">
-        /// The sender.
-        /// </param>
-        /// <param name="e">
-        /// The e.
-        /// </param>
-        private static void CallOutValueChanged(object sender, OnValueChangeEventArgs e)
-        {
-            if (!m.Item("CallOut").GetValue<bool>())
-            {
-                foreach (var entry in Rage.IDont)
-                {
-                    Rage.Flame.Add(entry);
-                }
-            }
-
-            if (!m.Item("CallOut").GetValue<bool>())
-            {
-                return;
-            }
-
-            foreach (var entry in Rage.IDont)
-            {
-                Rage.Flame.Remove(entry);
-            }
-        }
-
-        #endregion
-
-        /// <summary>
-        /// The log.
+        ///     The log.
         /// </summary>
         /// <param name="value">
-        /// The value.
+        ///     The value.
         /// </param>
         private static void Log(object value)
         {
@@ -218,27 +173,19 @@
         }
 
         /// <summary>
-        /// The main method.
+        ///     The un mute all.
         /// </summary>
-        private static void Main()
-        {
-            CustomEvents.Game.OnGameLoad += Game_OnGameLoad;
-        }
-
-        /// <summary>
-        /// The un mute.
-        /// </summary>
-        private static void UnMute()
+        private static void UnMuteAll()
         {
             if (muted == null)
             {
                 return;
             }
 
-            foreach (var t in muted)
+            foreach (var e in muted)
             {
-                Utility.DelayAction.Add(new Random().Next(127, 723), () => Game.Say("/mute " + t));
-                muted.Remove(t);
+                Utility.DelayAction.Add(new Random().Next(127, 723), () => Game.Say("/mute " + e));
+                muted.Remove(e);
             }
         }
 

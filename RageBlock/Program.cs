@@ -1,7 +1,6 @@
 ﻿namespace RageBlock
 {
     using System;
-    using System.Collections.Generic;
     using System.Linq;
     using System.Text.RegularExpressions;
 
@@ -28,11 +27,6 @@
         ///     The Menu.
         /// </summary>
         private static Menu m;
-
-        /// <summary>
-        ///     List of Players.
-        /// </summary>
-        private static List<string> muted = new List<string>();
 
         #endregion
 
@@ -120,10 +114,11 @@
         /// </param>
         private static void Game_OnChat(GameChatEventArgs args)
         {
-            if (!m.Item("Status").GetValue<bool>() // If RageBlock → Enable → On
-                || args.Sender == null // Prevents Exceptions in the console for buying items.
-                || args.Sender.IsMe // Prevents the event to run for myself.
-                || muted.Any(args.Sender.Name.Contains) // Checks if the SM name exists in muted.
+            if (!m.Item("Status").GetValue<bool>()
+                || args.Sender == null
+                || args.Sender.IsMe
+                || (m.Item(args.Sender.Name) != null
+                && (m.Item(args.Sender.Name) == null || m.Item(args.Sender.Name).GetValue<bool>()))
                 || !new Regex(@"\b" + string.Join(@"\b|\b", Rage.Flame) + @"\b", RegexOptions.IgnoreCase).Match(
                     args.Message).Success)
             {
@@ -137,8 +132,39 @@
                 return;
             }
 
-            muted.Add(args.Sender.Name);
             Utility.DelayAction.Add(new Random().Next(127, 723), () => Game.Say("/mute " + args.Sender.Name));
+
+            if (!m.Children.Any(menu => menu.Name.Equals("Muted")))
+            {
+                m.AddSubMenu(new Menu("Muted Summoners", "Muted"));
+            }
+
+            var team = args.Sender.IsAlly ? "Allies" : "Enemies";
+
+            if (!m.SubMenu("Muted").Children.Any(menu => menu.Name.Equals(team)))
+            {
+                m.SubMenu("Muted").AddSubMenu(new Menu(team, team));
+            }
+
+            if (!m.SubMenu("Muted").SubMenu(team).Items.Any(x => x.Name.Equals(args.Sender.Name)))
+            {
+                m.SubMenu("Muted")
+                 .SubMenu(team)
+                 .AddItem(new MenuItem(args.Sender.Name, args.Sender.ChampionName))
+                 .SetValue(true)
+                 .ValueChanged +=
+                    delegate
+                    {
+                        Utility.DelayAction.Add(
+                            new Random().Next(127, 723),
+                            () => Game.Say("/mute " + args.Sender.Name));
+                    };
+            }
+
+            if (!m.SubMenu("Muted").SubMenu(team).Item(args.Sender.Name).GetValue<bool>())
+            {
+                m.SubMenu("Muted").SubMenu(team).Item(args.Sender.Name).SetValue(true);
+            }
         }
 
         /// <summary>
@@ -177,20 +203,16 @@
         /// </summary>
         private static void UnMuteAll()
         {
-            if (muted == null)
+            if (!m.Children.Any(muted => muted.Children.Any(team => team.Items.Any(item => item.GetValue<bool>()))))
             {
                 return;
             }
 
-            for (int[] i = { muted.Count - 1 }; i[0] >= 0; i[0]--)
+            foreach (var sm in
+                m.Children.SelectMany(
+                    muted => muted.Children.SelectMany(team => team.Items.Where(item => item.GetValue<bool>()))))
             {
-                Utility.DelayAction.Add(
-                    new Random().Next(127, 723),
-                    delegate
-                        {
-                            Game.Say("/mute " + muted[i[0] + 1]);
-                            muted.RemoveAt(i[0] + 1);
-                        });
+                sm.SetValue(false);
             }
         }
 

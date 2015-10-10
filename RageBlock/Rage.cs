@@ -632,7 +632,7 @@
             "evadin'", "hack", "hacks", "hackz", "hacking", "hackin", "hackin'", "hacker", "hackers", "cheat", "cheats",
             "cheatz", "cheater", "cheaters", "cheating", "cheatin", "cheatin'", "bol", "botoflegends", "botoflegend",
             "bot oflegends", "botof legends", "bot of legends", "elobuddy", "elo buddy", "gamingonsteroids",
-            "gamingonsteroid", "gaming onsteroids", "gamingon steroids", "gaming on steroids", "hax", "turn it off"
+            "gamingonsteroid", "gaming onsteroids", "gamingon steroids", "gaming on steroids", "hax"
         };
 
         /// <summary>

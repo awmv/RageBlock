@@ -384,7 +384,7 @@
             "peidar", "pênis", "pinto", "peitura", "pica", "pirocudo", "piroca", "porra", "puto", "putinho",
             "putinha", "prostituta", "putaria", "punheta", "puta que pariu", "puta que te pariu", "queca", "quenga",
             "retardado", "ratardada", "rabuda", "rabo", "rola", "roludo", "siririca", "sacanagem", "saco", "sado",
-            "sadomado", "sem noção", "safado", "safada", "transexual", "transa", "teemo", "torneira", "tarado",
+            "sadomado", "sem noção", "safado", "safada", "transexual", "transa", "torneira", "tarado",
             "tarada", "transar", "transudo", "trepada", "trepadeira", "trepar", "travesti", "vai-te foder",
             "vai tomar no cu", "veado", "viado", "viadinho", "viadão", "vaginal", "vibrador", "xana", "xochota",
             "xota", "xoxota", "zoofilia", "zoofilo", "vtnc", "arrombado", "seu merda", "vai toma no cu", "cala a boca",

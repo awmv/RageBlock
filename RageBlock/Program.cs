@@ -207,7 +207,6 @@
         {
             if (!m.Item("Status").GetValue<bool>()
                 || args.Sender == null
-                || args.Sender.IsValid
                 || args.Sender.IsMe
                 || args.Sender.IsBot
                 || m.Item(args.Sender.NetworkId.ToString()).GetValue<bool>()
@@ -264,7 +263,6 @@
             var hero = (Obj_AI_Hero)args.Source;
             if (hero == null
                 || hero.IsMe
-                || !hero.IsValid
                 || !HeroCount.ContainsKey(hero.NetworkId))
             {
                 return;
@@ -321,7 +319,7 @@
         /// Lower the int value of LowerCount.
         /// </summary>
         /// <param name="hero">
-        /// This is experimental. I'm not quite sure what I did there.
+        /// The hero.
         /// </param>
         private static void LowerCount(int hero)
         {

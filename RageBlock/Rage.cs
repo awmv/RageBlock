@@ -623,7 +623,7 @@
         /// <summary>
         ///     List of words that people use to call someone out.
         /// </summary>
-        public static string[] IDont =
+        public static HashSet<string> IDont = new HashSet<string>
         {
             "script", "scriptz", "scripts", "scripter", "scripters", "scriptin", "scriptin'", "scripting", "l#",
             "league sharp", "league sharper", "league sharpers", "leaguesharp", "leaguesharper", "leaguesharpers",

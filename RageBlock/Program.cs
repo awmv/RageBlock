@@ -205,16 +205,6 @@
         /// </param>
         private static void GameOnChat(GameChatEventArgs args)
         {
-            ////if (!m.Item("Status").GetValue<bool>()
-            ////    || args.Sender == null
-            ////    ////|| !args.Sender.IsValid
-            ////    || args.Sender.IsMe
-            ////    || m.Item(args.Sender.NetworkId.ToString()).GetValue<bool>()
-            ////    || !new Regex(@"(?<!\S)(" + string.Join(@"|", Rage.Flame) + @")(?!\S)", RegexOptions.IgnoreCase)
-            ////            .Match(args.Message).Success)
-            ////{
-            ////    return;
-            ////}
             if (!m.Item("Status").GetValue<bool>()
                 || args.Sender == null
                 || args.Sender.IsValid
@@ -227,24 +217,6 @@
                 return;
             }
 
-            ////try
-            ////{
-            ////    if (m.Item(args.Sender.NetworkId.ToString()).GetValue<bool>())
-            ////    {
-            ////        return;
-            ////    }
-            ////}
-            ////catch (NullReferenceException ex)
-            ////{
-            ////    Console.WriteLine("{0} " + args.Sender.ChampionName + ": " + args.Sender.NetworkId, ex);
-            ////}
-
-            ////if (
-            ////    !new Regex(@"(?<!\S)(" + string.Join(@"|", Rage.Flame) + @")(?!\S)", RegexOptions.IgnoreCase).Match(
-            ////        args.Message).Success)
-            ////{
-            ////    return;
-            ////}
             args.Process = false;
 
             if (m.Item("Block").GetValue<StringList>().SelectedIndex != 0)

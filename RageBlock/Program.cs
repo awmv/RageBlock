@@ -149,7 +149,7 @@
                  .SubMenu("Allies")
                  .AddItem(new MenuItem(ally.NetworkId.ToString(), ally.ChampionName))
                  .SetFontStyle(FontStyle.Regular, new Color(135, 206, 250))
-                 .SetTooltip(DuplicateSmName ? ("@" + ally.ChampionName) : ally.Name)
+                 .SetTooltip(DuplicateSmName ? ally.Name : ("@" + ally.ChampionName))
                  .SetValue(false)
                  .ValueChanged += (sender, eventArgs) =>
                  {
@@ -164,7 +164,7 @@
                  .SubMenu("Enemies")
                  .AddItem(new MenuItem(enemy.NetworkId.ToString(), enemy.ChampionName))
                  .SetFontStyle(FontStyle.Regular, new Color(135, 206, 250))
-                 .SetTooltip(DuplicateSmName ? ("@" + enemy.ChampionName) : enemy.Name)
+                 .SetTooltip(DuplicateSmName ? enemy.Name : ("@" + enemy.ChampionName))
                  .SetValue(false)
                  .ValueChanged += (sender, eventArgs) =>
                  {

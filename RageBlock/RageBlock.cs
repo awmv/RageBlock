@@ -227,7 +227,7 @@
         {
             if (!m.Item("Status").GetValue<bool>()
                 || args.Sender == null
-                || !args.Sender.IsMe
+                || args.Sender.IsMe
                 || args.Sender.IsBot
                 || !args.Sender.IsValid
                 || m.Item(args.Sender.NetworkId.ToString()).GetValue<bool>()

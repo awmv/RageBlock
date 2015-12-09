@@ -5,6 +5,7 @@
     using System.Drawing;
     using System.Linq;
     using System.Text.RegularExpressions;
+    using System.Threading.Tasks;
 
     using LeagueSharp;
     using LeagueSharp.Common;
@@ -14,7 +15,7 @@
     /// <summary>
     ///     Program class.
     /// </summary>
-    internal class Program
+    internal class RageBlock
     {
         #region Constants
 
@@ -44,7 +45,12 @@
         private static readonly Dictionary<int, Count> HeroCount = new Dictionary<int, Count>();
 
         /// <summary>
-        ///     The last tick.
+        ///     Queue Worker in terms of a list.
+        /// </summary>
+        private static readonly List<Task> Queue = new List<Task>();
+
+        /// <summary>
+        ///     Last Tick of Environment.TickCount.
         /// </summary>
         private static float lastTick;
 
@@ -75,7 +81,7 @@
         {
             m = new Menu(R, R, true);
             m.AddItem(new MenuItem("Status", "Enable").SetValue(true)).ValueChanged +=
-                delegate(object sender, OnValueChangeEventArgs eventArgs)
+                delegate (object sender, OnValueChangeEventArgs eventArgs)
                 {
                     if (eventArgs.GetNewValue<bool>())
                     {
@@ -96,7 +102,7 @@
                 };
             m.AddItem(
                 new MenuItem("Block", "Block modus:").SetValue(new StringList(new[] { "Block and Mute", "Block" })))
-             .ValueChanged += delegate(object sender, OnValueChangeEventArgs eventArgs)
+             .ValueChanged += delegate (object sender, OnValueChangeEventArgs eventArgs)
              {
                  if (eventArgs.GetNewValue<StringList>().SelectedIndex == 0)
                  {
@@ -108,16 +114,16 @@
             m.AddItem(new MenuItem("CallOut", "Block words for scripting"))
              .SetTooltip("Add/Remove words for scripting to the word filter.")
              .SetValue(true)
-             .ValueChanged += delegate(object sender, OnValueChangeEventArgs eventArgs)
+             .ValueChanged += delegate (object sender, OnValueChangeEventArgs eventArgs)
              {
                  if (eventArgs.GetNewValue<bool>())
                  {
-                     foreach (var entry in Rage.IDont)
+                     foreach (var entry in WordFilter.IDont)
                      {
-                         Rage.Flame.Add(entry);
+                         WordFilter.Flame.Add(entry);
                      }
 
-                     Rage.Flame.Add(GetRegex(Rage.IDont));
+                     WordFilter.Flame.Add(GetRegex(WordFilter.IDont));
                  }
 
                  if (eventArgs.GetNewValue<bool>())
@@ -125,12 +131,12 @@
                      return;
                  }
 
-                 foreach (var entry in Rage.IDont)
+                 foreach (var entry in WordFilter.IDont)
                  {
-                     Rage.Flame.Remove(entry);
+                     WordFilter.Flame.Remove(entry);
                  }
 
-                 Rage.Flame.Remove(GetRegex(Rage.IDont));
+                 WordFilter.Flame.Remove(GetRegex(WordFilter.IDont));
              };
 
             m.AddItem(new MenuItem("Ping", "Block ping abuser"))
@@ -154,7 +160,14 @@
                  .ValueChanged += (sender, eventArgs) =>
                  {
                      var name = (MenuItem)sender;
-                     Game.Say("/mute " + name.Tooltip);
+
+                     if (m.Item("Block").GetValue<StringList>().SelectedIndex != 0)
+                     {
+                         return;
+                     }
+
+                     Queue.Add(new Task(delegate { Game.Say("/mute " + name.Tooltip); }));
+                     Log("Release a key to mute " + name.Tooltip + ".");
                  };
             }
 
@@ -169,7 +182,14 @@
                  .ValueChanged += (sender, eventArgs) =>
                  {
                      var name = (MenuItem)sender;
-                     Game.Say("/mute " + name.Tooltip);
+
+                     if (m.Item("Block").GetValue<StringList>().SelectedIndex != 0)
+                     {
+                         return;
+                     }
+
+                     Queue.Add(new Task(delegate { Game.Say("/mute " + name.Tooltip); }));
+                     Log("Release a key to mute " + name.Tooltip + ".");
                  };
             }
 
@@ -177,12 +197,12 @@
 
             if (m.Item("CallOut").GetValue<bool>())
             {
-                foreach (var entry in Rage.IDont)
+                foreach (var entry in WordFilter.IDont)
                 {
-                    Rage.Flame.Add(entry);
+                    WordFilter.Flame.Add(entry);
                 }
 
-                Rage.Flame.Add(GetRegex(Rage.IDont));
+                WordFilter.Flame.Add(GetRegex(WordFilter.IDont));
             }
 
             foreach (var hero in
@@ -207,11 +227,12 @@
         {
             if (!m.Item("Status").GetValue<bool>()
                 || args.Sender == null
-                || args.Sender.IsMe
+                || !args.Sender.IsMe
                 || args.Sender.IsBot
+                || !args.Sender.IsValid
                 || m.Item(args.Sender.NetworkId.ToString()).GetValue<bool>()
-                || !new Regex(@"(?<!\S)(" + string.Join(@"|", Rage.Flame) + @")(?!\S)", RegexOptions.IgnoreCase).Match(
-                    args.Message).Success)
+                || !new Regex(@"(?<!\S)(" + string.Join(@"|", WordFilter.Flame) + @")(?!\S)", RegexOptions.IgnoreCase)
+                        .Match(Regex.Replace(args.Message, @"\p{P}\p{S}", string.Empty)).Success)
             {
                 return;
             }
@@ -223,13 +244,7 @@
                 return;
             }
 
-            Utility.DelayAction.Add(
-                new Random().Next(127, 723), 
-                () =>
-                m.SubMenu("Muted")
-                 .SubMenu(args.Sender.IsAlly ? "Allies" : "Enemies")
-                 .Item(args.Sender.Name)
-                 .SetValue(true));
+            m.SubMenu("Muted").SubMenu(args.Sender.IsAlly ? "Allies" : "Enemies").Item(args.Sender.Name).SetValue(true);
         }
 
         /// <summary>
@@ -242,14 +257,15 @@
         {
             if (!m.Item("Status").GetValue<bool>()
                 || !new Regex(
-                        @"^(?!\/(?:whisper|w|reply|r)(?!\S)).*(?<!\S)(" + string.Join(@"|", Rage.Flame) + @")(?!\S)", 
-                        RegexOptions.IgnoreCase).Match(args.Input).Success)
+                        @"^(?!\/(?:whisper|w|reply|r)(?!\S)).*(?<!\S)(" + string.Join(@"|", WordFilter.Flame)
+                        + @")(?!\S)", 
+                        RegexOptions.IgnoreCase).Match(Regex.Replace(args.Input, @"\p{P}\p{S}", string.Empty)).Success)
             {
                 return;
             }
 
             args.Process = false;
-            Log(Rage.Jokes[new Random().Next(0, Rage.Jokes.Length)]);
+            Log(WordFilter.Jokes[new Random().Next(0, WordFilter.Jokes.Length)]);
         }
 
         /// <summary>
@@ -261,7 +277,10 @@
         private static void GameOnPing(GamePingEventArgs args)
         {
             var hero = (Obj_AI_Hero)args.Source;
-            if (hero == null
+            if (!m.Item("Status").GetValue<bool>()
+                || !m.Item("Ping").GetValue<bool>()
+                || hero == null
+                || !hero.IsValid
                 || hero.IsMe
                 || !HeroCount.ContainsKey(hero.NetworkId))
             {
@@ -286,10 +305,28 @@
         /// </param>
         private static void GameOnUpdate(EventArgs args)
         {
+            if (!m.Item("Status").GetValue<bool>()
+                || !m.Item("Ping").GetValue<bool>())
+            {
+                return;
+            }
+
             foreach (var hero in
                 HeroManager.AllHeroes.Where(me => !me.IsMe && !me.IsBot).Select(hero => hero.NetworkId).ToList())
             {
                 LowerCount(hero);
+            }
+
+            if (Orbwalking.Orbwalker.Instances.Count != 0
+                && Orbwalking.Orbwalker.Instances.Any(o => o.ActiveMode != Orbwalking.OrbwalkingMode.None))
+            {
+                return;
+            }
+
+            foreach (var task in Queue.ToList().Where(task => Queue.Any()))
+            {
+                task.Start();
+                Queue.Remove(task);
             }
         }
 
@@ -365,6 +402,8 @@
             Game.PrintChat("[" + DateTime.Now.ToString("HH:mm") + "] <font color='#eb7577'>" + R + "</font>: " + value);
         }
 
+        #endregion
+
         /// <summary>
         ///     Class count.
         /// </summary>
@@ -379,6 +418,5 @@
 
             #endregion
         }
-        #endregion
     }
 }

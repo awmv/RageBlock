@@ -5,7 +5,7 @@
     /// <summary>
     ///     The class Rage.
     /// </summary>
-    public static class Rage
+    public static class WordFilter
     {
         #region Static Fields
 

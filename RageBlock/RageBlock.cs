@@ -231,8 +231,9 @@
                 || args.Sender.IsBot
                 || !args.Sender.IsValid
                 || m.Item(args.Sender.NetworkId.ToString()).GetValue<bool>()
-                || !new Regex(@"(?<!\S)(" + string.Join(@"|", WordFilter.Flame) + @")(?!\S)", RegexOptions.IgnoreCase)
-                        .Match(Regex.Replace(args.Message, @"\p{P}\p{S}", string.Empty)).Success)
+                || !new Regex(
+                        @"(?<!\S)(" + string.Join(@"|", WordFilter.Flame) + @")(?!\S)", 
+                        RegexOptions.IgnoreCase & RegexOptions.Compiled).Match(Validate(args.Message)).Success)
             {
                 return;
             }
@@ -259,7 +260,8 @@
                 || !new Regex(
                         @"^(?!\/(?:whisper|w|reply|r)(?!\S)).*(?<!\S)(" + string.Join(@"|", WordFilter.Flame)
                         + @")(?!\S)", 
-                        RegexOptions.IgnoreCase).Match(Regex.Replace(args.Input, @"\p{P}\p{S}", string.Empty)).Success)
+                        RegexOptions.IgnoreCase & RegexOptions.Compiled).Match(
+                            Regex.Replace(Validate(args.Input), @"\p{P}\p{S}", string.Empty)).Success)
             {
                 return;
             }
@@ -371,6 +373,41 @@
 
                 HeroCount[hero].Value--;
             }
+        }
+
+        /// <summary>
+        /// The validate.
+        /// </summary>
+        /// <param name="args">
+        /// The args.
+        /// </param>
+        /// <returns>
+        /// The <see cref="string"/>.
+        /// </returns>
+        private static string Validate(string args)
+        {
+            var message = Regex.Replace(args, @"\p{P}\p{S}", string.Empty);
+
+            foreach (Match match in
+                new Regex(
+                    @"\b(?=\p{L}*\d)(?=\d*\p{L})(\w+\b)",
+                    RegexOptions.Multiline & RegexOptions.IgnoreCase & RegexOptions.Compiled).Matches(message))
+            {
+                var source = match.Value;
+                var replace =
+                    source.Replace("0", "o")
+                          .Replace("1", "i")
+                          .Replace("2", "z")
+                          .Replace("3", "e")
+                          .Replace("4", "a")
+                          .Replace("5", "s")
+                          .Replace("6", "b")
+                          .Replace("7", "t")
+                          .Replace("9", "g");
+                message = message.Replace(source, replace);
+            }
+
+            return message;
         }
 
         /// <summary>

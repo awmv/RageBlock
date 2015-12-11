@@ -81,7 +81,7 @@
         {
             m = new Menu(R, R, true);
             m.AddItem(new MenuItem("Status", "Enable").SetValue(true)).ValueChanged +=
-                delegate (object sender, OnValueChangeEventArgs eventArgs)
+                delegate(object sender, OnValueChangeEventArgs eventArgs)
                 {
                     if (eventArgs.GetNewValue<bool>())
                     {
@@ -102,7 +102,7 @@
                 };
             m.AddItem(
                 new MenuItem("Block", "Block modus:").SetValue(new StringList(new[] { "Block and Mute", "Block" })))
-             .ValueChanged += delegate (object sender, OnValueChangeEventArgs eventArgs)
+             .ValueChanged += delegate(object sender, OnValueChangeEventArgs eventArgs)
              {
                  if (eventArgs.GetNewValue<StringList>().SelectedIndex == 0)
                  {
@@ -114,7 +114,7 @@
             m.AddItem(new MenuItem("CallOut", "Block words for scripting"))
              .SetTooltip("Add/Remove words for scripting to the word filter.")
              .SetValue(true)
-             .ValueChanged += delegate (object sender, OnValueChangeEventArgs eventArgs)
+             .ValueChanged += delegate(object sender, OnValueChangeEventArgs eventArgs)
              {
                  if (eventArgs.GetNewValue<bool>())
                  {
@@ -259,9 +259,8 @@
             if (!m.Item("Status").GetValue<bool>()
                 || !new Regex(
                         @"^(?!\/(?:whisper|w|reply|r)(?!\S)).*(?<!\S)(" + string.Join(@"|", WordFilter.Flame)
-                        + @")(?!\S)", 
-                        RegexOptions.IgnoreCase & RegexOptions.Compiled).Match(
-                            Regex.Replace(Validate(args.Input), @"\p{P}\p{S}", string.Empty)).Success)
+                        + @")(?!\S)",
+                        RegexOptions.IgnoreCase & RegexOptions.Compiled).Match(Validate(args.Input)).Success)
             {
                 return;
             }
